@@ -1,0 +1,900 @@
+[
+    {
+        "exchangeName": "BaseSwap (Base)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BCHAIN (Nasdaq Data Link)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Binance",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Binance.US",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BingX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Biswap v2 (BNB chain)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitazza",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitfinex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "bitFlyer",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitget",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bithumb",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitkub",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BitMart",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BitMEX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitrue",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitso",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitstamp",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bittrex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitvavo",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BloFin",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Brave New Coin",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BTSE",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bybit",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Camelot v2 (Arbitrum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Camelot v3 (Arbitrum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Coin Metrics",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "FUNDAMENTAL"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Coinbase",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "CoinEx",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Crypto.com",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Curve (Ethereum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "DeDust.io (TON)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Defi Llama",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "FUNDAMENTAL"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Delta Exchange",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Delta Exchange India",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Deribit",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Gate.io",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Gemini",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Glassnode",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "FUNDAMENTAL"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Honeyswap v2 (Gnosis)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "HTX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "FUTURES",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "IntoTheBlock",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "FUNDAMENTAL"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Katana (Ronin)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "KCEX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Kraken",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "KuCoin",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "LunarCrush",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "FUNDAMENTAL"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "MEXC",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "MM Finance (Cronos)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Okcoin",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "OKX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Orca (Solana)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Osmosis",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "PancakeSwap v2 (BNB chain)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "PancakeSwap v3 (BNB chain, Ethereum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Pangolin v2 (Avalanche)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Pepperstone",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Phemex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Pionex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Poloniex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Pulsex (Pulsechain)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "PulseX v2 (Pulsechain)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Pyth",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "QuickSwap v2 (Polygon)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "QuickSwap v3 (Polygon, Polygon zkEVM)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Raydium (Solana)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Shadow (Sonic)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "SpookySwap v2 (Fantom)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "STON.fi (TON)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "SunSwap v2 (TRON)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "SunSwap v3 (TRON)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "SushiSwap v2 (Polygon, Ethereum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Thruster v3 (Blast)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Tokenize",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Trader Joe v2 (Avalanche)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Uniswap v2 (Ethereum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Uniswap v3 (Ethereum, Polygon, Arbitrum, Optimism, BNB chain, Base, Avalanche)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "UpBit",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Vantage",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Velodrome (Optimism)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Volmex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "VVS Finance (Cronos)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Wagmi (Sonic)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Webull Pay",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "WhiteBIT",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "WOO X",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "xExchange",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Zoomex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    }
+]

@@ -1,0 +1,317 @@
+[
+    {
+        "exchangeName": "ActivTrades",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "BlackBull Markets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Capital.com",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "CFI",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "City Index",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "easyMarkets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Eightcap",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Errante",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "EsaFX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "FOREX.com",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "FP Markets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Fusion Markets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "FXCM",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "FXOpen",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "GBE brokers",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "GO Markets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "IC Markets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "ICE Data Services",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "IG",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "JFX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Markets.com",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "OANDA",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "OPRA",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Pepperstone",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Phillip Nova",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Saxo",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "SKILLING",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Spreadex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "tastyfx",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "ThinkMarkets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Trade Nation",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Tradu",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Vantage",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Velocity Trade",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "WH SelfInvest",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    }
+]

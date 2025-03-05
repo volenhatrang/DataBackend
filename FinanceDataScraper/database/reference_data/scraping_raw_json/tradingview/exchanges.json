@@ -1,0 +1,2413 @@
+[
+    {
+        "exchangeName": "US Stock Markets bundle",
+        "exchangeDescName": "NYSE, NASDAQ, NYSE Arca, NASDAQ GIDS, OTC",
+        "country": "USA",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "NASDAQ Stock Market",
+        "exchangeDescName": "NASDAQ",
+        "country": "USA",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "NASDAQ Global Index Data Service",
+        "exchangeDescName": "NASDAQ (GIDS)",
+        "country": "USA",
+        "types": [
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "New York Stock Exchange",
+        "exchangeDescName": "NYSE",
+        "country": "USA",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "NYSE Arca",
+        "exchangeDescName": "Arca",
+        "country": "USA",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "OTC Markets",
+        "exchangeDescName": "OTC",
+        "country": "USA",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "CME Group (E-mini included)",
+        "exchangeDescName": "CME, CBOT, COMEX, NYMEX",
+        "country": "USA",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "National Stock Exchange of India",
+        "exchangeDescName": "NSE",
+        "country": "India",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "Bursa Malaysia Berhad",
+        "exchangeDescName": "MYX",
+        "country": "Malaysia",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "Stock Exchange of Thailand",
+        "exchangeDescName": "SET",
+        "country": "Thailand",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "Tokyo Stock Exchange",
+        "exchangeDescName": "TSE (TOPIX, Fukuoka Stock Exchange, Sapporo Securities Exchange included)",
+        "country": "Japan",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "Borsa Istanbul (without volume data)",
+        "exchangeDescName": "BIST Mixed",
+        "country": "Turkey",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "BIST 100",
+            "BIST 30"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "Abu Dhabi Securities Exchange",
+        "exchangeDescName": "ADX",
+        "country": "United Arab Emirates",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Argentine Stock Exchanges and Markets",
+        "exchangeDescName": "BYMA",
+        "country": "Argentina",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Athens Stock Exchange",
+        "exchangeDescName": "ATHEX",
+        "country": "Greece",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Australian Securities Exchange",
+        "exchangeDescName": "ASX",
+        "country": "Australia",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "BX Swiss",
+        "exchangeDescName": "BX",
+        "country": "Switzerland",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Bahrain Stock Exchange",
+        "exchangeDescName": "BHB",
+        "country": "Bahrain",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Belgrade Stock Exchange",
+        "exchangeDescName": "BELEX",
+        "country": "Serbia",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Berlin Stock Exchange",
+        "exchangeDescName": "BER",
+        "country": "Germany",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Bolsa Institucional de Valores",
+        "exchangeDescName": "BIVA",
+        "country": "Mexico",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Bolsa de Madrid",
+        "exchangeDescName": "BME",
+        "country": "Spain",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Bombay Stock Exchange",
+        "exchangeDescName": "BSE",
+        "country": "India",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Borsa Istanbul",
+        "exchangeDescName": "BIST",
+        "country": "Turkey",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Bratislava Stock Exchange",
+        "exchangeDescName": "BSSE",
+        "country": "Slovakia",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Brazil Stock Exchange",
+        "exchangeDescName": "B3",
+        "country": "Brazil",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Bucharest Stock Exchange",
+        "exchangeDescName": "BVB",
+        "country": "Romania",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Budapest Stock Exchange",
+        "exchangeDescName": "BET",
+        "country": "Hungary",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Canadian Securities Exchange",
+        "exchangeDescName": "CSE",
+        "country": "Canada",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Caracas Stock Exchange",
+        "exchangeDescName": "BVC",
+        "country": "Venezuela",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Casablanca Stock Exchange",
+        "exchangeDescName": "CSE",
+        "country": "Morocco",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Cboe Australia",
+        "exchangeDescName": "Cboe Australia",
+        "country": "Australia",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Cboe Canada",
+        "exchangeDescName": "Cboe Canada",
+        "country": "Canada",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Cboe FTSE Russell",
+        "exchangeDescName": "Cboe FTSE",
+        "country": "USA",
+        "types": [
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Cboe Global Indices Feed",
+        "exchangeDescName": "Cboe CGIF",
+        "country": "USA",
+        "types": [
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Cboe Global Markets (Arca, NYSE, NASDAQ)",
+        "exchangeDescName": "Cboe One",
+        "country": "USA",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Colombia Stock Exchange",
+        "exchangeDescName": "BVC",
+        "country": "Colombia",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Colombo Stock Exchange",
+        "exchangeDescName": "CSE",
+        "country": "Sri Lanka",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Cyprus Stock Exchange",
+        "exchangeDescName": "CSE",
+        "country": "Cyprus",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Dhaka Stock Exchange",
+        "exchangeDescName": "DSE",
+        "country": "Bangladesh",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Dubai Financial Market",
+        "exchangeDescName": "DFM",
+        "country": "United Arab Emirates",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Dusseldorf Stock Exchange",
+        "exchangeDescName": "DUS",
+        "country": "Germany",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Egyptian Exchange",
+        "exchangeDescName": "EGX",
+        "country": "Egypt",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Euronext NV",
+        "exchangeDescName": "Euronext",
+        "country": "European Union",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "European Union Indices",
+        "exchangeDescName": "CBOE EU",
+        "country": "European Union",
+        "types": [
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "FINRA Agency Debt Trade Dissemination Service",
+        "exchangeDescName": "FINRA ATDS",
+        "country": "USA",
+        "types": [
+            "BONDS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "FINRA Bond Trade Dissemination Service",
+        "exchangeDescName": "FINRA BTDS",
+        "country": "USA",
+        "types": [
+            "BONDS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "FTSE Group Indices",
+        "exchangeDescName": "FTSE",
+        "country": "United Kingdom",
+        "types": [
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "FTSE Indices",
+        "exchangeDescName": "FTSE",
+        "country": "Malaysia",
+        "types": [
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "FTSE ST Index Series",
+        "exchangeDescName": "FTSE ST",
+        "country": "Singapore",
+        "types": [
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Frankfurt Stock Exchange, Deutsche Borse Xetra",
+        "exchangeDescName": "FWB, XETR",
+        "country": "Germany",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Gettex",
+        "exchangeDescName": "Gettex",
+        "country": "Germany",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Hamburg Stock Exchange",
+        "exchangeDescName": "HAM",
+        "country": "Germany",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Hang Seng Indexes",
+        "exchangeDescName": "HSI",
+        "country": "Hong Kong",
+        "types": [
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Hannover Stock Exchange",
+        "exchangeDescName": "HAN",
+        "country": "Germany",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Hanoi Stock Exchange",
+        "exchangeDescName": "HNX",
+        "country": "Vietnam",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Hanoi Stock Exchange (UPCoM)",
+        "exchangeDescName": "HNX",
+        "country": "Vietnam",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Ho Chi Minh City Stock Exchange",
+        "exchangeDescName": "HOSE",
+        "country": "Vietnam",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "ICE Endex",
+        "exchangeDescName": "ICE Endex",
+        "country": "European Union",
+        "types": [
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "ICE Futures U.S. Financial & Commodities",
+        "exchangeDescName": "ICE Futures U.S.",
+        "country": "USA",
+        "types": [
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Indonesia Stock Exchange",
+        "exchangeDescName": "IDX",
+        "country": "Indonesia",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Johannesburg Stock Exchange (Derived Data)",
+        "exchangeDescName": "JSE",
+        "country": "South Africa",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Korea Stock Exchange",
+        "exchangeDescName": "KRX",
+        "country": "South Korea",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Kuwait Stock Exchange",
+        "exchangeDescName": "KSE",
+        "country": "Kuwait",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Lang & Schwarz TradeCenter AG & Co. KG",
+        "exchangeDescName": "LS, LSX",
+        "country": "Germany",
+        "types": [
+            "STOCKS",
+            "BONDS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Lima Stock Exchange",
+        "exchangeDescName": "BVL",
+        "country": "Peru",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "London Metal Exchange",
+        "exchangeDescName": "LME",
+        "country": "United Kingdom",
+        "types": [
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "London Stock Exchange (International Companies)",
+        "exchangeDescName": "LSIN",
+        "country": "United Kingdom",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "London Stock Exchange (UK Companies)",
+        "exchangeDescName": "LSE",
+        "country": "United Kingdom",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Luxembourg Stock Exchange",
+        "exchangeDescName": "LuxSE",
+        "country": "Luxembourg",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Mexican Stock Exchange",
+        "exchangeDescName": "BMV",
+        "country": "Mexico",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Milan Stock Exchange",
+        "exchangeDescName": "MIL",
+        "country": "Italy",
+        "types": [
+            "STOCKS",
+            "CERTIFICATES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Multi Commodity Exchange",
+        "exchangeDescName": "MCX",
+        "country": "India",
+        "types": [
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Munich Stock Exchange",
+        "exchangeDescName": "MUN",
+        "country": "Germany",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "NASDAQ Dubai",
+        "exchangeDescName": "NASDAQ Dubai",
+        "country": "United Arab Emirates",
+        "types": [
+            "STOCKS",
+            "FUTURES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "NASDAQ Mutual Funds",
+        "exchangeDescName": "NASDAQ",
+        "country": "USA",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Nagoya Stock Exchange",
+        "exchangeDescName": "NSE",
+        "country": "Japan",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Nairobi Securities Exchange",
+        "exchangeDescName": "NSE",
+        "country": "Kenya",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Nasdaq OMX Group",
+        "exchangeDescName": "OMX",
+        "country": "European Union",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "National Commodity & Derivatives Exchange",
+        "exchangeDescName": "NCDEX",
+        "country": "India",
+        "types": [
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "New Zealand Exchange",
+        "exchangeDescName": "NZX",
+        "country": "New Zealand",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Nigerian Stock Exchange",
+        "exchangeDescName": "NSE",
+        "country": "Nigeria",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Nordic Growth Market",
+        "exchangeDescName": "NGM",
+        "country": "Sweden",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Pakistan Stock Exchange",
+        "exchangeDescName": "PSX",
+        "country": "Pakistan",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Philippine Stock Exchange",
+        "exchangeDescName": "PSE",
+        "country": "Philippines",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Prague Stock Exchange",
+        "exchangeDescName": "PSE",
+        "country": "Czech Republic",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Qatar Stock Exchange",
+        "exchangeDescName": "QSE",
+        "country": "Qatar",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "SIX Swiss Exchange",
+        "exchangeDescName": "SIX",
+        "country": "Switzerland",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Santiago Stock Exchange",
+        "exchangeDescName": "SSE",
+        "country": "Chile",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Saudi Exchange",
+        "exchangeDescName": "Tadawul",
+        "country": "Saudi Arabia",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Shanghai Futures Exchange",
+        "exchangeDescName": "SHFE",
+        "country": "China",
+        "types": [
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Shanghai Stock Exchange",
+        "exchangeDescName": "SSE",
+        "country": "China",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Shenzhen Stock Exchange",
+        "exchangeDescName": "SZSE",
+        "country": "China",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Singapore Exchange",
+        "exchangeDescName": "SGX",
+        "country": "Singapore",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Stuttgart Stock Exchange",
+        "exchangeDescName": "SWB",
+        "country": "Germany",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Taipei Exchange",
+        "exchangeDescName": "TPEx",
+        "country": "Taiwan",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Taiwan Stock Exchange",
+        "exchangeDescName": "TWSE",
+        "country": "Taiwan",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Tel Aviv Stock Exchange",
+        "exchangeDescName": "TASE",
+        "country": "Israel",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "The Stock Exchange of Hong Kong",
+        "exchangeDescName": "SEHK",
+        "country": "Hong Kong",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Tokyo Commodity Exchange",
+        "exchangeDescName": "TOCOM",
+        "country": "Japan",
+        "types": [
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Toronto Stock Exchange, TSX Venture Exchange",
+        "exchangeDescName": "TSX, TSXV",
+        "country": "Canada",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Tradegate Exchange",
+        "exchangeDescName": "Tradegate Exchange",
+        "country": "Germany",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Tunis Stock Exchange",
+        "exchangeDescName": "BVMT",
+        "country": "Tunisia",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Turquoise",
+        "exchangeDescName": "Turquoise",
+        "country": "United Kingdom",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Vienna Stock Exchange",
+        "exchangeDescName": "WB",
+        "country": "Austria",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Warsaw Stock Exchange",
+        "exchangeDescName": "GPW (NewConnect included)",
+        "country": "Poland",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Stocks& Indices"
+    },
+    {
+        "exchangeName": "Cboe Futures Exchange",
+        "exchangeDescName": "Cboe CFE",
+        "country": "USA",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Chicago Board of Trade",
+        "exchangeDescName": "CBOT (E-mini included)",
+        "country": "USA",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Chicago Mercantile Exchange Globex",
+        "exchangeDescName": "CME GLOBEX (E-mini included)",
+        "country": "USA",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "China Financial Futures Exchange",
+        "exchangeDescName": "CFFEX",
+        "country": "China",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Commodity Exchange",
+        "exchangeDescName": "COMEX (E-mini included)",
+        "country": "USA",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Eurex Exchange",
+        "exchangeDescName": "EUREX",
+        "country": "European Union",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Euronext Commodity",
+        "exchangeDescName": "Euronext",
+        "country": "European Union",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "FairX",
+        "exchangeDescName": "FairX",
+        "country": "USA",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Hanoi Stock Exchange (Futures)",
+        "exchangeDescName": "HNX",
+        "country": "Vietnam",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Hong Kong Futures Exchange",
+        "exchangeDescName": "HKFE",
+        "country": "Hong Kong",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "ICE Futures Abu Dhabi",
+        "exchangeDescName": "ICEAD",
+        "country": "United Arab Emirates",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "ICE Futures Europe Commodities",
+        "exchangeDescName": "ICEEUR",
+        "country": "European Union",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "ICE Futures Europe Financials",
+        "exchangeDescName": "ICEEUR",
+        "country": "European Union",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "ICE Futures Singapore",
+        "exchangeDescName": "ICE Futures Singapore",
+        "country": "Singapore",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "ICE Futures U.S. Commodities - Canadian Grains",
+        "exchangeDescName": "ICE Futures U.S.",
+        "country": "USA",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "MATBA ROFEX",
+        "exchangeDescName": "ROFEX",
+        "country": "Argentina",
+        "types": [
+            "FUTURES",
+            "ROFEX 20"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Metropolitan Stock Exchange",
+        "exchangeDescName": "MSE",
+        "country": "India",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Montreal Exchange",
+        "exchangeDescName": "TMX",
+        "country": "Canada",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "New York Mercantile Exchange",
+        "exchangeDescName": "NYMEX (E-mini included)",
+        "country": "USA",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Options Price Reporting Authority",
+        "exchangeDescName": "OPRA",
+        "country": "USA",
+        "types": [
+            "OPTIONS"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Osaka Exchange",
+        "exchangeDescName": "OSE",
+        "country": "Japan",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Osaka Exchange JGB Futures",
+        "exchangeDescName": "OSE JGB",
+        "country": "Japan",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Taiwan Futures Exchange",
+        "exchangeDescName": "TAIFEX",
+        "country": "Taiwan",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Thailand Futures Exchange",
+        "exchangeDescName": "TFEX",
+        "country": "Thailand",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Tokyo Financial Exchange",
+        "exchangeDescName": "TFX",
+        "country": "Japan",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "Zhengzhou Commodity Exchange",
+        "exchangeDescName": "ZCE",
+        "country": "China",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Futures"
+    },
+    {
+        "exchangeName": "ActivTrades",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "BlackBull Markets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Capital.com",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "CFI",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "City Index",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "easyMarkets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Eightcap",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Errante",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "EsaFX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "FOREX.com",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "FP Markets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Fusion Markets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "FXCM",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "FXOpen",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "GBE brokers",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "GO Markets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "IC Markets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "ICE Data Services",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "IG",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "JFX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Markets.com",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "OANDA",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "OPRA",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Pepperstone",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Phillip Nova",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Saxo",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "SKILLING",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Spreadex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "tastyfx",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "ThinkMarkets",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Trade Nation",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Tradu",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Vantage",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "Velocity Trade",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "WH SelfInvest",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CURRENCY"
+        ],
+        "tab": "Forex"
+    },
+    {
+        "exchangeName": "BaseSwap (Base)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BCHAIN (Nasdaq Data Link)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Binance",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Binance.US",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BingX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Biswap v2 (BNB chain)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitazza",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitfinex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "bitFlyer",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitget",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bithumb",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitkub",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BitMart",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BitMEX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitrue",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitso",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitstamp",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bittrex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bitvavo",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BloFin",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Brave New Coin",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "BTSE",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Bybit",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Camelot v2 (Arbitrum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Camelot v3 (Arbitrum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Coin Metrics",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "FUNDAMENTAL"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Coinbase",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "CoinEx",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Crypto.com",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Curve (Ethereum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "DeDust.io (TON)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Defi Llama",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "FUNDAMENTAL"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Delta Exchange",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Delta Exchange India",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Deribit",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Gate.io",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Gemini",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Glassnode",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "FUNDAMENTAL"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Honeyswap v2 (Gnosis)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "HTX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "FUTURES",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "IntoTheBlock",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "FUNDAMENTAL"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Katana (Ronin)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "KCEX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Kraken",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "KuCoin",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "LunarCrush",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "FUNDAMENTAL"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "MEXC",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "MM Finance (Cronos)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Okcoin",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "OKX",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP",
+            "FUTURES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Orca (Solana)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Osmosis",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "PancakeSwap v2 (BNB chain)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "PancakeSwap v3 (BNB chain, Ethereum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Pangolin v2 (Avalanche)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Phemex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Pionex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Poloniex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Pulsex (Pulsechain)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Pyth",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "QuickSwap v2 (Polygon)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "QuickSwap v3 (Polygon, Polygon zkEVM)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Raydium (Solana)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "SpookySwap v2 (Fantom)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "STON.fi (TON)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "SushiSwap v2 (Polygon, Ethereum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Thruster v3 (Blast)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Tokenize",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Trader Joe v2 (Avalanche)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Uniswap v2 (Ethereum)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Uniswap v3 (Ethereum, Polygon, Arbitrum, Optimism, BNB chain, Base, Avalanche)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "UpBit",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Velodrome (Optimism)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Volmex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "INDICES"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "VVS Finance (Cronos)",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Webull Pay",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "WhiteBIT",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "WOO X",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "xExchange",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SPOT"
+        ],
+        "tab": "Crypto"
+    },
+    {
+        "exchangeName": "Zoomex",
+        "exchangeDescName": "",
+        "country": "",
+        "types": [
+            "CRYPTOCURRENCY",
+            "SWAP"
+        ],
+        "tab": "Crypto"
+    }
+]

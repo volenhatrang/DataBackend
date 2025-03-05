@@ -1,0 +1,10 @@
+*.log    # Bỏ qua tất cả file có đuôi .log
+*.tmp    # Bỏ qua tất cả file có đuôi .tmp
+
+# Python
+__pycache__/
+*.py[cod]
+
+# ignore ALL files in ANY directory named temp
+temp/
+Airflow-docker/logs/

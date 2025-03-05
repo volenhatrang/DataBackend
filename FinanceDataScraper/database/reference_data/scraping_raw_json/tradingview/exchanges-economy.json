@@ -1,0 +1,812 @@
+[
+    {
+        "exchangeName": "Agency of Statistics",
+        "exchangeDescName": "",
+        "country": "Kosovo",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "AKAMAI",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Bank for International Settlements",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Bank of Central African States (BEAC)",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Bureau of Economics Analysis",
+        "exchangeDescName": "",
+        "country": "USA",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Bureau of Labour Statistics",
+        "exchangeDescName": "",
+        "country": "USA",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Bureau of National Statistics",
+        "exchangeDescName": "",
+        "country": "Kazakhstan",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Bureau of Statistics",
+        "exchangeDescName": "",
+        "country": "Australia",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Census and Statistics Department",
+        "exchangeDescName": "",
+        "country": "Hong Kong, China",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Census Bureau",
+        "exchangeDescName": "",
+        "country": "USA",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Central Bank",
+        "exchangeDescName": "",
+        "country": "Sri Lanka",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Central Bank of West African States (BCEAO)",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Central Bureau of Statistics",
+        "exchangeDescName": "",
+        "country": "Israel",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Central Reserve Bank",
+        "exchangeDescName": "",
+        "country": "El Salvador",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Central Statistical Bureau",
+        "exchangeDescName": "",
+        "country": "Latvia",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Central Statistical Office",
+        "exchangeDescName": "",
+        "country": "Hungary",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Central Statistical Office (GUS)",
+        "exchangeDescName": "",
+        "country": "Poland",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Central Statistics Office",
+        "exchangeDescName": "",
+        "country": "Ireland",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Danmarks Statistik",
+        "exchangeDescName": "",
+        "country": "Denmark",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Department of Statistics",
+        "exchangeDescName": "",
+        "country": "Singapore",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Directorate-General of Budget, Accounting and Statistics",
+        "exchangeDescName": "",
+        "country": "Taiwan, China",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "European Central Bank",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "European Commission",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "EUROSTAT",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Federal Reserve",
+        "exchangeDescName": "",
+        "country": "USA",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Federal State Statistics Service",
+        "exchangeDescName": "",
+        "country": "Russia",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Federal Statistical Office",
+        "exchangeDescName": "",
+        "country": "Germany",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "General Statistics Office",
+        "exchangeDescName": "",
+        "country": "Vietnam",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "ICE",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "INEGI - Instituto Nacional de Estadistica, Geografia e Informatica",
+        "exchangeDescName": "",
+        "country": "Mexico",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "INSEE",
+        "exchangeDescName": "",
+        "country": "France",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Institute for Economics and Peace",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Institute of Geography and Statistics (IBGE)",
+        "exchangeDescName": "",
+        "country": "Brazil",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Institute of Statistics (INSTAT)",
+        "exchangeDescName": "",
+        "country": "Albania",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Instituto Nacional de Estadística y Censos (INDEC)",
+        "exchangeDescName": "",
+        "country": "Argentina",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Institutul National de Statistica",
+        "exchangeDescName": "",
+        "country": "Romania",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "International Labour Organization (ILO)",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "International Monetary Fund (IMF)",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Lithuanian Department of Statistics",
+        "exchangeDescName": "",
+        "country": "Lithuania",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Ministry of Development, Planning and Statistics",
+        "exchangeDescName": "",
+        "country": "Qatar",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Monetary Authority",
+        "exchangeDescName": "",
+        "country": "Maldives",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "National Administrative Department of Statistics (DANE)",
+        "exchangeDescName": "",
+        "country": "Colombia",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "National Bank",
+        "exchangeDescName": "",
+        "country": "Belgium",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "National Bureau of Statistics",
+        "exchangeDescName": "",
+        "country": "Mainland China",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "National Institute of Statistics",
+        "exchangeDescName": "",
+        "country": "Tunisia",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "National Institute of Statistics (ISTAT)",
+        "exchangeDescName": "",
+        "country": "Italy",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "National Institute of Statistics (NISR)",
+        "exchangeDescName": "",
+        "country": "Rwanda",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "National Statistical Institute",
+        "exchangeDescName": "",
+        "country": "Bulgaria",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "National Statistical Service",
+        "exchangeDescName": "",
+        "country": "Greece",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "National Statistics Institute (INE)",
+        "exchangeDescName": "",
+        "country": "Portugal",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "National Statistics Office",
+        "exchangeDescName": "",
+        "country": "Georgia",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Office for National Statistics",
+        "exchangeDescName": "",
+        "country": "United Kingdom",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Organisation for Economic Co-operation and Development",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "State Bank",
+        "exchangeDescName": "",
+        "country": "Pakistan",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "State Statistical Committee",
+        "exchangeDescName": "",
+        "country": "Azerbaijan",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "State Statistics Service",
+        "exchangeDescName": "",
+        "country": "Ukraine",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistical Institute",
+        "exchangeDescName": "",
+        "country": "Turkey",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistical Office",
+        "exchangeDescName": "",
+        "country": "Slovakia",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistical Office (CSU)",
+        "exchangeDescName": "",
+        "country": "Czechia",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistical Service",
+        "exchangeDescName": "",
+        "country": "Cyprus",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics and Census Service",
+        "exchangeDescName": "",
+        "country": "Macau, China",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics Austria",
+        "exchangeDescName": "",
+        "country": "Austria",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics Authority",
+        "exchangeDescName": "",
+        "country": "Philippines",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics Canada",
+        "exchangeDescName": "",
+        "country": "Canada",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics Estonia",
+        "exchangeDescName": "",
+        "country": "Estonia",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics Finland",
+        "exchangeDescName": "",
+        "country": "Finland",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics Iceland",
+        "exchangeDescName": "",
+        "country": "Iceland",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics Indonesia",
+        "exchangeDescName": "",
+        "country": "Indonesia",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics Netherlands",
+        "exchangeDescName": "",
+        "country": "Netherlands",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics Norway",
+        "exchangeDescName": "",
+        "country": "Norway",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics South Africa",
+        "exchangeDescName": "",
+        "country": "South Africa",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Statistics Sweden",
+        "exchangeDescName": "",
+        "country": "Sweden",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Stats NZ",
+        "exchangeDescName": "",
+        "country": "New Zealand",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Stockholm International Peace Research Institute",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "Transparency International",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "U.S. Energy Information Administration",
+        "exchangeDescName": "",
+        "country": "USA",
+        "is_world": false,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "WageIndicator Foundation",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "World Bank",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "World Economic Forum",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "World Gold Council",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    },
+    {
+        "exchangeName": "World Steel Association",
+        "exchangeDescName": "",
+        "country": "World",
+        "is_world": true,
+        "types": [
+            "ECONOMY"
+        ],
+        "tab": "Economy"
+    }
+]

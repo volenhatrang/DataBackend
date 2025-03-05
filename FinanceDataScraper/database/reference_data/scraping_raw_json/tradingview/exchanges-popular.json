@@ -1,0 +1,120 @@
+[
+    {
+        "exchangeName": "US Stock Markets bundle",
+        "exchangeDescName": "NYSE, NASDAQ, NYSE Arca, NASDAQ GIDS, OTC",
+        "country": "USA",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "NASDAQ Stock Market",
+        "exchangeDescName": "NASDAQ",
+        "country": "USA",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "NASDAQ Global Index Data Service",
+        "exchangeDescName": "NASDAQ (GIDS)",
+        "country": "USA",
+        "types": [
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "New York Stock Exchange",
+        "exchangeDescName": "NYSE",
+        "country": "USA",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "NYSE Arca",
+        "exchangeDescName": "Arca",
+        "country": "USA",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "OTC Markets",
+        "exchangeDescName": "OTC",
+        "country": "USA",
+        "types": [
+            "STOCKS"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "CME Group (E-mini included)",
+        "exchangeDescName": "CME, CBOT, COMEX, NYMEX",
+        "country": "USA",
+        "types": [
+            "FUTURES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "National Stock Exchange of India",
+        "exchangeDescName": "NSE",
+        "country": "India",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "Bursa Malaysia Berhad",
+        "exchangeDescName": "MYX",
+        "country": "Malaysia",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "Stock Exchange of Thailand",
+        "exchangeDescName": "SET",
+        "country": "Thailand",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "Tokyo Stock Exchange",
+        "exchangeDescName": "TSE (TOPIX, Fukuoka Stock Exchange, Sapporo Securities Exchange included)",
+        "country": "Japan",
+        "types": [
+            "STOCKS",
+            "INDICES"
+        ],
+        "tab": "Popular"
+    },
+    {
+        "exchangeName": "Borsa Istanbul (without volume data)",
+        "exchangeDescName": "BIST Mixed",
+        "country": "Turkey",
+        "types": [
+            "STOCKS",
+            "FUTURES",
+            "BIST 100",
+            "BIST 30"
+        ],
+        "tab": "Popular"
+    }
+]

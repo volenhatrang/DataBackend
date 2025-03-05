@@ -1,0 +1,4 @@
+# FinanceDataProject/FinanceDataScraper/requirements.txt
+selenium
+webdriver-manager
+cassandra-driver
