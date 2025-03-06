@@ -8,6 +8,7 @@ import json
 import time
 import os
 import datetime
+import pytz
 
 def exchanges_scraper():
     options = webdriver.ChromeOptions()
@@ -23,7 +24,11 @@ def exchanges_scraper():
     URL = "https://www.tradingview.com/data-coverage/"
     driver.get(URL)
 
-    tradingview_path = "/opt/airflow/data"
+    # timezone 
+    utc_plus_7 = pytz.timezone("Asia/Bangkok")
+
+    # tradingview_path = "/data"
+    tradingview_path = "/opt/airflow/FinanaceDataScraper/database/reference_data/scraping_raw_json/tradingview"
     os.makedirs(tradingview_path, exist_ok=True)
 
     tabs = ["Popular", "Stocks& Indices", "Futures", "Forex", "Crypto"]
@@ -99,7 +104,7 @@ def exchanges_scraper():
         driver.quit()
         return "Error: No exchange data scraped to save!"
 
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.datetime.now(utc_plus_7).strftime("%Y%m%d_%H%M%S")
     filename = f"{tradingview_path}/exchanges_{timestamp}.json"
     json_output = json.dumps(exchange_data, indent=4, ensure_ascii=False)
     with open(filename, "w", encoding="utf-8") as f:
