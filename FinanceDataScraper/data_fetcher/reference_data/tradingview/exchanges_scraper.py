@@ -9,7 +9,7 @@ import time
 import os
 import datetime
 
-def exchanges_scraper():
+def exchanges_scraper(tradingview_path = "/opt/airflow/FinanaceDataScraper/database/reference_data/scraping_raw_json/tradingview"):
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
@@ -23,7 +23,6 @@ def exchanges_scraper():
     URL = "https://www.tradingview.com/data-coverage/"
     driver.get(URL)
 
-    tradingview_path = "/opt/airflow/data"
     os.makedirs(tradingview_path, exist_ok=True)
 
     tabs = ["Popular", "Stocks& Indices", "Futures", "Forex", "Crypto"]
