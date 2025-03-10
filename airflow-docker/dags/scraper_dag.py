@@ -3,14 +3,16 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 import sys
 import os
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
 
 # Add the path to sys.path for imports
-sys.path.append('/opt/airflow/FinanceDataScraper/data_fetcher/reference_data/tradingview')
+# sys.path.append('/opt/airflow/FinanceDataScraper/data_fetcher/reference_data/tradingview')
 
-# Import your scraping function
-from exchanges_scraper import exchanges_scraper
+sys.path.append(os.getenv('FINANCE_SCRIPT_TRADINGVIEW_SCRAPER_PATH'))
+from data_coverage_scraper  import countries_scraper, crawler_data_coverage
 
-# Default arguments for the DAG
 default_args = {
     "owner": "airflow",
     "depends_on_past": False,
@@ -19,21 +21,24 @@ default_args = {
     "retry_delay": timedelta(minutes=5),
 }
 
-# Wrapper function to pass arguments to exchanges_scraper
-def scrape_task_callable():
-    tradingview_path = "/opt/airflow/FinanceDataScraper/database/reference_data/scraping_raw_json/tradingview"
-    exchanges_scraper(tradingview_path=tradingview_path)
+def countries_tradingview_task_callable():
+    countries_scraper(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH'))
 
-# Define the DAG
+def exchanges_tradingview_task_callable():
+    crawler_data_coverage(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH'))
+
 with DAG(
     "web_scraping_dag",
     default_args=default_args,
-    schedule_interval=None,  # Set to None for manual execution
+    schedule_interval=None,
     catchup=False
 ) as dag:
-    
-    # Define the scraping task
-    scrape_task = PythonOperator(
-        task_id="scrape_task",
-        python_callable=scrape_task_callable  # Pass the wrapper function
+    countries_task = PythonOperator(
+        task_id="countries_task", 
+        python_callable=countries_tradingview_task_callable
     )
+    exchanges_task = PythonOperator(
+        task_id="exchanges_task",
+        python_callable=exchanges_tradingview_task_callable 
+    )
+countries_task >> exchanges_task

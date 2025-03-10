@@ -1,4 +1,3 @@
-
 # Python
 __pycache__/
 *.py[cod]
@@ -13,3 +12,7 @@ logs/*
 
 # Ignore .log files
 *.log
+
+# Ignore all the json files in /database/reference_data/scraping_raw_json/tradingview/
+FinanceDataScraper/database/reference_data/scraping_raw_json/tradingview/*
+
