@@ -2,17 +2,15 @@
 __pycache__/
 *.py[cod]
 
-# ignore ALL files in ANY directory named temp
+
+# Ignore all files in any directory named temp
 temp/
-# Ignore all files in logs/
+
+# Ignore all files in logs/ but keep the directory itself
 logs/*
 
-# Allow the logs/ directory itself
-!logs/
-
-# Ignore .log files
+# Ignore .log files globally
 *.log
 
-# Ignore all the json files in /database/reference_data/scraping_raw_json/tradingview/
+# Ignore all JSON files in /database/reference_data/scraping_raw_json/tradingview/
 FinanceDataScraper/database/reference_data/scraping_raw_json/tradingview/*
-
