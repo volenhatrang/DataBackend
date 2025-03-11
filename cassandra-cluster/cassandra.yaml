@@ -1,0 +1,18 @@
+cluster_name: 'FinanceDataCluster'
+
+# Cấu hình seed node (các node khác sẽ kết nối vào seed để gia nhập cluster)
+seed_provider:
+  - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+    parameters:
+      - seeds: "cassandra-seed:9042"
+
+listen_address: 0.0.0.0
+rpc_address: 0.0.0.0
+
+start_rpc: true
+endpoint_snitch: SimpleSnitch
+
+data_file_directories:
+  - /var/lib/cassandra/data
+commitlog_directory: /var/lib/cassandra/commitlog
+saved_caches_directory: /var/lib/cassandra/saved_caches

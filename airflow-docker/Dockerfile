@@ -27,6 +27,9 @@ RUN chmod +x /usr/bin/google-chrome || echo "Permission change failed for /usr/b
 
 USER airflow
 
+COPY ../scraper app/scraper
+RUN pip install --no-cache-dir -r app/scraper
+
 RUN pip install --no-cache-dir selenium webdriver-manager apache-airflow
 
 CMD ["google-chrome", "--version"]

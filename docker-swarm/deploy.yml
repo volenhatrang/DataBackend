@@ -1,0 +1,58 @@
+version: "3.8"
+services:
+  # Airflow service
+  airflow:
+    image: airflow-custom:latest
+    deploy:
+      replicas: 1
+    volumes:
+      - airflow-dags:/opt/airflow/dags
+      - airflow-logs:/opt/airflow/logs
+    environment:
+      - CASSANDRA_HOST=cassandra-seed
+      - CASSANDRA_PORT=9042
+    networks:
+      - app-network
+
+  # Cassandra seed node
+  cassandra-seed:
+    image: cassandra-custom:latest
+    build:
+      context: ../cassandra-cluster
+      dockerfile: Dockerfile
+    deploy:
+      replicas: 1
+    environment:
+      - CASSANDRA_SEED=true
+    ports:
+      - "9042:9042"  
+      - "7000:7000"  
+    volumes:
+      - cassandra-seed-data:/var/lib/cassandra
+    networks:
+      - app-network
+
+  # Các node Cassandra khác
+  cassandra-node:
+    image: cassandra-custom:latest
+    build:
+      context: ../cassandra-cluster
+      dockerfile: Dockerfile
+    deploy:
+      replicas: 2 
+    environment:
+      - CASSANDRA_SEED=false
+    volumes:
+      - cassandra-node-data:/var/lib/cassandra
+    networks:
+      - app-network
+
+volumes:
+  airflow-dags:
+  airflow-logs:
+  cassandra-seed-data:
+  cassandra-node-data:
+
+networks:
+  app-network:
+    driver: overlay
