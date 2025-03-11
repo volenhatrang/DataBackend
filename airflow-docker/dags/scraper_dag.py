@@ -10,8 +10,10 @@ load_dotenv(override=True)
 # Add the path to sys.path for imports
 # sys.path.append('/opt/airflow/FinanceDataScraper/data_fetcher/reference_data/tradingview')
 
-sys.path.append(os.getenv('FINANCE_SCRIPT_TRADINGVIEW_SCRAPER_PATH'))
-from data_coverage_scraper  import countries_scraper, crawler_data_coverage
+# sys.path.append(os.getenv('FINANCE_SCRIPT_TRADINGVIEW_SCRAPER_PATH'))
+# from data_coverage_scraper  import countries_scraper, crawler_data_coverage
+
+from finance_data_scraper.data_fetcher.reference_data.tradingview.data_coverage_scraper import countries_scraper, crawler_data_coverage
 
 default_args = {
     "owner": "airflow",
