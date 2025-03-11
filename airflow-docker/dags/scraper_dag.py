@@ -4,16 +4,14 @@ from datetime import datetime, timedelta
 import sys
 import os
 from dotenv import load_dotenv
+import json
+import glob
 
 load_dotenv(override=True)
 
-# Add the path to sys.path for imports
-# sys.path.append('/opt/airflow/FinanceDataScraper/data_fetcher/reference_data/tradingview')
-
-# sys.path.append(os.getenv('FINANCE_SCRIPT_TRADINGVIEW_SCRAPER_PATH'))
-# from data_coverage_scraper  import countries_scraper, crawler_data_coverage
-
-from finance_data_scraper.data_fetcher.reference_data.tradingview.data_coverage_scraper import countries_scraper, crawler_data_coverage
+sys.path.append(os.getenv('FINANCE_SCRIPT_ROOT_PATH', '/app/scraper/src'))
+from fetchers.tradingview.data_coverage_scraper import countries_scraper, crawler_data_coverage
+from database.reference_data.cassandra_client import CassandraClient
 
 default_args = {
     "owner": "airflow",
@@ -24,10 +22,28 @@ default_args = {
 }
 
 def countries_tradingview_task_callable():
-    countries_scraper(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH'))
+    return countries_scraper(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview'))
 
 def exchanges_tradingview_task_callable():
-    crawler_data_coverage(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH'))
+    return crawler_data_coverage(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview'))
+
+def load_to_cassandra_task_callable():
+    client = CassandraClient()
+    client.connect()
+    path = os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview')
+    for json_file in glob.glob(f"{path}/*.json"):
+        with open(json_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            if 'countries' in data[0]:  
+                for region_data in data:
+                    region = region_data['region']
+                    for country in region_data['countries']:
+                        client.insert_country(region, country)
+            else: 
+                for exchange in data:
+                    client.insert_exchange(exchange)
+    client.close()
+    return "Data loaded to Cassandra successfully!"
 
 with DAG(
     "web_scraping_dag",
@@ -36,11 +52,15 @@ with DAG(
     catchup=False
 ) as dag:
     countries_task = PythonOperator(
-        task_id="countries_task", 
+        task_id="countries_task",
         python_callable=countries_tradingview_task_callable
     )
     exchanges_task = PythonOperator(
         task_id="exchanges_task",
-        python_callable=exchanges_tradingview_task_callable 
+        python_callable=exchanges_tradingview_task_callable
     )
-countries_task >> exchanges_task
+    load_to_cassandra_task = PythonOperator(
+        task_id="load_to_cassandra",
+        python_callable=load_to_cassandra_task_callable
+    )
+    countries_task >> exchanges_task >> load_to_cassandra_task
