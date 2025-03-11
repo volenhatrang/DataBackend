@@ -1,10 +1,10 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='finance_data_scraper',
     version='0.1.0',
-    packages=find_packages(where='scraper'),
-    package_dir={'': 'src'},
+    packages=find_packages(where='src'), 
+    package_dir={'': 'src'}, 
     install_requires=[
         'beautifulsoup4==4.9.3',
         'selenium',
@@ -18,6 +18,8 @@ setup(
         'scikit-learn',
         'tensorflow',
         'keras',
-        'pytorch',
+        'torch',
         'torchvision',
-        'fastai'])
+        'fastai'
+    ]
+)

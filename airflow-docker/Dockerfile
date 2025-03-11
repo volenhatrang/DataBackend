@@ -26,13 +26,19 @@ RUN google-chrome --version || echo "Google Chrome installation failed"
 
 RUN chmod +x /usr/bin/google-chrome || echo "Permission change failed for /usr/bin/google-chrome"
 
+
+USER airflow
+
 RUN pip install --no-cache-dir \
     selenium \
     webdriver-manager
 
 COPY scraper /app/scraper
-RUN pip install --no-cache-dir /app/scraper
+WORKDIR /app/scraper
 
-USER airflow
+RUN if [ -f "setup.py" ]; then pip install --no-cache-dir . ; fi
+
+# Nếu `scraper` có file requirements.txt
+RUN if [ -f "requirements.txt" ]; then pip install --no-cache-dir -r requirements.txt ; fi
 
 CMD ["/bin/bash", "-c", "Xvfb :99 -screen 0 1920x1080x24 & export DISPLAY=:99 && python -c 'from selenium import webdriver; print(webdriver.Chrome().capabilities)'"]
