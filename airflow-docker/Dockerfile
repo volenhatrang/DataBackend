@@ -1,4 +1,3 @@
-
 FROM apache/airflow:2.10.5
 
 USER root
@@ -23,22 +22,21 @@ RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd6
     && rm google-chrome-stable_current_amd64.deb
 
 RUN google-chrome --version || echo "Google Chrome installation failed"
-
 RUN chmod +x /usr/bin/google-chrome || echo "Permission change failed for /usr/bin/google-chrome"
 
-
 USER airflow
-
 RUN pip install --no-cache-dir \
     selenium \
     webdriver-manager
 
-COPY scraper /app/scraper
+USER root
+# Tạo thư mục trước để đảm bảo nó tồn tại, sau đó copy và cấp quyền
+RUN mkdir -p /app/scraper
+COPY ./scraper /app/scraper
+RUN chown -R airflow:airflow /app/scraper && chmod -R 777 /app/scraper || { echo "Failed to set permissions"; exit 1; }
+
+USER airflow
 WORKDIR /app/scraper
-
-RUN if [ -f "setup.py" ]; then pip install --no-cache-dir . ; fi
-
-# Nếu `scraper` có file requirements.txt
-RUN if [ -f "requirements.txt" ]; then pip install --no-cache-dir -r requirements.txt ; fi
+RUN pip install -e .
 
 CMD ["/bin/bash", "-c", "Xvfb :99 -screen 0 1920x1080x24 & export DISPLAY=:99 && python -c 'from selenium import webdriver; print(webdriver.Chrome().capabilities)'"]
