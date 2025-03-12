@@ -1,6 +1,7 @@
+version: '3.8'
+
 x-airflow-common: &airflow-common
-    # image: my_airflow_5
-    build : .
+    build: .
     environment: &airflow-common-env
         AIRFLOW__CORE__EXECUTOR: CeleryExecutor
         AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
@@ -14,23 +15,23 @@ x-airflow-common: &airflow-common
         _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
         FINANCE_SCRIPT_ROOT_PATH: ${FINANCE_SCRIPT_ROOT_PATH}
         FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH: ${FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH}
-        CASSANDRA_HOST: ${CASSANDRA_HOST:-cassandra}  
-        CASSANDRA_PORT: ${CASSANDRA_PORT:-9042}      
-        CASSANDRA_KEYSPACE: ${CASSANDRA_KEYSPACE:-finance_tradingview_data}
+        CASSANDRA_HOST: ${CASSANDRA_HOST}
+        CASSANDRA_PORT: ${CASSANDRA_PORT}
+        CASSANDRA_KEYSPACE: ${CASSANDRA_KEYSPACE}
     volumes:
         - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
         - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
         - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
         - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
         - ${AIRFLOW_PROJ_DIR:-.}/../scraper:/app/scraper
-        - tradingview_data:/app/tradingview_data
+        - tradingview_data:/data/tradingview_data
     user: "${AIRFLOW_UID:-50000}:0"
     depends_on: &airflow-common-depends-on
         redis:
             condition: service_healthy
         postgres:
             condition: service_healthy
-        cassandra:  
+        cassandra:
             condition: service_healthy
 
 services:
@@ -50,8 +51,6 @@ services:
         restart: always
 
     redis:
-        # Redis is limited to 7.2-bookworm due to licencing change
-        # https://redis.io/blog/redis-adopts-dual-source-available-licensing/
         image: redis:7.2-bookworm
         expose:
             - 6379
@@ -99,7 +98,6 @@ services:
         <<: *airflow-common
         command: celery worker
         healthcheck:
-            # yamllint disable rule:line-length
             test:
                 - "CMD-SHELL"
                 - 'celery --app airflow.providers.celery.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}" || celery --app airflow.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}"'
@@ -109,8 +107,6 @@ services:
             start_period: 30s
         environment:
             <<: *airflow-common-env
-            # Required to handle warm shutdown of the celery workers properly
-            # See https://airflow.apache.org/docs/docker-stack/entrypoint.html#signal-propagation
             DUMB_INIT_SETSID: "0"
         restart: always
         depends_on:
@@ -136,7 +132,6 @@ services:
     airflow-init:
         <<: *airflow-common
         entrypoint: /bin/bash
-        # yamllint disable rule:line-length
         command:
             - -c
             - |
@@ -185,7 +180,6 @@ services:
                 mkdir -p /sources/logs /sources/dags /sources/plugins
                 chown -R "${AIRFLOW_UID}:0" /sources/{logs,dags,plugins}
                 exec /entrypoint airflow version
-        # yamllint enable rule:line-length
         environment:
             <<: *airflow-common-env
             _AIRFLOW_DB_MIGRATE: "true"
@@ -204,15 +198,11 @@ services:
         environment:
             <<: *airflow-common-env
             CONNECTION_CHECK_MAX_COUNT: "0"
-        # Workaround for entrypoint issue. See: https://github.com/apache/airflow/issues/16252
         command:
             - bash
             - -c
             - airflow
 
-    # You can enable flower by adding "--profile flower" option e.g. docker-compose --profile flower up
-    # or by explicitly targeted on the command line e.g. docker-compose up flower.
-    # See: https://docs.docker.com/compose/profiles/
     flower:
         <<: *airflow-common
         command: celery flower
@@ -231,24 +221,19 @@ services:
             <<: *airflow-common-depends-on
             airflow-init:
                 condition: service_completed_successfully
-    
+
     cassandra:
-        image: cassandra:latest
+        image: cassandra:4.1
         ports:
             - "9042:9042"
-        environment:
-            - CASSANDRA_CLUSTER_NAME=MyCluster
-            - CASSANDRA_DC=dc1
-            - CASSANDRA_RACK=rack1
-            - JVM_OPTS=-Xms512m -Xmx2g  # Add memory limits
         volumes:
             - cassandra-data:/var/lib/cassandra
         healthcheck:
             test: ["CMD", "cqlsh", "--execute", "DESCRIBE KEYSPACES"]
             interval: 10s
             timeout: 5s
-            retries: 10
-            start_period: 60s  # Increase startup time
+            retries: 5
+            start_period: 120s
         restart: always
 
 volumes:

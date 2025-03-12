@@ -13,6 +13,7 @@ sys.path.append(os.getenv('FINANCE_SCRIPT_ROOT_PATH', '/app/scraper/src'))
 from fetchers.tradingview.data_coverage_scraper import countries_scraper, crawler_data_coverage
 from database.reference_data.cassandra_client import CassandraClient
 
+
 default_args = {
     "owner": "airflow",
     "depends_on_past": False,
@@ -22,15 +23,15 @@ default_args = {
 }
 
 def countries_tradingview_task_callable():
-    return countries_scraper(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview'))
+    return countries_scraper(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview_data'))
 
 def exchanges_tradingview_task_callable():
-    return crawler_data_coverage(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview'))
+    return crawler_data_coverage(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview_data'))
 
 def load_to_cassandra_task_callable():
     client = CassandraClient()
     client.connect()
-    path = os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview')
+    path = os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview_data')
     for json_file in glob.glob(f"{path}/*.json"):
         with open(json_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
