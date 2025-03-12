@@ -29,14 +29,4 @@ RUN pip install --no-cache-dir \
     selenium \
     webdriver-manager
 
-USER root
-# Tạo thư mục trước để đảm bảo nó tồn tại, sau đó copy và cấp quyền
-RUN mkdir -p /app/scraper
-COPY ./scraper /app/scraper
-RUN chown -R airflow:airflow /app/scraper && chmod -R 777 /app/scraper || { echo "Failed to set permissions"; exit 1; }
-
-USER airflow
-WORKDIR /app/scraper
-RUN pip install -e .
-
 CMD ["/bin/bash", "-c", "Xvfb :99 -screen 0 1920x1080x24 & export DISPLAY=:99 && python -c 'from selenium import webdriver; print(webdriver.Chrome().capabilities)'"]

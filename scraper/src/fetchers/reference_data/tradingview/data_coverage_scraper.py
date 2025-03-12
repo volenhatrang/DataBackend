@@ -116,16 +116,14 @@ def scrape_tab(driver, tab_id, selector, is_economy=False):
     exchange_data = []
 
     try:
-        # Click the tab
         tab_button = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, f"//button[@id='{tab_id}']"))
         )
         driver.execute_script("arguments[0].scrollIntoView(true);", tab_button)
-        time.sleep(1)  # Wait for scroll
+        time.sleep(1)  
         driver.execute_script("arguments[0].click();", tab_button)
-        time.sleep(1)  # Wait for tab content to load
+        time.sleep(1)  
 
-        # Click "Show more" if available
         try:
             button = WebDriverWait(driver, 5).until(
                 EC.element_to_be_clickable((By.CLASS_NAME, "showLaptop-qJcpoITA"))
@@ -135,7 +133,6 @@ def scrape_tab(driver, tab_id, selector, is_economy=False):
         except:
             print(f"No 'Show more' button found for tab {tab_id}")
 
-        # Find exchange elements
         exchange_elements = driver.find_elements(By.CSS_SELECTOR, selector)
         print(f"Found {len(exchange_elements)} elements in {tab_id}")
 
@@ -216,8 +213,6 @@ def crawler_data_coverage(tradingview_path = "/opt/airflow/FinanaceDataScraper/d
     URL = "https://www.tradingview.com/data-coverage/"
     print(f"Navigating to {URL}")
     driver.get(URL)
-
-    # Define tab configurations
     tab_configs = [
         {"id": "Popular", "selector": "#tab-region-Popular tbody tr", "filename": "exchanges-popular"},
         {"id": "Stocks& Indices", "selector": ".rowWrap-qJcpoITA", "filename": "exchanges-stocks-indices"},
