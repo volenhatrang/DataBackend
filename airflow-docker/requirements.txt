@@ -4,4 +4,5 @@ psycopg2-binary
 apache-airflow[cassandra,celery,postgres,redis]
 selenium
 webdriver-manager
+cassandra-driver
 # 

@@ -12,5 +12,9 @@ logs/*
 # Ignore .log files globally
 *.log
 
+
+# Ignore .log files globally
+*.log
+
 # Ignore all JSON files in /database/reference_data/scraping_raw_json/tradingview/
-FinanceDataScraper/database/reference_data/scraping_raw_json/tradingview/*
+scraper/database/reference_data/scraping_raw_json/tradingview/*

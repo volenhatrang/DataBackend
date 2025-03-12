@@ -21,7 +21,7 @@ def setup_driver():
     service = Service(ChromeDriverManager().install())
     return webdriver.Chrome(service=service, options=options)
 
-def countries_scraper(tradingview_path="/opt/airflow/FinanceDataScraper/database/reference_data/scraping_raw_json/tradingview"):
+def countries_scraper(tradingview_path="/data/tradingview_data"):
 
     driver = setup_driver()
     URL = "https://www.tradingview.com/data-coverage/"
@@ -206,7 +206,7 @@ def save_to_json(data, filepath):
     print(f"Saved data to {filepath}")
     return True
 
-def crawler_data_coverage(tradingview_path = "/opt/airflow/FinanaceDataScraper/database/reference_data/scraping_raw_json/tradingview" ):
+def crawler_data_coverage(tradingview_path = "/data/tradingview_data" ):
     """Main function to crawl data coverage from TradingView."""
 
     driver = setup_driver()
@@ -234,7 +234,7 @@ def crawler_data_coverage(tradingview_path = "/opt/airflow/FinanaceDataScraper/d
     print("Crawling completed successfully!")
 
 
-def countries_scraper(tradingview_path="/opt/airflow/FinanceDataScraper/database/reference_data/scraping_raw_json/tradingview"):
+def countries_scraper(tradingview_path="/data/tradingview_data"):
 
     driver = setup_driver()
     URL = "https://www.tradingview.com/data-coverage/"
@@ -325,6 +325,6 @@ def countries_scraper(tradingview_path="/opt/airflow/FinanceDataScraper/database
 
 if __name__ == "__main__":
     try:
-        crawler_data_coverage(tradingview_path = "/opt/airflow/FinanaceDataScraper/database/reference_data/scraping_raw_json/tradingview")
+        crawler_data_coverage(tradingview_path = "/data/tradingview_data")
     except Exception as e:
         print(f"Failed to complete crawling: {str(e)}")

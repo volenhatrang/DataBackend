@@ -25,6 +25,8 @@ RUN google-chrome --version || echo "Google Chrome installation failed"
 RUN chmod +x /usr/bin/google-chrome || echo "Permission change failed for /usr/bin/google-chrome"
 
 USER airflow
+COPY requirements.txt /requirements.txt
+RUN pip install --no-cache-dir -r /requirements.txt
 RUN pip install --no-cache-dir \
     selenium \
     webdriver-manager

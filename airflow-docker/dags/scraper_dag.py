@@ -2,17 +2,17 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 import sys
-import os
 from dotenv import load_dotenv
 import json
 import glob
 
 load_dotenv(override=True)
 
-sys.path.append(os.getenv('FINANCE_SCRIPT_ROOT_PATH', '/app/scraper/src'))
-from fetchers.tradingview.data_coverage_scraper import countries_scraper, crawler_data_coverage
-from database.reference_data.cassandra_client import CassandraClient
+sys.path.append('/app/scraper/src/fetchers/reference_data/tradingview')
+from data_coverage_scraper import countries_scraper, crawler_data_coverage 
 
+sys.path.append('/app/scraper/src/database/reference_data')
+from cassandra_client import CassandraClient
 
 default_args = {
     "owner": "airflow",
@@ -23,15 +23,15 @@ default_args = {
 }
 
 def countries_tradingview_task_callable():
-    return countries_scraper(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview_data'))
+    return countries_scraper(tradingview_path='/data/tradingview_data')
 
 def exchanges_tradingview_task_callable():
-    return crawler_data_coverage(tradingview_path=os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview_data'))
+    return crawler_data_coverage(tradingview_path='/data/tradingview_data')
 
 def load_to_cassandra_task_callable():
     client = CassandraClient()
     client.connect()
-    path = os.getenv('FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH', '/data/tradingview_data')
+    path = '/data/tradingview_data'
     for json_file in glob.glob(f"{path}/*.json"):
         with open(json_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -39,10 +39,17 @@ def load_to_cassandra_task_callable():
                 for region_data in data:
                     region = region_data['region']
                     for country in region_data['countries']:
-                        client.insert_country(region, country)
+                        client.insert_countries({'region': region, 'country': country, 'data_market': '', 'country_flag': ''})  
             else: 
                 for exchange in data:
-                    client.insert_exchange(exchange)
+                    exchange_data = {
+                        'exchange_name': exchange.get('exchange_name', ''),
+                        'exchange_desc_name': exchange.get('exchange_desc_name', ''),
+                        'country': exchange.get('country', ''),
+                        'types': exchange.get('types', []),
+                        'tab': exchange.get('tab', '')
+                    }
+                    client.insert_exchanges(exchange_data)  
     client.close()
     return "Data loaded to Cassandra successfully!"
 

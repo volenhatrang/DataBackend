@@ -1,11 +1,11 @@
 from cassandra.cluster import Cluster
+from cassandra.policies import DCAwareRoundRobinPolicy
 import os
 import logging
 from datetime import datetime
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
 
 class CassandraClient:
     def __init__(self):
@@ -16,14 +16,18 @@ class CassandraClient:
 
     def connect(self):
         try:
-            cluster = Cluster([self.host], self.port)
+            cluster = Cluster(
+                [self.host],
+                port=self.port,
+                protocol_version=5,  # Explicitly set protocol version (adjust based on your Cassandra version)
+                load_balancing_policy=DCAwareRoundRobinPolicy(local_dc='datacenter1')  # Set load balancing policy
+            )
             self.session = cluster.connect()
             self.create_keyspace()
             self.session.set_keyspace(self.keyspace)
             self.create_tables()
         except Exception as e:
             logger.error(f'Error connecting to Cassandra: {e}')
-
 
     def create_keyspace(self):
         self.session.execute(
@@ -52,7 +56,6 @@ class CassandraClient:
             )"""
         )
 
-    
     def insert_exchanges(self, exchange_data):
         try:
             self.session.execute(
@@ -91,7 +94,8 @@ class CassandraClient:
         except Exception as e:
             logger.error(f"Failed to insert country data: {e}")
 
-
-    def close_connection(self):
-        self.session.cassandra.shutdown()
-        logger.info('Closing Cassandra connection')
+    def close(self):
+        if self.session:
+            self.session.cluster.shutdown()
+            logger.info('Closing Cassandra connection')
+            self.session = None
