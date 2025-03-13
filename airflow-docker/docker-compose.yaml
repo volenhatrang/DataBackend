@@ -15,7 +15,7 @@ x-airflow-common: &airflow-common
         _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
         FINANCE_SCRIPT_ROOT_PATH: ${FINANCE_SCRIPT_ROOT_PATH}
         FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH: ${FINANCE_DATA_TRADINGVIEW_SCRAPER_PATH}
-        CASSANDRA_HOST: ${CASSANDRA_HOST}
+        CASSANDRA_HOST: "cassandra"
         CASSANDRA_PORT: ${CASSANDRA_PORT}
         CASSANDRA_KEYSPACE: ${CASSANDRA_KEYSPACE}
     volumes:
@@ -231,6 +231,10 @@ services:
             - "9042:9042"
         volumes:
             - cassandra-data:/var/lib/cassandra
+        environment:
+            - CASSANDRA_HOST=${CASSANDRA_HOST}
+            - CASSANDRA_PORT=${CASSANDRA_PORT}
+            - CASSANDRA_KEYSPACE=${CASSANDRA_KEYSPACE}
         healthcheck:
             test: ["CMD", "cqlsh", "--execute", "DESCRIBE KEYSPACES"]
             interval: 10s
