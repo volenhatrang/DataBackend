@@ -5,6 +5,7 @@ import sys
 from dotenv import load_dotenv
 import json
 import glob
+import os
 
 load_dotenv(override=True)
 
@@ -32,15 +33,23 @@ def load_to_cassandra_task_callable():
     client = CassandraClient()
     client.connect()
     path = '/data/tradingview_data'
-    for json_file in glob.glob(f"{path}/*.json"):
-        with open(json_file, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            if 'countries' in data[0]:  
+    for json_file in glob.glob(f"{path}/*.json"): 
+        filename_with_ext = os.path.basename(json_file)  
+        if 'countries' in filename_with_ext.lower():
+            with open(json_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
                 for region_data in data:
                     region = region_data['region']
                     for country in region_data['countries']:
-                        client.insert_countries({'region': region, 'country': country, 'data_market': '', 'country_flag': ''})  
-            else: 
+                        client.insert_countries({
+                            'region': region,
+                            'country': country,
+                            'data_market': '',
+                            'country_flag': ''
+                        })
+        elif 'exchanges' in filename_with_ext.lower():
+            with open(json_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
                 for exchange in data:
                     exchange_data = {
                         'exchange_name': exchange.get('exchange_name', ''),
@@ -49,7 +58,7 @@ def load_to_cassandra_task_callable():
                         'types': exchange.get('types', []),
                         'tab': exchange.get('tab', '')
                     }
-                    client.insert_exchanges(exchange_data)  
+                    client.insert_exchanges(exchange_data)
     client.close()
     return "Data loaded to Cassandra successfully!"
 
