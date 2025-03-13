@@ -19,8 +19,8 @@ class CassandraClient:
             cluster = Cluster(
                 [self.host],
                 port=self.port,
-                protocol_version=5,  # Explicitly set protocol version (adjust based on your Cassandra version)
-                load_balancing_policy=DCAwareRoundRobinPolicy(local_dc='datacenter1')  # Set load balancing policy
+                protocol_version=5,  
+                load_balancing_policy=DCAwareRoundRobinPolicy(local_dc='datacenter1') 
             )
             self.session = cluster.connect()
             self.create_keyspace()
@@ -29,9 +29,24 @@ class CassandraClient:
         except Exception as e:
             logger.error(f'Error connecting to Cassandra: {e}')
 
-    def create_keyspace(self):
+    def create_keyspace(self, keyspace=None):
+        keyspace_to_create = keyspace if keyspace is not None else self.keyspace
         self.session.execute(
-            f"CREATE KEYSPACE IF NOT EXISTS {self.keyspace} WITH REPLICATION = {{'class': 'SimpleStrategy', 'replication_factor': 1}}"
+            f"CREATE KEYSPACE IF NOT EXISTS {keyspace_to_create} WITH REPLICATION = {{'class': 'SimpleStrategy', 'replication_factor': 1}}"
+        )
+
+    def create_table_data_raw(self):
+        self.session.execute(
+            f"""
+                CREATE TABLE IF NOT EXISTS web_crawl (
+                    url text,
+                    title text,
+                    content text,
+                    crawl_date timestamp,
+                    data_crawled map<text, text>, 
+                    PRIMARY KEY (url, crawl_date)
+                ) WITH CLUSTERING ORDER BY (crawl_date DESC);
+            """
         )
     
     def create_tables(self):

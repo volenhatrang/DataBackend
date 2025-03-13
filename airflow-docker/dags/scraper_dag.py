@@ -24,10 +24,10 @@ default_args = {
 }
 
 def countries_tradingview_task_callable():
-    return countries_scraper(tradingview_path='/data/tradingview_data')
+    return countries_scraper()
 
 def exchanges_tradingview_task_callable():
-    return crawler_data_coverage(tradingview_path='/data/tradingview_data')
+    return crawler_data_coverage()
 
 def load_to_cassandra_task_callable():
     client = CassandraClient()
@@ -41,19 +41,15 @@ def load_to_cassandra_task_callable():
                 for region_data in data:
                     region = region_data['region']
                     for country in region_data['countries']:
-                        client.insert_countries({
-                            'region': region,
-                            'country': country,
-                            'data_market': '',
-                            'country_flag': ''
-                        })
+                        country['region'] = region
+                        client.insert_countries(country)
         elif 'exchanges' in filename_with_ext.lower():
             with open(json_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 for exchange in data:
                     exchange_data = {
-                        'exchange_name': exchange.get('exchange_name', ''),
-                        'exchange_desc_name': exchange.get('exchange_desc_name', ''),
+                        'exchange_name': exchange.get('exchangeName', ''),
+                        'exchange_desc_name': exchange.get('exchangeDescName', ''),
                         'country': exchange.get('country', ''),
                         'types': exchange.get('types', []),
                         'tab': exchange.get('tab', '')

@@ -179,8 +179,10 @@ services:
                 fi
                 mkdir -p /sources/logs /sources/dags /sources/plugins
                 chown -R "${AIRFLOW_UID}:0" /sources/{logs,dags,plugins}
+                mkdir -p /app/scraper
+                chown -R "${AIRFLOW_UID}:0" /app/scraper
                 mkdir -p /data/tradingview_data
-                chown -R "${AIRFLOW_UID:-50000}:0" /data/tradingview_data
+                chown -R "${AIRFLOW_UID}:0" /data/tradingview_data
                 chmod -R 775 /data/tradingview_data
                 exec /entrypoint airflow version
         environment:

@@ -192,7 +192,6 @@ def scrape_tab(driver, tab_id, selector, is_economy=False):
 
     except Exception as e:
         print(f"Error processing tab {tab_id}: {str(e)}")
-
     return exchange_data
 
 def save_to_json(data, filepath):
@@ -214,34 +213,48 @@ def crawler_data_coverage(tradingview_path = "/data/tradingview_data" ):
     print(f"Navigating to {URL}")
     driver.get(URL)
     tab_configs = [
-        {"id": "Popular", "selector": "#tab-region-Popular tbody tr", "filename": "exchanges-popular"},
-        {"id": "Stocks& Indices", "selector": ".rowWrap-qJcpoITA", "filename": "exchanges-stocks-indices"},
-        {"id": "Futures", "selector": ".rowWrap-qJcpoITA", "filename": "exchanges-futures"},
-        {"id": "Forex", "selector": "#tab-region-Forex tbody tr", "filename": "exchanges-forex"},
-        {"id": "Crypto", "selector": "#tab-region-Crypto tbody tr", "filename": "exchanges-crypto"},
-        {"id": "Economy", "selector": "#tab-region-Economy .economyTableRow-qJcpoITA", "filename": "exchanges-economy", "is_economy": True}
+        {"id": "Popular", "selector": "#tab-region-Popular tbody tr", "filename": "exchanges_popular"},
+        {"id": "Stocks& Indices", "selector": ".rowWrap-qJcpoITA", "filename": "exchanges_stocksindices"},
+        {"id": "Futures", "selector": ".rowWrap-qJcpoITA", "filename": "exchanges_futures"},
+        {"id": "Forex", "selector": "#tab-region-Forex tbody tr", "filename": "exchanges_forex"},
+        {"id": "Crypto", "selector": "#tab-region-Crypto tbody tr", "filename": "exchanges_crypto"},
+        {"id": "Economy", "selector": "#tab-region-Economy .economyTableRow-qJcpoITA", "filename": "exchanges_economy", "is_economy": True}
     ]
 
-    timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y%m%d_%H%M%S")
-    os.makedirs(tradingview_path, exist_ok=True)
+    # timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y%m%d_%H%M%S")
+    # os.makedirs(tradingview_path, exist_ok=True)
+    exchange_data = []
 
     for config in tab_configs:
         data = scrape_tab(driver, config["id"], config["selector"], config.get("is_economy", False))
-        filename = f"{tradingview_path}/{config['filename']}_{timestamp}.json"
-        save_to_json(data, filename)
+        # filename = f"{tradingview_path}/{config['filename']}_{timestamp}.json"
+        # save_to_json(data, filename)
+        exchange_data.append({
+            "exchange_type": config['filename'],
+            "exchanges": data
+                })
 
+    if not exchange_data:
+        driver.quit()
+        logging.error("No country data scraped to save!")
+        return None
+
+        # timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y%m%d_%H%M%S")
+        # filename = f"{tradingview_path}/countries_{timestamp}.json"
+    json_output = json.dumps(exchange_data, indent=4, ensure_ascii=False)
     driver.quit()
-    print("Crawling completed successfully!")
+    logging.info("Exchanges scraped successfully!")
+    return json_output
 
 
-def countries_scraper(tradingview_path="/data/tradingview_data"):
+def countries_scraper():
 
+    # tradingview_path = 'data/tradingview_data'
     driver = setup_driver()
     URL = "https://www.tradingview.com/data-coverage/"
     print(f"Navigating to {URL}")
     driver.get(URL)
-
-    os.makedirs(tradingview_path, exist_ok=True)
+    # os.makedirs(tradingview_path, exist_ok=True)
 
     try:
         print("Waiting for 'Selectcountry' button...")
@@ -304,23 +317,25 @@ def countries_scraper(tradingview_path="/data/tradingview_data"):
 
         if not data:
             driver.quit()
-            return "Error: No country data scraped to save!"
+            logging.error("No country data scraped to save!")
+            return None
 
-        timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y%m%d_%H%M%S")
-        filename = f"{tradingview_path}/countries_{timestamp}.json"
+        # timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y%m%d_%H%M%S")
+        # filename = f"{tradingview_path}/countries_{timestamp}.json"
         json_output = json.dumps(data, indent=4, ensure_ascii=False)
 
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write(json_output)
-        print(f"Data saved to {filename}")
+        # with open(filename, "w", encoding="utf-8") as f:
+        #     f.write(json_output)
+        # print(f"Data saved to {filename}")
 
         driver.quit()
-        return "Countries scraped successfully!"
+        logging.info("Countries scraped successfully!")
+        return json_output
 
     except Exception as e:
-        print(f"Error during scraping: {e}")
+        logging.error(f"Error during scraping: {e}")
         driver.quit()
-        return f"Error: Scraping failed - {str(e)}"
+        return None
 
 
 if __name__ == "__main__":

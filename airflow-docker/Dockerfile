@@ -25,10 +25,12 @@ RUN google-chrome --version || echo "Google Chrome installation failed"
 RUN chmod +x /usr/bin/google-chrome || echo "Permission change failed for /usr/bin/google-chrome"
 
 USER airflow
+
 COPY requirements.txt /requirements.txt
 RUN pip install --no-cache-dir -r /requirements.txt
 RUN pip install --no-cache-dir \
     selenium \
-    webdriver-manager
+    webdriver-manager \
+    ipython
 
 CMD ["/bin/bash", "-c", "Xvfb :99 -screen 0 1920x1080x24 & export DISPLAY=:99 && python -c 'from selenium import webdriver; print(webdriver.Chrome().capabilities)'"]
