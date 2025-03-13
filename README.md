@@ -3,7 +3,12 @@
 
 Follow these steps to set up and run Airflow using Docker:
 
-1. **Navigate to the Airflow Directory**
+1. **clone repo
+   ```bash
+   git clone https://github.com/volenhatrang/DataBackend.git
+
+
+2. **Navigate to the Airflow Directory**
    ```bash
    cd airflow-docker
    docker build -t my-airflow .
