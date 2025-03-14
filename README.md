@@ -12,7 +12,7 @@ Follow these steps to set up and run Airflow using Docker:
    ```bash
    cd airflow-docker
    docker-compose up -d --build
-   docker-compose up -d
+
 
 3. **Access to  http://localhost:8080**
    Username: airflow Password: airflow
