@@ -2,7 +2,9 @@ from cassandra.cluster import Cluster
 from cassandra.policies import DCAwareRoundRobinPolicy
 import os
 import logging
-from datetime import datetime
+import datetime
+import time
+import logging
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -14,7 +16,8 @@ class CassandraClient:
         self.keyspace = os.getenv('CASSANDRA_KEYSPACE')
         self.session = None
 
-    def connect(self):
+    def connect(self, keyspace=None):
+        keyspace_to_create = keyspace if keyspace is not None else self.keyspace
         try:
             cluster = Cluster(
                 [self.host],
@@ -23,9 +26,9 @@ class CassandraClient:
                 load_balancing_policy=DCAwareRoundRobinPolicy(local_dc='datacenter1') 
             )
             self.session = cluster.connect()
-            self.create_keyspace()
-            self.session.set_keyspace(self.keyspace)
-            self.create_tables()
+            self.create_keyspace(keyspace_to_create)
+            self.session.set_keyspace(keyspace_to_create)
+            # self.create_tables()
         except Exception as e:
             logger.error(f'Error connecting to Cassandra: {e}')
 
@@ -43,7 +46,7 @@ class CassandraClient:
                     title text,
                     content text,
                     crawl_date timestamp,
-                    data_crawled map<text, text>, 
+                    data_crawled text, 
                     PRIMARY KEY (url, crawl_date)
                 ) WITH CLUSTERING ORDER BY (crawl_date DESC);
             """
@@ -71,7 +74,27 @@ class CassandraClient:
             )"""
         )
 
+    def insert_raw_data(self, data_crawled):
+        timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7)))
+        try:
+            self.session.execute(
+                """
+                INSERT INTO web_crawl (url, title, content, crawl_date, data_crawled)
+                VALUES (%s, %s, %s, %s, %s)
+                """,
+                (
+                    data_crawled['url'],
+                    data_crawled['title'],
+                    data_crawled['content'],
+                    timestamp,
+                    data_crawled['data_crawled']
+                )
+            )
+        except Exception as e:
+            logger.error(f"Failed to insert raw data: {e}")
+
     def insert_exchanges(self, exchange_data):
+        timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7)))
         try:
             self.session.execute(
                 """
@@ -84,7 +107,7 @@ class CassandraClient:
                     exchange_data['country'],
                     exchange_data['types'],
                     exchange_data['tab'],
-                    datetime.now()
+                    timestamp
                 )
             )
             logger.info(f"Inserted exchange data for {exchange_data['exchange_name']}")
@@ -92,17 +115,19 @@ class CassandraClient:
             logger.error(f"Failed to insert exchange data: {e}")
 
     def insert_countries(self, country_data):
+        timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y%m%d_%H%M%S")
         try:
             self.session.execute(
                 """
-                INSERT INTO tradingview_countries (region, country, data_market, country_flag)
+                INSERT INTO tradingview_countries (region, country, data_market, country_flag, timestamp)
                 VALUES (%s, %s, %s, %s)
                 """,
                 (
                     country_data['region'],
                     country_data['country'],
                     country_data['data_market'],
-                    country_data['country_flag']
+                    country_data['country_flag'],
+                    timestamp
                 )
             )
             logger.info(f"Inserted country data for {country_data['country']}")

@@ -9,6 +9,7 @@ import time
 import os
 from dotenv import load_dotenv
 import datetime
+import logging
 
 def setup_driver():
     """Initialize and return a Selenium WebDriver instance."""
@@ -20,95 +21,6 @@ def setup_driver():
     options.add_argument("--disable-gpu")
     service = Service(ChromeDriverManager().install())
     return webdriver.Chrome(service=service, options=options)
-
-def countries_scraper(tradingview_path="/data/tradingview_data"):
-
-    driver = setup_driver()
-    URL = "https://www.tradingview.com/data-coverage/"
-    print(f"Navigating to {URL}")
-    driver.get(URL)
-
-    os.makedirs(tradingview_path, exist_ok=True)
-
-    try:
-        print("Waiting for 'Selectcountry' button...")
-        button = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "Selectcountry"))
-        )
-        driver.execute_script("arguments[0].scrollIntoView(true);", button)
-        time.sleep(2)  
-        driver.execute_script("arguments[0].click();", button)
-
-        print("Waiting for country select dialog...")
-        dialog = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, 'div[data-name="country-select-dialog"]'))
-        )
-
-        regions = dialog.find_elements(By.CLASS_NAME, "groupTitle-TiHRzx3B")
-        print(f"Found {len(regions)} regions to process")
-        data = []
-
-        for region in regions:
-            region_name = region.text.strip()
-            print(f"Processing region: {region_name}")
-            countries_list = []
-
-            try:
-                container = WebDriverWait(region, 5).until(
-                    EC.presence_of_element_located(
-                        (By.XPATH, "./following-sibling::div[contains(@class, 'marketItemsContainer-TiHRzx3B')]")
-                    )
-                )
-
-                countries = container.find_elements(
-                    By.XPATH, ".//div[contains(@class, 'iconColor-XLXs8O7w wrapTablet-XLXs8O7w')]"
-                )
-                print(f"Found {len(countries)} countries in {region_name}")
-
-                for country in countries:
-                    try:
-                        country_name = country.find_element(By.CLASS_NAME, "title-XLXs8O7w").text.strip()
-                        country_flag = country.find_element(By.TAG_NAME, "img").get_attribute("src")
-                        data_market = country.get_attribute("data-market")
-
-                        countries_list.append({
-                            "country": country_name,
-                            "data_market": data_market,
-                            "country_flag": country_flag
-                        })
-                    except Exception as e:
-                        print(f"Error processing country in {region_name}: {e}")
-                        continue
-
-            except Exception as e:
-                print(f"No countries found in {region_name}: {e}")
-
-            if countries_list:
-                data.append({
-                    "region": region_name,
-                    "countries": countries_list
-                })
-
-        if not data:
-            driver.quit()
-            return "Error: No country data scraped to save!"
-
-        timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y%m%d_%H%M%S")
-        filename = f"{tradingview_path}/countries_{timestamp}.json"
-        json_output = json.dumps(data, indent=4, ensure_ascii=False)
-
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write(json_output)
-        print(f"Data saved to {filename}")
-
-        driver.quit()
-        return "Countries scraped successfully!"
-
-    except Exception as e:
-        print(f"Error during scraping: {e}")
-        driver.quit()
-        return f"Error: Scraping failed - {str(e)}"
-
 
 def scrape_tab(driver, tab_id, selector, is_economy=False):
     """Scrape data from a specific tab and return a list of exchange data."""
@@ -205,9 +117,8 @@ def save_to_json(data, filepath):
     print(f"Saved data to {filepath}")
     return True
 
-def crawler_data_coverage(tradingview_path = "/data/tradingview_data" ):
+def crawler_data_coverage():
     """Main function to crawl data coverage from TradingView."""
-
     driver = setup_driver()
     URL = "https://www.tradingview.com/data-coverage/"
     print(f"Navigating to {URL}")
@@ -231,8 +142,7 @@ def crawler_data_coverage(tradingview_path = "/data/tradingview_data" ):
         # save_to_json(data, filename)
         exchange_data.append({
             "exchange_type": config['filename'],
-            "exchanges": data
-                })
+            "exchanges": data })
 
     if not exchange_data:
         driver.quit()
@@ -322,7 +232,7 @@ def countries_scraper():
 
         # timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y%m%d_%H%M%S")
         # filename = f"{tradingview_path}/countries_{timestamp}.json"
-        json_output = json.dumps(data, indent=4, ensure_ascii=False)
+        # json_output = json.dumps(data, indent=4, ensure_ascii=False)
 
         # with open(filename, "w", encoding="utf-8") as f:
         #     f.write(json_output)
@@ -330,7 +240,7 @@ def countries_scraper():
 
         driver.quit()
         logging.info("Countries scraped successfully!")
-        return json_output
+        return data
 
     except Exception as e:
         logging.error(f"Error during scraping: {e}")
