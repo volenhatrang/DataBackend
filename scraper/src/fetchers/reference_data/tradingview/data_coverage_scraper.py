@@ -131,26 +131,18 @@ def crawler_data_coverage():
         {"id": "Crypto", "selector": "#tab-region-Crypto tbody tr", "filename": "exchanges_crypto"},
         {"id": "Economy", "selector": "#tab-region-Economy .economyTableRow-qJcpoITA", "filename": "exchanges_economy", "is_economy": True}
     ]
-
-    # timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y%m%d_%H%M%S")
-    # os.makedirs(tradingview_path, exist_ok=True)
     exchange_data = []
 
     for config in tab_configs:
         data = scrape_tab(driver, config["id"], config["selector"], config.get("is_economy", False))
-        # filename = f"{tradingview_path}/{config['filename']}_{timestamp}.json"
-        # save_to_json(data, filename)
-        exchange_data.append({
-            "exchange_type": config['filename'],
-            "exchanges": data })
+        exchange_data.append({"exchange_type": config['filename'], "exchanges": data })
 
     if not exchange_data:
         driver.quit()
         logging.error("No country data scraped to save!")
         return None
-
-        # timestamp = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y%m%d_%H%M%S")
-        # filename = f"{tradingview_path}/countries_{timestamp}.json"
+    
+    exchange_data = [item for item in exchange_data if item["exchanges"]]
     json_output = json.dumps(exchange_data, indent=4, ensure_ascii=False)
     driver.quit()
     logging.info("Exchanges scraped successfully!")
