@@ -99,23 +99,26 @@ class CassandraClient:
 
     def insert_raw_data(self, data_crawled):
         timestamp = datetime.datetime.now(tz=datetime.timezone.utc)
+        logger.info(f"Preparing to insert raw data for URL: {data_crawled['url']}")
         try:
-            self.session.execute(
-                """
+            logger.debug(f"Cassandra session: {self.session}")
+            logger.debug(f"Data to insert: {data_crawled}")
+            query = """
                 INSERT INTO web_crawl (url, title, content, crawl_date, data_crawled)
                 VALUES (%s, %s, %s, %s, %s)
-                """,
-                (
-                    data_crawled['url'],
-                    data_crawled['title'],
-                    data_crawled['content'],
-                    timestamp,
-                    data_crawled['data_crawled']
-                )
-            )
-            logger.info(f"Inserted raw data for URL: {data_crawled['url']}")
+            """
+            logger.info("Executing Cassandra insert...")
+            self.session.execute(query, (
+                data_crawled['url'],
+                data_crawled['title'],
+                data_crawled['content'],
+                timestamp,
+                data_crawled['data_crawled']
+            ))  
+            logger.info(f"Successfully inserted raw data for URL: {data_crawled['url']}")
         except Exception as e:
-            logger.error(f"Failed to insert raw data: {e}")
+            logger.error(f"Failed to insert raw data: {str(e)}", exc_info=True)
+            raise
 
     def insert_exchanges(self, exchange_data):
         timestamp = datetime.datetime.now(tz=datetime.timezone.utc)
@@ -126,14 +129,14 @@ class CassandraClient:
                 VALUES (%s, %s, %s, %s, %s)
                 """,
                 (
-                    exchange_data['exchange_name'],
-                    exchange_data['exchange_desc_name'],
+                    exchange_data['exchangeName'],
+                    exchange_data['exchangeDescName'],
                     exchange_data['country'],
                     exchange_data['types'],
                     timestamp
                 )
             )
-            logger.info(f"Inserted exchange data for {exchange_data['exchange_name']}")
+            logger.info(f"Inserted exchange data for {exchange_data['exchangeName']}")
         except Exception as e:
             logger.error(f"Failed to insert exchange data: {e}")
 
@@ -142,8 +145,8 @@ class CassandraClient:
         try:
             self.session.execute(
                 """
-                INSERT INTO tradingview_countries (region, country, data_market, country_flag)
-                VALUES (%s, %s, %s, %s)
+                INSERT INTO tradingview_countries (region, country, data_market, country_flag, timestamp)
+                VALUES (%s, %s, %s, %s, %s)
                 """,
                 (
                     country_data['region'],

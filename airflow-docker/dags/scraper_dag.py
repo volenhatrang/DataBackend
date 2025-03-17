@@ -14,7 +14,7 @@ sys.path.extend([
     '/app/scraper/src/database/reference_data'
 ])
 
-from data_coverage_scraper import countries_scraper, crawler_data_coverage
+from data_coverage_scraper import countries_scraper, crawler_data_coverage, setup_driver, scrape_tab
 from cassandra_client import CassandraClient
 
 # Default DAG arguments
@@ -27,18 +27,15 @@ default_args = {
 }
 
 # Cassandra client singleton
-cassandra_client = CassandraClient()
-cassandra_client.connect()
-cassandra_client.create_keyspace()
-
-
 def fetch_and_store_data(fetch_function, title, url, content):
+    cassandra_client = CassandraClient()
+    cassandra_client.connect()
+    cassandra_client.create_keyspace()
     logging.info(f"Scraping data for: {title}")
     data = fetch_function()
     if not data:
         logging.warning(f"No data found for: {title}")
         return f"No data for {title}"
-    
     cassandra_client.insert_raw_data({
         'url': url,
         'title': title,
@@ -50,21 +47,25 @@ def fetch_and_store_data(fetch_function, title, url, content):
 
 def transform_data():
     logging.info("Starting data transformation")
+    cassandra_client = CassandraClient()
+    cassandra_client.connect()
+    cassandra_client.create_keyspace()
     data = cassandra_client.fetch_latest_data_by_title()
-    for item in data:
-        title = item['title']
-        data_loaded = json.loads(item['data_crawled'])
-        
+    list_data = list(data.items())
+    for item in list_data:
+        title = item[0]
+        data_loaded = json.loads(item[1]['data_crawled'])
         if title == "Countries Data Coverage":
             for region_data in data_loaded:
                 region = region_data.get('region', 'Unknown')
                 for country in region_data.get('countries', []):
-                    cassandra_client.insert_countries({
+                    data = {
                         'region': region,
-                        'country': country.get('country', 'Unknown'),
-                        'data_market': country.get('data_market', None),
-                        'country_flag': country.get('country_flag', None)
-                    })
+                        'country': country.get('country'),
+                        'data_market': country.get('data_market'),
+                        'country_flag': country.get('country_flag')
+                    }
+                    cassandra_client.insert_countries(data)
         elif title == "Exchanges Data Coverage":
             for exchange_item in data_loaded:
                 for data in exchange_item.get('exchanges', []):

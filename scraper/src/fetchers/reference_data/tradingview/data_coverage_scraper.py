@@ -143,10 +143,9 @@ def crawler_data_coverage():
         return None
     
     exchange_data = [item for item in exchange_data if item["exchanges"]]
-    json_output = json.dumps(exchange_data, indent=4, ensure_ascii=False)
     driver.quit()
     logging.info("Exchanges scraped successfully!")
-    return json_output
+    return exchange_data
 
 
 def countries_scraper():
