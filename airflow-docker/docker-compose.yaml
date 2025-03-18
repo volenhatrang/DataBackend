@@ -18,6 +18,7 @@
             CASSANDRA_HOST: "cassandra"
             CASSANDRA_PORT: ${CASSANDRA_PORT}
             CASSANDRA_KEYSPACE: ${CASSANDRA_KEYSPACE}
+            MT5_API_DOMAIN: ${MT5_API_DOMAIN}
         volumes:
             - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
             - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
