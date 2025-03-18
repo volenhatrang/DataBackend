@@ -8,11 +8,12 @@ import json
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 class CassandraClient:
     def __init__(self):
-        self.host = os.getenv('CASSANDRA_HOST', 'localhost')
-        self.port = int(os.getenv('CASSANDRA_PORT', 9042))
-        self.keyspace = os.getenv('CASSANDRA_KEYSPACE', 'default_keyspace')
+        self.host = os.getenv("CASSANDRA_HOST", "localhost")
+        self.port = int(os.getenv("CASSANDRA_PORT", 9042))
+        self.keyspace = os.getenv("CASSANDRA_KEYSPACE", "default_keyspace")
         self.session = None
 
     def connect(self, keyspace=None):
@@ -22,7 +23,7 @@ class CassandraClient:
                 [self.host],
                 port=self.port,
                 protocol_version=5,
-                load_balancing_policy=DCAwareRoundRobinPolicy(local_dc='datacenter1')
+                load_balancing_policy=DCAwareRoundRobinPolicy(local_dc="datacenter1"),
             )
             self.session = cluster.connect()
             self.create_keyspace(keyspace_to_create)
@@ -43,7 +44,8 @@ class CassandraClient:
 
     def create_tables(self):
         try:
-            self.session.execute("""
+            self.session.execute(
+                """
                 CREATE TABLE IF NOT EXISTS web_crawl (
                     url TEXT,
                     title TEXT,
@@ -52,8 +54,10 @@ class CassandraClient:
                     data_crawled TEXT,
                     PRIMARY KEY (url, crawl_date)
                 ) WITH CLUSTERING ORDER BY (crawl_date DESC);
-            """)
-            self.session.execute("""
+            """
+            )
+            self.session.execute(
+                """
                 CREATE TABLE IF NOT EXISTS tradingview_exchanges (
                     exchange_name TEXT PRIMARY KEY,
                     exchange_desc_name TEXT,
@@ -61,8 +65,10 @@ class CassandraClient:
                     types LIST<TEXT>,
                     timestamp TIMESTAMP
                 );
-            """)
-            self.session.execute("""
+            """
+            )
+            self.session.execute(
+                """
                 CREATE TABLE IF NOT EXISTS tradingview_countries (
                     region TEXT,
                     country TEXT,
@@ -71,7 +77,24 @@ class CassandraClient:
                     timestamp TIMESTAMP,
                     PRIMARY KEY (region, country)
                 );
-            """)
+            """
+            )
+            self.session.execute(
+                """
+                CREATE TABLE IF NOT EXISTS tradingview_holidays (
+                    exchange TEXT PRIMARY KEY,
+                    timezone TEXT,
+                    open_time TIME,
+                    close_time TIME,
+                    regular_duration_hours DOUBLE,
+                    holidays LIST<TEXT>,
+                    total_trading_days INT,
+                    period_start_date DATE,
+                    period_end_date DATE,
+                    timestamp TIMESTAMP,
+                );
+            """
+            )
         except Exception as e:
             logger.error(f"Failed to create tables: {e}")
 
@@ -83,13 +106,16 @@ class CassandraClient:
             for row in rows:
                 title = row.title
                 crawl_date = row.crawl_date
-                if title not in latest_data or crawl_date > latest_data[title]['crawl_date']:
+                if (
+                    title not in latest_data
+                    or crawl_date > latest_data[title]["crawl_date"]
+                ):
                     latest_data[title] = {
-                        'url': row.url,
-                        'title': row.title,
-                        'content': row.content,
-                        'crawl_date': row.crawl_date,
-                        'data_crawled': row.data_crawled,
+                        "url": row.url,
+                        "title": row.title,
+                        "content": row.content,
+                        "crawl_date": row.crawl_date,
+                        "data_crawled": row.data_crawled,
                     }
             logger.info("Fetched latest data by title successfully.")
             return latest_data
@@ -108,14 +134,19 @@ class CassandraClient:
                 VALUES (%s, %s, %s, %s, %s)
             """
             logger.info("Executing Cassandra insert...")
-            self.session.execute(query, (
-                data_crawled['url'],
-                data_crawled['title'],
-                data_crawled['content'],
-                timestamp,
-                data_crawled['data_crawled']
-            ))  
-            logger.info(f"Successfully inserted raw data for URL: {data_crawled['url']}")
+            self.session.execute(
+                query,
+                (
+                    data_crawled["url"],
+                    data_crawled["title"],
+                    data_crawled["content"],
+                    timestamp,
+                    data_crawled["data_crawled"],
+                ),
+            )
+            logger.info(
+                f"Successfully inserted raw data for URL: {data_crawled['url']}"
+            )
         except Exception as e:
             logger.error(f"Failed to insert raw data: {str(e)}", exc_info=True)
             raise
@@ -129,12 +160,12 @@ class CassandraClient:
                 VALUES (%s, %s, %s, %s, %s)
                 """,
                 (
-                    exchange_data['exchangeName'],
-                    exchange_data['exchangeDescName'],
-                    exchange_data['country'],
-                    exchange_data['types'],
-                    timestamp
-                )
+                    exchange_data["exchangeName"],
+                    exchange_data["exchangeDescName"],
+                    exchange_data["country"],
+                    exchange_data["types"],
+                    timestamp,
+                ),
             )
             logger.info(f"Inserted exchange data for {exchange_data['exchangeName']}")
         except Exception as e:
@@ -149,19 +180,44 @@ class CassandraClient:
                 VALUES (%s, %s, %s, %s, %s)
                 """,
                 (
-                    country_data['region'],
-                    country_data['country'],
-                    country_data['data_market'],
-                    country_data['country_flag'],
-                    timestamp
-                )
+                    country_data["region"],
+                    country_data["country"],
+                    country_data["data_market"],
+                    country_data["country_flag"],
+                    timestamp,
+                ),
             )
             logger.info(f"Inserted country data for {country_data['country']}")
+        except Exception as e:
+            logger.error(f"Failed to insert country data: {e}")
+
+    def insert_holidays(self, holiday_data):
+        timestamp = datetime.datetime.now(tz=datetime.timezone.utc)
+        try:
+            self.session.execute(
+                """
+                INSERT INTO tradingview_holidays (exchange, timezone, open_time, close_time, regular_duration_hours, holidays, total_trading_days, period_start_date, period_end_date, timestamp)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                """,
+                (
+                    holiday_data["exchange"],
+                    holiday_data["timezone"],
+                    holiday_data["open_time"],
+                    holiday_data["close_time"],
+                    holiday_data["regular_duration_hours"],
+                    holiday_data["holidays"],
+                    holiday_data["total_trading_days"],
+                    holiday_data["period_start_date"],
+                    holiday_data["period_end_date"],
+                    timestamp,
+                ),
+            )
+            logger.info(f"Inserted country data for holidays")
         except Exception as e:
             logger.error(f"Failed to insert country data: {e}")
 
     def close(self):
         if self.session:
             self.session.cluster.shutdown()
-            logger.info('Closed Cassandra connection')
+            logger.info("Closed Cassandra connection")
             self.session = None

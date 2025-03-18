@@ -1,0 +1,2936 @@
+[
+    {
+        "Market":"ADX",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"ADX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Monday, March 31, 2025",
+        "Date":"2025-03-31",
+        "Status":"Closed, 4 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"ADX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Tuesday, April 1, 2025",
+        "Date":"2025-04-01",
+        "Status":"Closed, 4 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"ADX",
+        "Holiday":"Arafat Day",
+        "Long_Date":"Thursday, June 5, 2025",
+        "Date":"2025-06-05",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"ADX",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Friday, June 6, 2025",
+        "Date":"2025-06-06",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"ADX",
+        "Holiday":"Islamic New Year",
+        "Long_Date":"Thursday, June 26, 2025",
+        "Date":"2025-06-26",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"ADX",
+        "Holiday":"Mawlid",
+        "Long_Date":"Thursday, September 4, 2025",
+        "Date":"2025-09-04",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"ADX",
+        "Holiday":"National Day",
+        "Long_Date":"Tuesday, December 2, 2025",
+        "Date":"2025-12-02",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"ADX",
+        "Holiday":"National Day",
+        "Long_Date":"Wednesday, December 3, 2025",
+        "Date":"2025-12-03",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"DFM",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"DFM",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Monday, March 31, 2025",
+        "Date":"2025-03-31",
+        "Status":"Closed, 4 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"DFM",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Tuesday, April 1, 2025",
+        "Date":"2025-04-01",
+        "Status":"Closed, 4 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"DFM",
+        "Holiday":"Arafat Day",
+        "Long_Date":"Thursday, June 5, 2025",
+        "Date":"2025-06-05",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"DFM",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Friday, June 6, 2025",
+        "Date":"2025-06-06",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"DFM",
+        "Holiday":"Islamic New Year",
+        "Long_Date":"Thursday, June 26, 2025",
+        "Date":"2025-06-26",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"DFM",
+        "Holiday":"Mawlid",
+        "Long_Date":"Thursday, September 4, 2025",
+        "Date":"2025-09-04",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"DFM",
+        "Holiday":"National Day",
+        "Long_Date":"Tuesday, December 2, 2025",
+        "Date":"2025-12-02",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"DFM",
+        "Holiday":"National Day",
+        "Long_Date":"Wednesday, December 3, 2025",
+        "Date":"2025-12-03",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NDXB",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NDXB",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Monday, March 31, 2025",
+        "Date":"2025-03-31",
+        "Status":"Closed, 4 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NDXB",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Tuesday, April 1, 2025",
+        "Date":"2025-04-01",
+        "Status":"Closed, 4 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NDXB",
+        "Holiday":"Arafat Day",
+        "Long_Date":"Thursday, June 5, 2025",
+        "Date":"2025-06-05",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NDXB",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Friday, June 6, 2025",
+        "Date":"2025-06-06",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NDXB",
+        "Holiday":"Islamic New Year",
+        "Long_Date":"Thursday, June 26, 2025",
+        "Date":"2025-06-26",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NDXB",
+        "Holiday":"Mawlid",
+        "Long_Date":"Thursday, September 4, 2025",
+        "Date":"2025-09-04",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NDXB",
+        "Holiday":"Commemoration Day",
+        "Long_Date":"Monday, December 1, 2025",
+        "Date":"2025-12-01",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NDXB",
+        "Holiday":"National Day",
+        "Long_Date":"Tuesday, December 2, 2025",
+        "Date":"2025-12-02",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NDXB",
+        "Holiday":"National Day",
+        "Long_Date":"Wednesday, December 3, 2025",
+        "Date":"2025-12-03",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"",
+        "Long_Date":"Monday, March 3, 2025 (past)",
+        "Date":"2025-03-03",
+        "Status":"Closed, 3 days ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"",
+        "Long_Date":"Tuesday, March 4, 2025 (past)",
+        "Date":"2025-03-04",
+        "Status":"Closed, 2 days ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"Day of Remembrance for Truth and Justice",
+        "Long_Date":"Monday, March 24, 2025",
+        "Date":"2025-03-24",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"Malvinas Day",
+        "Long_Date":"Wednesday, April 2, 2025",
+        "Date":"2025-04-02",
+        "Status":"Closed, 4 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"Maundy Thursday",
+        "Long_Date":"Thursday, April 17, 2025",
+        "Date":"2025-04-17",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"Labor Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"Labor Day",
+        "Long_Date":"Friday, May 2, 2025 ",
+        "Date":"2025-05-02",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"General Mart\u00edn Miguel de Guemes' Death",
+        "Long_Date":"Monday, June 16, 2025",
+        "Date":"2025-06-16",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"General D. Manuel Belgrano's Death",
+        "Long_Date":"Friday, June 20, 2025",
+        "Date":"2025-06-20",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"Independence Day",
+        "Long_Date":"Wednesday, July 9, 2025",
+        "Date":"2025-07-09",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"Death of San Martin",
+        "Long_Date":"Friday, August 15, 2025 ",
+        "Date":"2025-08-15",
+        "Status":"Closed, 5 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"National Sovereignty Day",
+        "Long_Date":"Friday, November 21, 2025 ",
+        "Date":"2025-11-21",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"National Sovereignty Day",
+        "Long_Date":"Monday, November 24, 2025 ",
+        "Date":"2025-11-24",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"Feast of the Immaculate Conception",
+        "Long_Date":"Monday, December 8, 2025",
+        "Date":"2025-12-08",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BYMA",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"VSE",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"VSE",
+        "Holiday":"",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"VSE",
+        "Holiday":"",
+        "Long_Date":"Monday, April 21, 2025",
+        "Date":"2025-04-21",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"VSE",
+        "Holiday":"National Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"VSE",
+        "Holiday":"Christmas",
+        "Long_Date":"Wednesday, December 24, 2025 ",
+        "Date":"2025-12-24",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"VSE",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"VSE",
+        "Holiday":"St. Stephen's Day",
+        "Long_Date":"Friday, December 26, 2025",
+        "Date":"2025-12-26",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"VSE",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, December 31, 2025 ",
+        "Date":"2025-12-31",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"National Mourning Day",
+        "Long_Date":"Thursday, January 9, 2025 (past)",
+        "Date":"2025-01-09",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Birthday of Martin Luther King, Jr",
+        "Long_Date":"Monday, January 20, 2025 (past)",
+        "Date":"2025-01-20",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Washington's Birthday",
+        "Long_Date":"Monday, February 17, 2025 (past)",
+        "Date":"2025-02-17",
+        "Status":"Closed, 3 weeks ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Memorial Day",
+        "Long_Date":"Monday, May 26, 2025",
+        "Date":"2025-05-26",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Juneteenth",
+        "Long_Date":"Thursday, June 19, 2025",
+        "Date":"2025-06-19",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Independence Day",
+        "Long_Date":"Thursday, July 3, 2025 ",
+        "Date":"2025-07-03",
+        "Status":"Open, 9:30 am - 1:00 pm , 4 months from now",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00"
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Independence Day",
+        "Long_Date":"Friday, July 4, 2025",
+        "Date":"2025-07-04",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Labor Day",
+        "Long_Date":"Monday, September 1, 2025",
+        "Date":"2025-09-01",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Thanksgiving Day",
+        "Long_Date":"Thursday, November 27, 2025",
+        "Date":"2025-11-27",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Thanksgiving Day",
+        "Long_Date":"Friday, November 28, 2025 ",
+        "Date":"2025-11-28",
+        "Status":"Open, 9:30 am - 1:00 pm , 9 months from now",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00"
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Christmas",
+        "Long_Date":"Wednesday, December 24, 2025",
+        "Date":"2025-12-24",
+        "Status":"Open, 9:30 am - 1:00 pm , 10 months from now",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00"
+    },
+    {
+        "Market":"NASDAQ",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"National Mourning Day",
+        "Long_Date":"Thursday, January 9, 2025 (past)",
+        "Date":"2025-01-09",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Birthday of Martin Luther King, Jr",
+        "Long_Date":"Monday, January 20, 2025 (past)",
+        "Date":"2025-01-20",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Washington's Birthday",
+        "Long_Date":"Monday, February 17, 2025 (past)",
+        "Date":"2025-02-17",
+        "Status":"Closed, 3 weeks ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Memorial Day",
+        "Long_Date":"Monday, May 26, 2025",
+        "Date":"2025-05-26",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Juneteenth",
+        "Long_Date":"Thursday, June 19, 2025",
+        "Date":"2025-06-19",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Independence Day",
+        "Long_Date":"Thursday, July 3, 2025 ",
+        "Date":"2025-07-03",
+        "Status":"Open, 9:30 am - 1:00 pm , 4 months from now",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00"
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Independence Day",
+        "Long_Date":"Friday, July 4, 2025",
+        "Date":"2025-07-04",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Labor Day",
+        "Long_Date":"Monday, September 1, 2025",
+        "Date":"2025-09-01",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Thanksgiving Day",
+        "Long_Date":"Thursday, November 27, 2025",
+        "Date":"2025-11-27",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Thanksgiving Day",
+        "Long_Date":"Friday, November 28, 2025 ",
+        "Date":"2025-11-28",
+        "Status":"Open, 9:30 am - 1:00 pm , 9 months from now",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00"
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Christmas",
+        "Long_Date":"Wednesday, December 24, 2025 ",
+        "Date":"2025-12-24",
+        "Status":"Open, 9:30 am - 1:00 pm , 10 months from now",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00"
+    },
+    {
+        "Market":"NYSE",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Market Holiday",
+        "Long_Date":"Thursday, January 9, 2025 (past)",
+        "Date":"2025-01-09",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Birthday of Martin Luther King, Jr",
+        "Long_Date":"Monday, January 20, 2025 (past)",
+        "Date":"2025-01-20",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Washington's Birthday",
+        "Long_Date":"Monday, February 17, 2025 (past)",
+        "Date":"2025-02-17",
+        "Status":"Closed, 3 weeks ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Memorial Day",
+        "Long_Date":"Monday, May 26, 2025",
+        "Date":"2025-05-26",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Juneteenth",
+        "Long_Date":"Thursday, June 19, 2025",
+        "Date":"2025-06-19",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Independence Day",
+        "Long_Date":"Thursday, July 3, 2025 ",
+        "Date":"2025-07-03",
+        "Status":"Open, 9:30 am - 1:00 pm , 4 months from now",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00"
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Independence Day",
+        "Long_Date":"Friday, July 4, 2025",
+        "Date":"2025-07-04",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Labor Day",
+        "Long_Date":"Monday, September 1, 2025",
+        "Date":"2025-09-01",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Thanksgiving Day",
+        "Long_Date":"Thursday, November 27, 2025",
+        "Date":"2025-11-27",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Thanksgiving Day",
+        "Long_Date":"Friday, November 28, 2025 ",
+        "Date":"2025-11-28",
+        "Status":"Open, 9:30 am - 1:00 pm , 9 months from now",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00"
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Christmas",
+        "Long_Date":"Wednesday, December 24, 2025 ",
+        "Date":"2025-12-24",
+        "Status":"Open, 9:30 am - 1:00 pm , 10 months from now",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00"
+    },
+    {
+        "Market":"OTC",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Bank Holiday",
+        "Long_Date":"Monday, January 6, 2025 (past)",
+        "Date":"2025-01-06",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"National Day",
+        "Long_Date":"Monday, January 13, 2025  (past)",
+        "Date":"2025-01-13",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Carnival",
+        "Long_Date":"Monday, March 3, 2025 (past)",
+        "Date":"2025-03-03",
+        "Status":"Closed, 4 days ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Carnival",
+        "Long_Date":"Tuesday, March 4, 2025 (past)",
+        "Date":"2025-03-04",
+        "Status":"Closed, 3 days ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Saint Joseph's Day",
+        "Long_Date":"Wednesday, March 19, 2025",
+        "Date":"2025-03-19",
+        "Status":"Closed, 2 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Maundy Thursday",
+        "Long_Date":"Thursday, April 17, 2025",
+        "Date":"2025-04-17",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Labor Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Ascension Day",
+        "Long_Date":"Monday, June 2, 2025 ",
+        "Date":"2025-06-02",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"San Antonio Day",
+        "Long_Date":"Monday, June 16, 2025 ",
+        "Date":"2025-06-16",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Corpus Christi Day",
+        "Long_Date":"Monday, June 23, 2025 ",
+        "Date":"2025-06-23",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Battle of Carabobo",
+        "Long_Date":"Tuesday, June 24, 2025",
+        "Date":"2025-06-24",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Bolivar's Birthday",
+        "Long_Date":"Thursday, July 24, 2025",
+        "Date":"2025-07-24",
+        "Status":"Closed, 5 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Assumption Day",
+        "Long_Date":"Monday, August 18, 2025 ",
+        "Date":"2025-08-18",
+        "Status":"Closed, 5 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Our Lady of Coromoto",
+        "Long_Date":"Monday, September 15, 2025 ",
+        "Date":"2025-09-15",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"National Day",
+        "Long_Date":"Monday, November 24, 2025 ",
+        "Date":"2025-11-24",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Feast of the Immaculate Conception",
+        "Long_Date":"Monday, December 8, 2025",
+        "Date":"2025-12-08",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Christmas",
+        "Long_Date":"Wednesday, December 24, 2025 ",
+        "Date":"2025-12-24",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVCC",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, December 31, 2025",
+        "Date":"2025-12-31",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"Chinese New Year",
+        "Long_Date":"Monday, January 27, 2025 (past)",
+        "Date":"2025-01-27",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"Chinese New Year",
+        "Long_Date":"Tuesday, January 28, 2025 (past)",
+        "Date":"2025-01-28",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"Chinese New Year",
+        "Long_Date":"Wednesday, January 29, 2025 (past)",
+        "Date":"2025-01-29",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"Chinese New Year",
+        "Long_Date":"Thursday, January 30, 2025 (past)",
+        "Date":"2025-01-30",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"Chinese New Year",
+        "Long_Date":"Friday, January 31, 2025 (past)",
+        "Date":"2025-01-31",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"Hung King's Festival",
+        "Long_Date":"Monday, April 7, 2025",
+        "Date":"2025-04-07",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"Unification Day",
+        "Long_Date":"Wednesday, April 30, 2025",
+        "Date":"2025-04-30",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"Labor Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"Labor Day",
+        "Long_Date":"Friday, May 2, 2025",
+        "Date":"2025-05-02",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"Independence Day",
+        "Long_Date":"Monday, September 1, 2025",
+        "Date":"2025-09-01",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HNX",
+        "Holiday":"Independence Day",
+        "Long_Date":"Tuesday, September 2, 2025",
+        "Date":"2025-09-02",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"Chinese New Year",
+        "Long_Date":"Monday, January 27, 2025 (past)",
+        "Date":"2025-01-27",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"Chinese New Year",
+        "Long_Date":"Tuesday, January 28, 2025 (past)",
+        "Date":"2025-01-28",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"Chinese New Year",
+        "Long_Date":"Wednesday, January 29, 2025 (past)",
+        "Date":"2025-01-29",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"Chinese New Year",
+        "Long_Date":"Thursday, January 30, 2025 (past)",
+        "Date":"2025-01-30",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"Chinese New Year",
+        "Long_Date":"Friday, January 31, 2025 (past)",
+        "Date":"2025-01-31",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"Hung King's Festival",
+        "Long_Date":"Monday, April 7, 2025",
+        "Date":"2025-04-07",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"Unification Day",
+        "Long_Date":"Wednesday, April 30, 2025",
+        "Date":"2025-04-30",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"Labor Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"Labor Day",
+        "Long_Date":"Friday, May 2, 2025",
+        "Date":"2025-05-02",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"Independence Day",
+        "Long_Date":"Monday, September 1, 2025",
+        "Date":"2025-09-01",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"HOSE",
+        "Holiday":"Independence Day",
+        "Long_Date":"Tuesday, September 2, 2025",
+        "Date":"2025-09-02",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"JSE",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"JSE",
+        "Holiday":"Human Rights Day",
+        "Long_Date":"Friday, March 21, 2025",
+        "Date":"2025-03-21",
+        "Status":"Closed, 2 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"JSE",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"JSE",
+        "Holiday":"Family Day",
+        "Long_Date":"Monday, April 21, 2025",
+        "Date":"2025-04-21",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"JSE",
+        "Holiday":"Freedom Day",
+        "Long_Date":"Monday, April 28, 2025 ",
+        "Date":"2025-04-28",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"JSE",
+        "Holiday":"Workers' Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"JSE",
+        "Holiday":"Youth Day",
+        "Long_Date":"Monday, June 16, 2025",
+        "Date":"2025-06-16",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"JSE",
+        "Holiday":"Heritage Day",
+        "Long_Date":"Wednesday, September 24, 2025",
+        "Date":"2025-09-24",
+        "Status":"Closed, 7 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"JSE",
+        "Holiday":"Day of Reconciliation",
+        "Long_Date":"Tuesday, December 16, 2025",
+        "Date":"2025-12-16",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"JSE",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"JSE",
+        "Holiday":"Boxing Day",
+        "Long_Date":"Friday, December 26, 2025",
+        "Date":"2025-12-26",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XZSE",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XZSE",
+        "Holiday":"Youth Day",
+        "Long_Date":"Friday, February 21, 2025 (past)",
+        "Date":"2025-02-21",
+        "Status":"Closed, 2 weeks ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XZSE",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XZSE",
+        "Holiday":"Easter",
+        "Long_Date":"Monday, April 21, 2025",
+        "Date":"2025-04-21",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XZSE",
+        "Holiday":"Workers' Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XZSE",
+        "Holiday":"Market Holiday",
+        "Long_Date":"Monday, May 26, 2025",
+        "Date":"2025-05-26",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XZSE",
+        "Holiday":"National Heroes Day",
+        "Long_Date":"Monday, August 11, 2025",
+        "Date":"2025-08-11",
+        "Status":"Closed, 5 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XZSE",
+        "Holiday":"Armed Forces Day",
+        "Long_Date":"Tuesday, August 12, 2025",
+        "Date":"2025-08-12",
+        "Status":"Closed, 5 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XZSE",
+        "Holiday":"Unity Day",
+        "Long_Date":"Monday, December 22, 2025",
+        "Date":"2025-12-22",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XZSE",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XZSE",
+        "Holiday":"Boxing Day",
+        "Long_Date":"Friday, December 26, 2025",
+        "Date":"2025-12-26",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"",
+        "Long_Date":"Thursday, January 2, 2025 (past)",
+        "Date":"2025-01-02",
+        "Status":"Open, 10:00 am - 3:30 pm , 2 months ago",
+        "Open_Local":"10:00",
+        "Close_Local":"15:30"
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"",
+        "Long_Date":"Monday, January 27, 2025 (past)",
+        "Date":"2025-01-27",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"",
+        "Long_Date":"Tuesday, January 28, 2025 (past)",
+        "Date":"2025-01-28",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 29, 2025 (past)",
+        "Date":"2025-01-29",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"",
+        "Long_Date":"Thursday, January 30, 2025 (past)",
+        "Date":"2025-01-30",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"Independence Day",
+        "Long_Date":"Monday, March 3, 2025  (past)",
+        "Date":"2025-03-03",
+        "Status":"Closed, 1 week ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"Labor Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"Vesak Day",
+        "Long_Date":"Monday, May 5, 2025",
+        "Date":"2025-05-05",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"Vesak Day",
+        "Long_Date":"Tuesday, May 6, 2025 ",
+        "Date":"2025-05-06",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"Memorial Day",
+        "Long_Date":"Friday, June 6, 2025",
+        "Date":"2025-06-06",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"Liberation Day",
+        "Long_Date":"Friday, August 15, 2025",
+        "Date":"2025-08-15",
+        "Status":"Closed, 5 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"National Day",
+        "Long_Date":"Friday, October 3, 2025",
+        "Date":"2025-10-03",
+        "Status":"Closed, 7 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"Chuseok Festivity",
+        "Long_Date":"Monday, October 6, 2025",
+        "Date":"2025-10-06",
+        "Status":"Closed, 7 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"Chuseok Festivity",
+        "Long_Date":"Tuesday, October 7, 2025",
+        "Date":"2025-10-07",
+        "Status":"Closed, 7 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"Chuseok Festivity",
+        "Long_Date":"Wednesday, October 8, 2025 ",
+        "Date":"2025-10-08",
+        "Status":"Closed, 7 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"Hangul Day",
+        "Long_Date":"Thursday, October 9, 2025",
+        "Date":"2025-10-09",
+        "Status":"Closed, 7 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"KOSDAQ",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, December 31, 2025",
+        "Date":"2025-12-31",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"MOEX",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"MOEX",
+        "Holiday":"",
+        "Long_Date":"Thursday, January 2, 2025 (past)",
+        "Date":"2025-01-02",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"MOEX",
+        "Holiday":"",
+        "Long_Date":"Tuesday, January 7, 2025 (past)",
+        "Date":"2025-01-07",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"MOEX",
+        "Holiday":"",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"MOEX",
+        "Holiday":"Victory Day",
+        "Long_Date":"Friday, May 9, 2025",
+        "Date":"2025-05-09",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"MOEX",
+        "Holiday":"National Day",
+        "Long_Date":"Thursday, June 12, 2025",
+        "Date":"2025-06-12",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"MOEX",
+        "Holiday":"Weekend Working Day",
+        "Long_Date":"Saturday, November 1, 2025",
+        "Date":"2025-11-01",
+        "Status":"Open, 10:00 am - 6:40 pm , 8 months from now",
+        "Open_Local":"10:00",
+        "Close_Local":"18:40"
+    },
+    {
+        "Market":"MOEX",
+        "Holiday":"Unity Day",
+        "Long_Date":"Tuesday, November 4, 2025",
+        "Date":"2025-11-04",
+        "Status":"Closed, 8 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"",
+        "Long_Date":"Tuesday, January 7, 2025 (past)",
+        "Date":"2025-01-07",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"",
+        "Long_Date":"Sunday, March 2, 2025 (past)",
+        "Date":"2025-03-02",
+        "Status":"Open, 10:00 am - 1:30 pm , 1 week ago",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"",
+        "Long_Date":"Monday, March 3, 2025 (past)",
+        "Date":"2025-03-03",
+        "Status":"Open, 10:00 am - 1:30 pm , 1 week ago",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Tuesday, March 4, 2025 (past)",
+        "Date":"2025-03-04",
+        "Status":"Open, 10:00 am - 1:30 pm , 6 days ago",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Wednesday, March 5, 2025 (past)",
+        "Date":"2025-03-05",
+        "Status":"Open, 10:00 am - 1:30 pm , 5 days ago",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Thursday, March 6, 2025 (past)",
+        "Date":"2025-03-06",
+        "Status":"Open, 10:00 am - 1:30 pm , 4 days ago",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Sunday, March 9, 2025 (past)",
+        "Date":"2025-03-09",
+        "Status":"Open, 10:00 am - 1:30 pm , yesterday",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Monday, March 10, 2025",
+        "Date":"2025-03-10",
+        "Status":"Open, 10:00 am - 1:30 pm , today",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Tuesday, March 11, 2025",
+        "Date":"2025-03-11",
+        "Status":"Open, 10:00 am - 1:30 pm , tomorrow",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Wednesday, March 12, 2025",
+        "Date":"2025-03-12",
+        "Status":"Open, 10:00 am - 1:30 pm , 2 days from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Thursday, March 13, 2025",
+        "Date":"2025-03-13",
+        "Status":"Open, 10:00 am - 1:30 pm , 3 days from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Sunday, March 16, 2025",
+        "Date":"2025-03-16",
+        "Status":"Open, 10:00 am - 1:30 pm , 6 days from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Monday, March 17, 2025",
+        "Date":"2025-03-17",
+        "Status":"Open, 10:00 am - 1:30 pm , 1 week from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Tuesday, March 18, 2025",
+        "Date":"2025-03-18",
+        "Status":"Open, 10:00 am - 1:30 pm , 1 week from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Wednesday, March 19, 2025",
+        "Date":"2025-03-19",
+        "Status":"Open, 10:00 am - 1:30 pm , 1 week from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Thursday, March 20, 2025",
+        "Date":"2025-03-20",
+        "Status":"Open, 10:00 am - 1:30 pm , 2 weeks from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Sunday, March 23, 2025",
+        "Date":"2025-03-23",
+        "Status":"Open, 10:00 am - 1:30 pm , 2 weeks from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Monday, March 24, 2025",
+        "Date":"2025-03-24",
+        "Status":"Open, 10:00 am - 1:30 pm , 2 weeks from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Tuesday, March 25, 2025",
+        "Date":"2025-03-25",
+        "Status":"Open, 10:00 am - 1:30 pm , 2 weeks from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Wednesday, March 26, 2025",
+        "Date":"2025-03-26",
+        "Status":"Open, 10:00 am - 1:30 pm , 2 weeks from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Ramadan",
+        "Long_Date":"Thursday, March 27, 2025",
+        "Date":"2025-03-27",
+        "Status":"Open, 10:00 am - 1:30 pm , 3 weeks from now",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30"
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Sunday, March 30, 2025",
+        "Date":"2025-03-30",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Monday, March 31, 2025",
+        "Date":"2025-03-31",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Tuesday, April 1, 2025",
+        "Date":"2025-04-01",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Sham Ennessim",
+        "Long_Date":"Monday, April 21, 2025",
+        "Date":"2025-04-21",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Labor Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Sunday, June 8, 2025",
+        "Date":"2025-06-08",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Monday, June 9, 2025",
+        "Date":"2025-06-09",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Islamic New Year",
+        "Long_Date":"Thursday, June 26, 2025",
+        "Date":"2025-06-26",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Revolution Day",
+        "Long_Date":"Monday, June 30, 2025",
+        "Date":"2025-06-30",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Revolution Day",
+        "Long_Date":"Wednesday, July 23, 2025",
+        "Date":"2025-07-23",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Mawlid",
+        "Long_Date":"Thursday, September 4, 2025",
+        "Date":"2025-09-04",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"EGX",
+        "Holiday":"Armed Forces Day",
+        "Long_Date":"Monday, October 6, 2025",
+        "Date":"2025-10-06",
+        "Status":"Closed, 7 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"",
+        "Long_Date":"Thursday, January 2, 2025  (past)",
+        "Date":"2025-01-02",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"Easter",
+        "Long_Date":"Monday, April 21, 2025",
+        "Date":"2025-04-21",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"Labor Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"Labor Day",
+        "Long_Date":"Friday, May 2, 2025",
+        "Date":"2025-05-02",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"National Day",
+        "Long_Date":"Wednesday, June 25, 2025",
+        "Date":"2025-06-25",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"Assumption Day",
+        "Long_Date":"Friday, August 15, 2025",
+        "Date":"2025-08-15",
+        "Status":"Closed, 5 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"Reformation Day",
+        "Long_Date":"Friday, October 31, 2025",
+        "Date":"2025-10-31",
+        "Status":"Closed, 8 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"Christmas",
+        "Long_Date":"Wednesday, December 24, 2025",
+        "Date":"2025-12-24",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"Independence Day",
+        "Long_Date":"Friday, December 26, 2025",
+        "Date":"2025-12-26",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"XLJU",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, December 31, 2025",
+        "Date":"2025-12-31",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"",
+        "Long_Date":"Monday, January 27, 2025 (past)",
+        "Date":"2025-01-27",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"",
+        "Long_Date":"Tuesday, January 28, 2025 (past)",
+        "Date":"2025-01-28",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 29, 2025 (past)",
+        "Date":"2025-01-29",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Saka New Year",
+        "Long_Date":"Friday, February 28, 2025 (past)",
+        "Date":"2025-02-28",
+        "Status":"Closed, 1 week ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Monday, March 31, 2025",
+        "Date":"2025-03-31",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Tuesday, April 1, 2025",
+        "Date":"2025-04-01",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Wednesday, April 2, 2025",
+        "Date":"2025-04-02",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Thursday, April 3, 2025",
+        "Date":"2025-04-03",
+        "Status":"Closed, 4 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Friday, April 4, 2025",
+        "Date":"2025-04-04",
+        "Status":"Closed, 4 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Monday, April 7, 2025",
+        "Date":"2025-04-07",
+        "Status":"Closed, 4 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Labor Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Vesak Day",
+        "Long_Date":"Monday, May 12, 2025",
+        "Date":"2025-05-12",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Vesak Day",
+        "Long_Date":"Tuesday, May 13, 2025",
+        "Date":"2025-05-13",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Ascension Day",
+        "Long_Date":"Thursday, May 29, 2025",
+        "Date":"2025-05-29",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Ascension Day",
+        "Long_Date":"Friday, May 30, 2025",
+        "Date":"2025-05-30",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Friday, June 6, 2025",
+        "Date":"2025-06-06",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Monday, June 9, 2025",
+        "Date":"2025-06-09",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Islamic New Year",
+        "Long_Date":"Friday, June 27, 2025",
+        "Date":"2025-06-27",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Mawlid",
+        "Long_Date":"Friday, September 5, 2025",
+        "Date":"2025-09-05",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Christmas",
+        "Long_Date":"Friday, December 26, 2025",
+        "Date":"2025-12-26",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"IDX",
+        "Holiday":"Market Holiday",
+        "Long_Date":"Wednesday, December 31, 2025",
+        "Date":"2025-12-31",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"",
+        "Long_Date":"Thursday, January 2, 2025 (past)",
+        "Date":"2025-01-02",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"Epiphany",
+        "Long_Date":"Monday, January 6, 2025 (past)",
+        "Date":"2025-01-06",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"Market Holiday",
+        "Long_Date":"Tuesday, January 7, 2025 (past)",
+        "Date":"2025-01-07",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"Unification Day",
+        "Long_Date":"Friday, January 24, 2025 (past)",
+        "Date":"2025-01-24",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"Easter",
+        "Long_Date":"Monday, April 21, 2025",
+        "Date":"2025-04-21",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"Labor Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"Pentecost",
+        "Long_Date":"Monday, June 9, 2025",
+        "Date":"2025-06-09",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"Assumption Day",
+        "Long_Date":"Friday, August 15, 2025",
+        "Date":"2025-08-15",
+        "Status":"Closed, 5 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"National Day",
+        "Long_Date":"Monday, December 1, 2025",
+        "Date":"2025-12-01",
+        "Status":"Closed, 9 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"BVB",
+        "Holiday":"Christmas",
+        "Long_Date":"Friday, December 26, 2025",
+        "Date":"2025-12-26",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"",
+        "Long_Date":"Tuesday, January 14, 2025 (past)",
+        "Date":"2025-01-14",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"",
+        "Long_Date":"Tuesday, January 28, 2025 (past)",
+        "Date":"2025-01-28",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"",
+        "Long_Date":"Monday, February 10, 2025 (past)",
+        "Date":"2025-02-10",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"National Petroleum Day",
+        "Long_Date":"Wednesday, March 19, 2025",
+        "Date":"2025-03-19",
+        "Status":"Closed, 1 week from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Persian New Year",
+        "Long_Date":"Saturday, March 22, 2025",
+        "Date":"2025-03-22",
+        "Status":"Closed, 2 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Persian New Year",
+        "Long_Date":"Sunday, March 23, 2025",
+        "Date":"2025-03-23",
+        "Status":"Closed, 2 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Persian New Year",
+        "Long_Date":"Monday, March 24, 2025",
+        "Date":"2025-03-24",
+        "Status":"Closed, 2 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Monday, March 31, 2025",
+        "Date":"2025-03-31",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Islamic Republic Day",
+        "Long_Date":"Tuesday, April 1, 2025",
+        "Date":"2025-04-01",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Nature Day",
+        "Long_Date":"Wednesday, April 2, 2025",
+        "Date":"2025-04-02",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Imam Khomeini's Demise Anniversary",
+        "Long_Date":"Wednesday, June 4, 2025",
+        "Date":"2025-06-04",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Eid al-Ghadir",
+        "Long_Date":"Saturday, June 14, 2025",
+        "Date":"2025-06-14",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Tasu'a",
+        "Long_Date":"Saturday, July 5, 2025",
+        "Date":"2025-07-05",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Ashura",
+        "Long_Date":"Sunday, July 6, 2025",
+        "Date":"2025-07-06",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Martyrdom of Imam Reza",
+        "Long_Date":"Sunday, August 24, 2025",
+        "Date":"2025-08-24",
+        "Status":"Closed, 5 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Martyrdom Hasan al-Askari",
+        "Long_Date":"Monday, September 1, 2025",
+        "Date":"2025-09-01",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Mawlid",
+        "Long_Date":"Wednesday, September 10, 2025",
+        "Date":"2025-09-10",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSE",
+        "Holiday":"Martyrdom of Hazrat Fatimah al-Zahra",
+        "Long_Date":"Monday, November 24, 2025",
+        "Date":"2025-11-24",
+        "Status":"Closed, 8 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TADAWUL",
+        "Holiday":"",
+        "Long_Date":"Sunday, February 23, 2025 (past)",
+        "Date":"2025-02-23",
+        "Status":"Closed, 2 weeks ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TADAWUL",
+        "Holiday":"",
+        "Long_Date":"Sunday, March 30, 2025",
+        "Date":"2025-03-30",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TADAWUL",
+        "Holiday":"",
+        "Long_Date":"Monday, March 31, 2025",
+        "Date":"2025-03-31",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TADAWUL",
+        "Holiday":"",
+        "Long_Date":"Tuesday, April 1, 2025",
+        "Date":"2025-04-01",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TADAWUL",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Wednesday, April 2, 2025",
+        "Date":"2025-04-02",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TADAWUL",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Thursday, April 3, 2025",
+        "Date":"2025-04-03",
+        "Status":"Closed, 4 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TADAWUL",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Sunday, June 1, 2025",
+        "Date":"2025-06-01",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TADAWUL",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Monday, June 2, 2025",
+        "Date":"2025-06-02",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TADAWUL",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Tuesday, June 3, 2025",
+        "Date":"2025-06-03",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TADAWUL",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Wednesday, June 4, 2025",
+        "Date":"2025-06-04",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TADAWUL",
+        "Holiday":"National Day",
+        "Long_Date":"Tuesday, September 23, 2025",
+        "Date":"2025-09-23",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"",
+        "Long_Date":"Tuesday, January 28, 2025  (past)",
+        "Date":"2025-01-28",
+        "Status":"Open, 9:00 am - 12:00 pm , 1 month ago",
+        "Open_Local":"09:00",
+        "Close_Local":"12:00"
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"",
+        "Long_Date":"Wednesday, January 29, 2025 (past)",
+        "Date":"2025-01-29",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"Chinese New Year",
+        "Long_Date":"Thursday, January 30, 2025 (past)",
+        "Date":"2025-01-30",
+        "Status":"Closed, 1 month ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"Eid al-Fitr",
+        "Long_Date":"Monday, March 31, 2025",
+        "Date":"2025-03-31",
+        "Status":"Closed, 3 weeks from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"Labor Day",
+        "Long_Date":"Thursday, May 1, 2025",
+        "Date":"2025-05-01",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"Vesak Day",
+        "Long_Date":"Monday, May 12, 2025",
+        "Date":"2025-05-12",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"Eid al-Adha",
+        "Long_Date":"Friday, June 6, 2025",
+        "Date":"2025-06-06",
+        "Status":"Closed, 3 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"Diwali",
+        "Long_Date":"Monday, October 20, 2025",
+        "Date":"2025-10-20",
+        "Status":"Closed, 7 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"Christmas",
+        "Long_Date":"Wednesday, December 24, 2025",
+        "Date":"2025-12-24",
+        "Status":"Open, 9:00 am - 12:00 pm , 9 months from now",
+        "Open_Local":"09:00",
+        "Close_Local":"12:00"
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"SGX",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, December 31, 2025",
+        "Date":"2025-12-31",
+        "Status":"Open, 9:00 am - 12:00 pm , 10 months from now",
+        "Open_Local":"09:00",
+        "Close_Local":"12:00"
+    },
+    {
+        "Market":"TSX",
+        "Holiday":"New Year's Day",
+        "Long_Date":"Wednesday, January 1, 2025 (past)",
+        "Date":"2025-01-01",
+        "Status":"Closed, 2 months ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSX",
+        "Holiday":"Family Day",
+        "Long_Date":"Monday, February 17, 2025 (past)",
+        "Date":"2025-02-17",
+        "Status":"Closed, 3 weeks ago",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSX",
+        "Holiday":"Good Friday",
+        "Long_Date":"Friday, April 18, 2025",
+        "Date":"2025-04-18",
+        "Status":"Closed, 1 month from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSX",
+        "Holiday":"Victoria Day",
+        "Long_Date":"Monday, May 19, 2025",
+        "Date":"2025-05-19",
+        "Status":"Closed, 2 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSX",
+        "Holiday":"Canada Day",
+        "Long_Date":"Tuesday, July 1, 2025",
+        "Date":"2025-07-01",
+        "Status":"Closed, 4 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSX",
+        "Holiday":"Civic Day",
+        "Long_Date":"Monday, August 4, 2025",
+        "Date":"2025-08-04",
+        "Status":"Closed, 5 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSX",
+        "Holiday":"Labor Day",
+        "Long_Date":"Monday, September 1, 2025",
+        "Date":"2025-09-01",
+        "Status":"Closed, 6 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSX",
+        "Holiday":"Thanksgiving Day",
+        "Long_Date":"Monday, October 13, 2025",
+        "Date":"2025-10-13",
+        "Status":"Closed, 7 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSX",
+        "Holiday":"Christmas",
+        "Long_Date":"Wednesday, December 24, 2025",
+        "Date":"2025-12-24",
+        "Status":"Open, 9:30 am - 12:50 pm , 9 months from now",
+        "Open_Local":"09:30",
+        "Close_Local":"12:50"
+    },
+    {
+        "Market":"TSX",
+        "Holiday":"Christmas",
+        "Long_Date":"Thursday, December 25, 2025",
+        "Date":"2025-12-25",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    },
+    {
+        "Market":"TSX",
+        "Holiday":"Boxing Day",
+        "Long_Date":"Friday, December 26, 2025",
+        "Date":"2025-12-26",
+        "Status":"Closed, 10 months from now",
+        "Open_Local":null,
+        "Close_Local":null
+    }
+]

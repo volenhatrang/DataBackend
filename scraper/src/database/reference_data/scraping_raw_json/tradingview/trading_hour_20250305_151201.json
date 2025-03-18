@@ -1,0 +1,1106 @@
+[
+    {
+        "Iso2":"🇦🇪",
+        "Market_Exchange":"Abu Dhabi Securities Exchange",
+        "Market_Symbol":"ADX",
+        "Open_Local":"10:00",
+        "Close_Local":"14:44",
+        "Timezone":"+04"
+    },
+    {
+        "Iso2":"🇦🇪",
+        "Market_Exchange":"Dubai Financial Market",
+        "Market_Symbol":"DFM",
+        "Open_Local":"10:00",
+        "Close_Local":"14:45",
+        "Timezone":"+04"
+    },
+    {
+        "Iso2":"🇦🇪",
+        "Market_Exchange":"NASDAQ Dubai",
+        "Market_Symbol":"NDXB",
+        "Open_Local":"10:00",
+        "Close_Local":"14:45",
+        "Timezone":"+04"
+    },
+    {
+        "Iso2":"🇦🇷",
+        "Market_Exchange":"Argentinian Stock Exchange",
+        "Market_Symbol":"BYMA",
+        "Open_Local":"11:00",
+        "Close_Local":"18:00",
+        "Timezone":"-03"
+    },
+    {
+        "Iso2":"🇦🇹",
+        "Market_Exchange":"Vienna Stock Exchange",
+        "Market_Symbol":"VSE",
+        "Open_Local":"09:04",
+        "Close_Local":"17:30",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇦🇺",
+        "Market_Exchange":"Australia Stock Exchange",
+        "Market_Symbol":"ASX",
+        "Open_Local":"10:00",
+        "Close_Local":"16:00",
+        "Timezone":"AEDT"
+    },
+    {
+        "Iso2":"🇦🇺",
+        "Market_Exchange":"National Stock Exchange of Australia",
+        "Market_Symbol":"NSXA",
+        "Open_Local":"10:00",
+        "Close_Local":"16:00",
+        "Timezone":"AEDT"
+    },
+    {
+        "Iso2":"🇦🇺",
+        "Market_Exchange":"Sydney Stock Exchange",
+        "Market_Symbol":"SSX",
+        "Open_Local":"10:15",
+        "Close_Local":"16:15",
+        "Timezone":"AEDT"
+    },
+    {
+        "Iso2":"🇧🇦",
+        "Market_Exchange":"Banja Luka Stock Exchange",
+        "Market_Symbol":"BLSE",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇧🇦",
+        "Market_Exchange":"Sarajevo Stock Exchange",
+        "Market_Symbol":"SASE",
+        "Open_Local":"10:00",
+        "Close_Local":"13:30",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇧🇧",
+        "Market_Exchange":"Barbados Stock Exchange",
+        "Market_Symbol":"BDE-BARBADOS",
+        "Open_Local":"10:00",
+        "Close_Local":"13:00",
+        "Timezone":"AST"
+    },
+    {
+        "Iso2":"🇧🇩",
+        "Market_Exchange":"Chittagong Stock Exchange",
+        "Market_Symbol":"CSE",
+        "Open_Local":"10:00",
+        "Close_Local":"14:19",
+        "Timezone":"+06"
+    },
+    {
+        "Iso2":"🇧🇩",
+        "Market_Exchange":"Dhaka Stock Exchange",
+        "Market_Symbol":"DSE",
+        "Open_Local":"10:00",
+        "Close_Local":"14:20",
+        "Timezone":"+06"
+    },
+    {
+        "Iso2":"🇧🇪",
+        "Market_Exchange":"Euronext Brussels",
+        "Market_Symbol":"EURONEXT-BRUSSELS",
+        "Open_Local":"09:00",
+        "Close_Local":"17:30",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇧🇬",
+        "Market_Exchange":"Bulgarian Stock Exchange",
+        "Market_Symbol":"BSE-BULGARIA",
+        "Open_Local":"10:10",
+        "Close_Local":"16:55",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇧🇭",
+        "Market_Exchange":"Bahrain Stock Exchange",
+        "Market_Symbol":"BHB",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00",
+        "Timezone":"+03"
+    },
+    {
+        "Iso2":"🇧🇲",
+        "Market_Exchange":"Bermuda Stock Exchange",
+        "Market_Symbol":"BSX",
+        "Open_Local":"09:00",
+        "Close_Local":"16:30",
+        "Timezone":"AST"
+    },
+    {
+        "Iso2":"🇧🇴",
+        "Market_Exchange":"Bolivian Stock Exchange",
+        "Market_Symbol":"BBV",
+        "Open_Local":"08:30",
+        "Close_Local":"12:45",
+        "Timezone":"-04"
+    },
+    {
+        "Iso2":"🇧🇷",
+        "Market_Exchange":"Brazil Stock Exchange",
+        "Market_Symbol":"BOVESPA",
+        "Open_Local":"10:00",
+        "Close_Local":"17:55",
+        "Timezone":"-03"
+    },
+    {
+        "Iso2":"🇧🇼",
+        "Market_Exchange":"Botswana Stock Exchange",
+        "Market_Symbol":"BSE-BOTSWANA",
+        "Open_Local":"10:25",
+        "Close_Local":"13:20",
+        "Timezone":"CAT"
+    },
+    {
+        "Iso2":"🇧🇾",
+        "Market_Exchange":"Belarusian Currency and Stock Exchange",
+        "Market_Symbol":"BCSE",
+        "Open_Local":"09:00",
+        "Close_Local":"16:50",
+        "Timezone":"+03"
+    },
+    {
+        "Iso2":"🇨🇦",
+        "Market_Exchange":"Canadian Securities Exchange",
+        "Market_Symbol":"CNSX",
+        "Open_Local":"09:30",
+        "Close_Local":"16:00",
+        "Timezone":"EST"
+    },
+    {
+        "Iso2":"🇨🇦",
+        "Market_Exchange":"Toronto Stock Exchange",
+        "Market_Symbol":"TSX",
+        "Open_Local":"09:30",
+        "Close_Local":"16:00",
+        "Timezone":"EST"
+    },
+    {
+        "Iso2":"🇨🇦",
+        "Market_Exchange":"TSX Venture Exchange",
+        "Market_Symbol":"XTSX",
+        "Open_Local":"09:30",
+        "Close_Local":"16:00",
+        "Timezone":"EST"
+    },
+    {
+        "Iso2":"🇨🇭",
+        "Market_Exchange":"BX Swiss",
+        "Market_Symbol":"BX",
+        "Open_Local":"09:00",
+        "Close_Local":"17:30",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇨🇭",
+        "Market_Exchange":"Swiss Stock Exchange",
+        "Market_Symbol":"SIX",
+        "Open_Local":"09:00",
+        "Close_Local":"17:20",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇨🇮",
+        "Market_Exchange":"Regional Securities Exchange SA",
+        "Market_Symbol":"BRVM",
+        "Open_Local":"09:45",
+        "Close_Local":"14:00",
+        "Timezone":"GMT"
+    },
+    {
+        "Iso2":"🇨🇱",
+        "Market_Exchange":"Santiago Stock Exchange",
+        "Market_Symbol":"BVS",
+        "Open_Local":"09:30",
+        "Close_Local":"16:00",
+        "Timezone":"-03"
+    },
+    {
+        "Iso2":"🇨🇳",
+        "Market_Exchange":"Shanghai Stock Exchange",
+        "Market_Symbol":"SSE",
+        "Open_Local":"09:30",
+        "Close_Local":"14:57",
+        "Timezone":"CST"
+    },
+    {
+        "Iso2":"🇨🇳",
+        "Market_Exchange":"Shenzhen Stock Exchange",
+        "Market_Symbol":"SZSE",
+        "Open_Local":"09:30",
+        "Close_Local":"14:57",
+        "Timezone":"CST"
+    },
+    {
+        "Iso2":"🇨🇴",
+        "Market_Exchange":"Colombia Stock Exchange",
+        "Market_Symbol":"BVC",
+        "Open_Local":"08:30",
+        "Close_Local":"14:55",
+        "Timezone":"EST"
+    },
+    {
+        "Iso2":"🇨🇷",
+        "Market_Exchange":"Costa Rican Stock Exchange",
+        "Market_Symbol":"BNV",
+        "Open_Local":"08:00",
+        "Close_Local":"16:00",
+        "Timezone":"CST"
+    },
+    {
+        "Iso2":"🇨🇾",
+        "Market_Exchange":"Cyprus Stock Exchange",
+        "Market_Symbol":"CSE-CYPRUS",
+        "Open_Local":"10:30",
+        "Close_Local":"17:00",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇨🇿",
+        "Market_Exchange":"Prague Stock Exchange",
+        "Market_Symbol":"XPRA",
+        "Open_Local":"09:00",
+        "Close_Local":"16:10",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇩🇪",
+        "Market_Exchange":"Eurex Germany",
+        "Market_Symbol":"EUREX",
+        "Open_Local":"01:10",
+        "Close_Local":"22:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇩🇪",
+        "Market_Exchange":"Munich Stock Exchange",
+        "Market_Symbol":"XMUN",
+        "Open_Local":"08:00",
+        "Close_Local":"22:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇩🇪",
+        "Market_Exchange":"Stuttgart Stock Exchange",
+        "Market_Symbol":"XSTU",
+        "Open_Local":"08:00",
+        "Close_Local":"22:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇩🇪",
+        "Market_Exchange":"Börse Berlin Stock Exchange",
+        "Market_Symbol":"XBER",
+        "Open_Local":"08:00",
+        "Close_Local":"22:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇩🇪",
+        "Market_Exchange":"Düsseldorf Stock Exchange",
+        "Market_Symbol":"XDUS",
+        "Open_Local":"08:00",
+        "Close_Local":"22:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇩🇪",
+        "Market_Exchange":"Deutsche Börse Xetra",
+        "Market_Symbol":"XETR",
+        "Open_Local":"09:00",
+        "Close_Local":"17:30",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇩🇪",
+        "Market_Exchange":"Frankfurt Stock Exchange",
+        "Market_Symbol":"FSX",
+        "Open_Local":"08:00",
+        "Close_Local":"22:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇩🇪",
+        "Market_Exchange":"Hamburg Stock Exchange",
+        "Market_Symbol":"XHAM",
+        "Open_Local":"08:00",
+        "Close_Local":"22:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇩🇪",
+        "Market_Exchange":"Hannover Stock Exchange",
+        "Market_Symbol":"XHAN",
+        "Open_Local":"08:00",
+        "Close_Local":"22:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇩🇰",
+        "Market_Exchange":"Copenhagen Stock Exchange",
+        "Market_Symbol":"OMXC-COPENHAGEN",
+        "Open_Local":"09:00",
+        "Close_Local":"16:55",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇪🇨",
+        "Market_Exchange":"Guayaquil Stock Exchange",
+        "Market_Symbol":"BVG",
+        "Open_Local":"09:30",
+        "Close_Local":"15:30",
+        "Timezone":"-05"
+    },
+    {
+        "Iso2":"🇪🇪",
+        "Market_Exchange":"Tallinn Stock Exchange",
+        "Market_Symbol":"OMXT-TALLINN",
+        "Open_Local":"10:00",
+        "Close_Local":"15:55",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇪🇬",
+        "Market_Exchange":"Egyptian Exchange",
+        "Market_Symbol":"EGX",
+        "Open_Local":"10:00",
+        "Close_Local":"14:15",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇪🇬",
+        "Market_Exchange":"Nile Stock Exchange",
+        "Market_Symbol":"NILX",
+        "Open_Local":"10:00",
+        "Close_Local":"14:30",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇪🇸",
+        "Market_Exchange":"Madrid Stock Exchange",
+        "Market_Symbol":"BME",
+        "Open_Local":"09:00",
+        "Close_Local":"17:30",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇫🇮",
+        "Market_Exchange":"Helsinki Stock Exchange",
+        "Market_Symbol":"OMXH-HELSINKI",
+        "Open_Local":"10:00",
+        "Close_Local":"18:25",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇫🇷",
+        "Market_Exchange":"Euronext Paris Exchange",
+        "Market_Symbol":"EURONEXT-PARIS",
+        "Open_Local":"09:00",
+        "Close_Local":"17:30",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇬🇧",
+        "Market_Exchange":"AIM Stock Exchange",
+        "Market_Symbol":"AIM",
+        "Open_Local":"08:00",
+        "Close_Local":"16:30",
+        "Timezone":"GMT"
+    },
+    {
+        "Iso2":"🇬🇧",
+        "Market_Exchange":"London Metal Exchange",
+        "Market_Symbol":"LME",
+        "Open_Local":"01:00",
+        "Close_Local":"19:00",
+        "Timezone":"GMT"
+    },
+    {
+        "Iso2":"🇬🇧",
+        "Market_Exchange":"London Stock Exchange",
+        "Market_Symbol":"LSE",
+        "Open_Local":"08:00",
+        "Close_Local":"16:30",
+        "Timezone":"GMT"
+    },
+    {
+        "Iso2":"🇬🇧",
+        "Market_Exchange":"Aquis Stock Exchange",
+        "Market_Symbol":"NEX",
+        "Open_Local":"08:00",
+        "Close_Local":"16:30",
+        "Timezone":"GMT"
+    },
+    {
+        "Iso2":"🇬🇬",
+        "Market_Exchange":"The International Stock Exchange",
+        "Market_Symbol":"TISE",
+        "Open_Local":"09:00",
+        "Close_Local":"16:30",
+        "Timezone":"GMT"
+    },
+    {
+        "Iso2":"🇬🇭",
+        "Market_Exchange":"Ghana Stock Exchange",
+        "Market_Symbol":"GSE",
+        "Open_Local":"10:00",
+        "Close_Local":"15:00",
+        "Timezone":"GMT"
+    },
+    {
+        "Iso2":"🇬🇷",
+        "Market_Exchange":"Athens Stock Exchange",
+        "Market_Symbol":"ASE-ATHENS",
+        "Open_Local":"10:30",
+        "Close_Local":"17:00",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇭🇰",
+        "Market_Exchange":"Hong Kong Stock Exchange",
+        "Market_Symbol":"HKEX",
+        "Open_Local":"09:30",
+        "Close_Local":"16:00",
+        "Timezone":"HKT"
+    },
+    {
+        "Iso2":"🇭🇷",
+        "Market_Exchange":"Zagreb Stock Exchagne",
+        "Market_Symbol":"ZSE",
+        "Open_Local":"09:30",
+        "Close_Local":"15:55",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇭🇺",
+        "Market_Exchange":"Budapest Stock Exchange",
+        "Market_Symbol":"BSE-BUDAPEST",
+        "Open_Local":"09:00",
+        "Close_Local":"17:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇮🇩",
+        "Market_Exchange":"Indonesia Stock Exchange",
+        "Market_Symbol":"IDX",
+        "Open_Local":"09:00",
+        "Close_Local":"15:49",
+        "Timezone":"WIB"
+    },
+    {
+        "Iso2":"🇮🇪",
+        "Market_Exchange":"Euronext Dublin",
+        "Market_Symbol":"ISE",
+        "Open_Local":"08:00",
+        "Close_Local":"16:28",
+        "Timezone":"GMT"
+    },
+    {
+        "Iso2":"🇮🇱",
+        "Market_Exchange":"Tel-Aviv Stock Exchange",
+        "Market_Symbol":"TASE",
+        "Open_Local":"09:59",
+        "Close_Local":"17:14",
+        "Timezone":"IST"
+    },
+    {
+        "Iso2":"🇮🇳",
+        "Market_Exchange":"Bombay Stock Exchange",
+        "Market_Symbol":"BSE-BOMBAY",
+        "Open_Local":"09:15",
+        "Close_Local":"15:30",
+        "Timezone":"IST"
+    },
+    {
+        "Iso2":"🇮🇳",
+        "Market_Exchange":"India National Stock Exchange",
+        "Market_Symbol":"NSE-INDIA",
+        "Open_Local":"09:15",
+        "Close_Local":"15:30",
+        "Timezone":"IST"
+    },
+    {
+        "Iso2":"🇮🇷",
+        "Market_Exchange":"Iran Fara Bourse",
+        "Market_Symbol":"IFB",
+        "Open_Local":"09:00",
+        "Close_Local":"12:30",
+        "Timezone":"+0330"
+    },
+    {
+        "Iso2":"🇮🇷",
+        "Market_Exchange":"Tehran Stock Exchange",
+        "Market_Symbol":"TSE",
+        "Open_Local":"09:00",
+        "Close_Local":"12:30",
+        "Timezone":"+0330"
+    },
+    {
+        "Iso2":"🇮🇸",
+        "Market_Exchange":"Iceland Stock Exchange",
+        "Market_Symbol":"XICE",
+        "Open_Local":"09:30",
+        "Close_Local":"15:25",
+        "Timezone":"GMT"
+    },
+    {
+        "Iso2":"🇮🇹",
+        "Market_Exchange":"Italian Stock Exchange",
+        "Market_Symbol":"MTA",
+        "Open_Local":null,
+        "Close_Local":null,
+        "Timezone":null
+    },
+    {
+        "Iso2":"🇯🇲",
+        "Market_Exchange":"Jamaica Stock Exchange",
+        "Market_Symbol":"JSE-JAMAICA",
+        "Open_Local":"08:30",
+        "Close_Local":"14:00",
+        "Timezone":"EST"
+    },
+    {
+        "Iso2":"🇯🇴",
+        "Market_Exchange":"Amman Stock Exchange",
+        "Market_Symbol":"ASE-AMMAN",
+        "Open_Local":"10:30",
+        "Close_Local":"12:30",
+        "Timezone":"+03"
+    },
+    {
+        "Iso2":"🇯🇵",
+        "Market_Exchange":"Tokyo Stock Exchange",
+        "Market_Symbol":"JPX",
+        "Open_Local":"09:00",
+        "Close_Local":"15:25",
+        "Timezone":"JST"
+    },
+    {
+        "Iso2":"🇯🇵",
+        "Market_Exchange":"Nagoya Stock Exchange",
+        "Market_Symbol":"XNGO",
+        "Open_Local":"09:00",
+        "Close_Local":"15:25",
+        "Timezone":"JST"
+    },
+    {
+        "Iso2":"🇯🇵",
+        "Market_Exchange":"Fukuoka Stock Exchange",
+        "Market_Symbol":"XFKA",
+        "Open_Local":"09:00",
+        "Close_Local":"15:30",
+        "Timezone":"JST"
+    },
+    {
+        "Iso2":"🇯🇵",
+        "Market_Exchange":"Sapporo Securities Exchange",
+        "Market_Symbol":"XSAP",
+        "Open_Local":"09:00",
+        "Close_Local":"15:25",
+        "Timezone":"JST"
+    },
+    {
+        "Iso2":"🇰🇪",
+        "Market_Exchange":"Nairobi Securities Exchange",
+        "Market_Symbol":"NSE-NAIROBI",
+        "Open_Local":"09:31",
+        "Close_Local":"15:00",
+        "Timezone":"EAT"
+    },
+    {
+        "Iso2":"🇰🇭",
+        "Market_Exchange":"Cambodia Securities Exchange",
+        "Market_Symbol":"XCSX",
+        "Open_Local":"09:00",
+        "Close_Local":"14:50",
+        "Timezone":"+07"
+    },
+    {
+        "Iso2":"🇰🇷",
+        "Market_Exchange":"Korea Exchange (KOSDAQ)",
+        "Market_Symbol":"KOSDAQ",
+        "Open_Local":"09:00",
+        "Close_Local":"15:30",
+        "Timezone":"KST"
+    },
+    {
+        "Iso2":"🇰🇷",
+        "Market_Exchange":"South Korea Stock Exchange",
+        "Market_Symbol":"KRX",
+        "Open_Local":"09:00",
+        "Close_Local":"15:20",
+        "Timezone":"KST"
+    },
+    {
+        "Iso2":"🇰🇼",
+        "Market_Exchange":"Kuwait Stock Exchange",
+        "Market_Symbol":"XKUW",
+        "Open_Local":"09:00",
+        "Close_Local":"12:30",
+        "Timezone":"+03"
+    },
+    {
+        "Iso2":"🇰🇾",
+        "Market_Exchange":"Cayman Islands Stock Exchange",
+        "Market_Symbol":"CSX",
+        "Open_Local":"07:05",
+        "Close_Local":"12:25",
+        "Timezone":"EST"
+    },
+    {
+        "Iso2":"🇰🇿",
+        "Market_Exchange":"Kazakhstan Stock Exchange",
+        "Market_Symbol":"KASE",
+        "Open_Local":"11:30",
+        "Close_Local":"17:30",
+        "Timezone":"+05"
+    },
+    {
+        "Iso2":"🇱🇧",
+        "Market_Exchange":"Beirut Stock Exchange",
+        "Market_Symbol":"BSE-BEIRUT",
+        "Open_Local":"09:30",
+        "Close_Local":"12:30",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇱🇰",
+        "Market_Exchange":"Colombo Stock Exchange",
+        "Market_Symbol":"CSE-COLOMBO",
+        "Open_Local":"09:30",
+        "Close_Local":"14:30",
+        "Timezone":"+0530"
+    },
+    {
+        "Iso2":"🇱🇹",
+        "Market_Exchange":"Nasdaq Vilnius Stock Exchange",
+        "Market_Symbol":"OMXV-VILNIUS",
+        "Open_Local":"10:00",
+        "Close_Local":"15:55",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇱🇺",
+        "Market_Exchange":"Luxembourg Stock Exchange",
+        "Market_Symbol":"LUXSE",
+        "Open_Local":"09:00",
+        "Close_Local":"17:30",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇱🇻",
+        "Market_Exchange":"Riga Stock Exchange",
+        "Market_Symbol":"OMXR-RIGA",
+        "Open_Local":"10:00",
+        "Close_Local":"15:55",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇲🇦",
+        "Market_Exchange":"Casablanca Stock Exchange",
+        "Market_Symbol":"BC",
+        "Open_Local":"09:30",
+        "Close_Local":"15:20",
+        "Timezone":"+00"
+    },
+    {
+        "Iso2":"🇲🇪",
+        "Market_Exchange":"Montenegro Stock Exchange",
+        "Market_Symbol":"MNSE",
+        "Open_Local":"09:00",
+        "Close_Local":"13:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇲🇰",
+        "Market_Exchange":"Macedonian Stock Exchange",
+        "Market_Symbol":"XMAE",
+        "Open_Local":"09:00",
+        "Close_Local":"14:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇲🇳",
+        "Market_Exchange":"Mongolian Stock Exchange",
+        "Market_Symbol":"XULA",
+        "Open_Local":"10:00",
+        "Close_Local":"13:00",
+        "Timezone":"+08"
+    },
+    {
+        "Iso2":"🇲🇹",
+        "Market_Exchange":"Malta Stock Exchange",
+        "Market_Symbol":"MSE",
+        "Open_Local":"09:30",
+        "Close_Local":"15:30",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇲🇺",
+        "Market_Exchange":"Stock Exchange of Mauritius",
+        "Market_Symbol":"SEM",
+        "Open_Local":"10:00",
+        "Close_Local":"14:30",
+        "Timezone":"+04"
+    },
+    {
+        "Iso2":"🇲🇽",
+        "Market_Exchange":"Mexican Stock Exchange",
+        "Market_Symbol":"BMV",
+        "Open_Local":"08:30",
+        "Close_Local":"15:00",
+        "Timezone":"CST"
+    },
+    {
+        "Iso2":"🇲🇾",
+        "Market_Exchange":"Malaysia Stock Exchange",
+        "Market_Symbol":"MYX",
+        "Open_Local":"09:00",
+        "Close_Local":"16:45",
+        "Timezone":"+08"
+    },
+    {
+        "Iso2":"🇳🇦",
+        "Market_Exchange":"Namibian Stock Exchange",
+        "Market_Symbol":"NSX",
+        "Open_Local":"09:00",
+        "Close_Local":"17:00",
+        "Timezone":"CAT"
+    },
+    {
+        "Iso2":"🇳🇬",
+        "Market_Exchange":"Nigerian Stock Exchange",
+        "Market_Symbol":"NSE-NIGERIA",
+        "Open_Local":"10:00",
+        "Close_Local":"14:20",
+        "Timezone":"WAT"
+    },
+    {
+        "Iso2":"🇳🇱",
+        "Market_Exchange":"Euronext Amsterdam Stock Exchange",
+        "Market_Symbol":"EURONEXT",
+        "Open_Local":"09:00",
+        "Close_Local":"17:30",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇳🇴",
+        "Market_Exchange":"Oslo Stock Exchange",
+        "Market_Symbol":"OSE",
+        "Open_Local":"09:00",
+        "Close_Local":"16:20",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇳🇿",
+        "Market_Exchange":"New Zealand Stock Exchange",
+        "Market_Symbol":"NZX",
+        "Open_Local":"10:00",
+        "Close_Local":"16:45",
+        "Timezone":"NZDT"
+    },
+    {
+        "Iso2":"🇴🇲",
+        "Market_Exchange":"Muscat Securities Market",
+        "Market_Symbol":"MSM",
+        "Open_Local":"10:00",
+        "Close_Local":"14:00",
+        "Timezone":"+04"
+    },
+    {
+        "Iso2":"🇵🇦",
+        "Market_Exchange":"Panama Stock Exchange",
+        "Market_Symbol":"BVPA",
+        "Open_Local":"08:00",
+        "Close_Local":"15:00",
+        "Timezone":"EST"
+    },
+    {
+        "Iso2":"🇵🇪",
+        "Market_Exchange":"Lima Stock Exchange",
+        "Market_Symbol":"BVL",
+        "Open_Local":"09:30",
+        "Close_Local":"15:52",
+        "Timezone":"-05"
+    },
+    {
+        "Iso2":"🇵🇭",
+        "Market_Exchange":"Philippine Stock Exchange",
+        "Market_Symbol":"PSE",
+        "Open_Local":"09:30",
+        "Close_Local":"14:45",
+        "Timezone":"PST"
+    },
+    {
+        "Iso2":"🇵🇰",
+        "Market_Exchange":"Pakistan Stock Exchange",
+        "Market_Symbol":"PSX",
+        "Open_Local":"09:17",
+        "Close_Local":"15:30",
+        "Timezone":"PKT"
+    },
+    {
+        "Iso2":"🇵🇱",
+        "Market_Exchange":"Warsaw Stock Exchange",
+        "Market_Symbol":"GPW",
+        "Open_Local":"09:00",
+        "Close_Local":"16:50",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇵🇸",
+        "Market_Exchange":"Palestine Securities Exchange",
+        "Market_Symbol":"PEX",
+        "Open_Local":"10:00",
+        "Close_Local":"13:00",
+        "Timezone":"IST"
+    },
+    {
+        "Iso2":"🇵🇹",
+        "Market_Exchange":"Euronext Lisbon",
+        "Market_Symbol":"EURONEXT-LISBON",
+        "Open_Local":"08:00",
+        "Close_Local":"16:30",
+        "Timezone":"WET"
+    },
+    {
+        "Iso2":"🇶🇦",
+        "Market_Exchange":"Qatar Stock Exchange",
+        "Market_Symbol":"QE",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00",
+        "Timezone":"+03"
+    },
+    {
+        "Iso2":"🇷🇴",
+        "Market_Exchange":"Bucharest Stock Exchange",
+        "Market_Symbol":"BVB",
+        "Open_Local":"10:00",
+        "Close_Local":"17:45",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇷🇸",
+        "Market_Exchange":"Belgrade Stock Exchange",
+        "Market_Symbol":"BELEX",
+        "Open_Local":"09:30",
+        "Close_Local":"14:00",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇷🇺",
+        "Market_Exchange":"Moscow Exchange",
+        "Market_Symbol":"MOEX",
+        "Open_Local":"10:00",
+        "Close_Local":"18:40",
+        "Timezone":"MSK"
+    },
+    {
+        "Iso2":"🇷🇼",
+        "Market_Exchange":"Rwanda Stock Exchange",
+        "Market_Symbol":"RSE",
+        "Open_Local":"09:00",
+        "Close_Local":"12:00",
+        "Timezone":"CAT"
+    },
+    {
+        "Iso2":"🇸🇦",
+        "Market_Exchange":"Saudi Stock Exchange",
+        "Market_Symbol":"TADAWUL",
+        "Open_Local":"10:00",
+        "Close_Local":"15:00",
+        "Timezone":"+03"
+    },
+    {
+        "Iso2":"🇸🇪",
+        "Market_Exchange":"Stockholm Stock Exchange",
+        "Market_Symbol":"OMX",
+        "Open_Local":"09:00",
+        "Close_Local":"17:25",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇸🇪",
+        "Market_Exchange":"Nordic Growth Market",
+        "Market_Symbol":"XNGM",
+        "Open_Local":"09:00",
+        "Close_Local":"17:25",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇸🇪",
+        "Market_Exchange":"Spotlight Stock Market",
+        "Market_Symbol":"XSAT",
+        "Open_Local":"09:00",
+        "Close_Local":"17:25",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇸🇬",
+        "Market_Exchange":"Singapore Exchange",
+        "Market_Symbol":"SGX",
+        "Open_Local":"09:00",
+        "Close_Local":"17:00",
+        "Timezone":"+08"
+    },
+    {
+        "Iso2":"🇸🇮",
+        "Market_Exchange":"Ljubljana Stock Exchange",
+        "Market_Symbol":"XLJU",
+        "Open_Local":"09:15",
+        "Close_Local":"15:15",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇸🇰",
+        "Market_Exchange":"Bratislava Stock Exchange",
+        "Market_Symbol":"BSSE",
+        "Open_Local":"11:00",
+        "Close_Local":"15:30",
+        "Timezone":"CET"
+    },
+    {
+        "Iso2":"🇹🇭",
+        "Market_Exchange":"Stock Exchange of Thailand",
+        "Market_Symbol":"SET",
+        "Open_Local":"10:00",
+        "Close_Local":"16:30",
+        "Timezone":"+07"
+    },
+    {
+        "Iso2":"🇹🇭",
+        "Market_Exchange":"Thailand Futures Exchange",
+        "Market_Symbol":"TFEX",
+        "Open_Local":"09:45",
+        "Close_Local":"16:55",
+        "Timezone":"+07"
+    },
+    {
+        "Iso2":"🇹🇷",
+        "Market_Exchange":"Istanbul Stock Exchange",
+        "Market_Symbol":"BIST",
+        "Open_Local":"10:00",
+        "Close_Local":"18:00",
+        "Timezone":"+03"
+    },
+    {
+        "Iso2":"🇹🇼",
+        "Market_Exchange":"Taipei Exchange",
+        "Market_Symbol":"TPEX",
+        "Open_Local":"09:00",
+        "Close_Local":"13:25",
+        "Timezone":"CST"
+    },
+    {
+        "Iso2":"🇹🇼",
+        "Market_Exchange":"Taiwan Stock Exchange",
+        "Market_Symbol":"TWSE",
+        "Open_Local":"09:00",
+        "Close_Local":"13:25",
+        "Timezone":"CST"
+    },
+    {
+        "Iso2":"🇹🇿",
+        "Market_Exchange":"Dar es Salaam Stock Exchange",
+        "Market_Symbol":"XDSE",
+        "Open_Local":"10:30",
+        "Close_Local":"16:00",
+        "Timezone":"EAT"
+    },
+    {
+        "Iso2":"🇺🇦",
+        "Market_Exchange":"PFTS Stock Exchange",
+        "Market_Symbol":"PFTS",
+        "Open_Local":"10:00",
+        "Close_Local":"17:15",
+        "Timezone":"EET"
+    },
+    {
+        "Iso2":"🇺🇦",
+        "Market_Exchange":"Ukrainian Exchange",
+        "Market_Symbol":"UX",
+        "Open_Local":null,
+        "Close_Local":null,
+        "Timezone":null
+    },
+    {
+        "Iso2":"🇺🇸",
+        "Market_Exchange":"Investors Exchange",
+        "Market_Symbol":"IEX",
+        "Open_Local":"09:30",
+        "Close_Local":"16:00",
+        "Timezone":"EST"
+    },
+    {
+        "Iso2":"🇺🇸",
+        "Market_Exchange":"NASDAQ Stock Exchange",
+        "Market_Symbol":"NASDAQ",
+        "Open_Local":"09:30",
+        "Close_Local":"16:00",
+        "Timezone":"EST"
+    },
+    {
+        "Iso2":"🇺🇸",
+        "Market_Exchange":"New York Stock Exchange",
+        "Market_Symbol":"NYSE",
+        "Open_Local":"09:30",
+        "Close_Local":"16:00",
+        "Timezone":"EST"
+    },
+    {
+        "Iso2":"🇺🇸",
+        "Market_Exchange":"OTC Markets U.S.",
+        "Market_Symbol":"OTC",
+        "Open_Local":"09:30",
+        "Close_Local":"16:00",
+        "Timezone":"EST"
+    },
+    {
+        "Iso2":"🇻🇪",
+        "Market_Exchange":"Caracas Stock Exchange",
+        "Market_Symbol":"BVCC",
+        "Open_Local":"09:00",
+        "Close_Local":"13:00",
+        "Timezone":"-04"
+    },
+    {
+        "Iso2":"🇻🇳",
+        "Market_Exchange":"Hanoi Stock Exchange",
+        "Market_Symbol":"HNX",
+        "Open_Local":"09:00",
+        "Close_Local":"14:30",
+        "Timezone":"+07"
+    },
+    {
+        "Iso2":"🇻🇳",
+        "Market_Exchange":"Ho Chi Minh Stock Exchange",
+        "Market_Symbol":"HOSE",
+        "Open_Local":"09:15",
+        "Close_Local":"14:30",
+        "Timezone":"+07"
+    },
+    {
+        "Iso2":"🇿🇦",
+        "Market_Exchange":"Johannesburg Stock Exchange",
+        "Market_Symbol":"JSE",
+        "Open_Local":"09:00",
+        "Close_Local":"16:50",
+        "Timezone":"SAST"
+    },
+    {
+        "Iso2":"🇿🇼",
+        "Market_Exchange":"Zimbabwe Stock Exchange",
+        "Market_Symbol":"XZSE",
+        "Open_Local":"09:30",
+        "Close_Local":"13:00",
+        "Timezone":"CAT"
+    }
+]
