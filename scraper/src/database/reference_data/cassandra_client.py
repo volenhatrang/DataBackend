@@ -4,6 +4,7 @@ import os
 import logging
 import datetime
 import json
+import pandas as pd
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -92,6 +93,67 @@ class CassandraClient:
                     period_start_date DATE,
                     period_end_date DATE,
                     timestamp TIMESTAMP,
+                );
+            """
+            )
+            self.session.execute(
+                """
+                CREATE TABLE IF NOT EXISTS tradingview_sectors (
+                    icb_code TEXT,
+                    sector TEXT,
+                    marketcap DOUBLE,
+                    rt DOUBLE,
+                    volume DOUBLE,
+                    industries TEXT,
+                    stocks TEXT,
+                    component_url TEXT,
+                    country TEXT,
+                    cur TEXT,
+                    divyield_percent DOUBLE,
+                    timestamp TIMESTAMP,
+                    PRIMARY KEY (icb_code)
+                );
+            """
+            )
+            self.session.execute(
+                """
+                CREATE TABLE IF NOT EXISTS tradingview_industries (
+                    icb_code TEXT,
+                    industry TEXT,
+                    marketcap DOUBLE,
+                    rt DOUBLE,
+                    volume DOUBLE,
+                    sector TEXT,
+                    stocks TEXT,
+                    component_url TEXT,
+                    country TEXT,
+                    cur TEXT,
+                    divyield_percent DOUBLE,
+                    timestamp TIMESTAMP,
+                    PRIMARY KEY (icb_code)
+                );
+            """
+            )
+            self.session.execute(
+                """
+                CREATE TABLE IF NOT EXISTS tradingview_icb_components (
+                    codesource TEXT,
+                    marketcap DOUBLE,
+                    price DOUBLE,
+                    rt DOUBLE,
+                    volume DOUBLE,
+                    relvolume TEXT,
+                    pe TEXT,
+                    epsdilttm TEXT,
+                    epsdilgrowthttmyoy TEXT,
+                    divyieldttm TEXT,
+                    analystrating TEXT,
+                    stock_url TEXT,
+                    ticker TEXT,
+                    name TEXT,
+                    cur TEXT,
+                    timestamp TIMESTAMP,
+                    PRIMARY KEY (codesource)
                 );
             """
             )
@@ -215,6 +277,34 @@ class CassandraClient:
             logger.info(f"Inserted country data for holidays")
         except Exception as e:
             logger.error(f"Failed to insert country data: {e}")
+
+    def save_to_cassandra(self, df, table_name):
+        if df.empty:
+            return
+
+        columns = df.columns.tolist()
+        placeholders = ", ".join(["%s"] * len(columns))
+        query = f"""
+            INSERT INTO {table_name} ({', '.join(columns)}) 
+            VALUES ({placeholders}) IF NOT EXISTS
+        """
+        for _, row in df.iterrows():
+            self.session.execute(query, tuple(row))
+
+        logger.info(f"Inserted dataframe sucessfully to {table_name}!!!")
+
+    def query_data(self, query, params=None):
+        if params:
+            rows = self.session.execute(query, params)
+        else:
+            rows = self.session.execute(query)
+        return list(rows)
+
+    def query_to_dataframe(self, query, params=None):
+        rows = self.query_data(query, params)
+        if rows:
+            return pd.DataFrame(rows, columns=rows[0]._fields)
+        return pd.DataFrame()
 
     def close(self):
         if self.session:

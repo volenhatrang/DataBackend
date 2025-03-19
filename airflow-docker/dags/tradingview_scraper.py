@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import sys
 import os
 
+from airflow.exceptions import AirflowTaskTimeout
 
 sys.path.extend(
     [
@@ -23,8 +24,9 @@ from airflow.utils.task_group import TaskGroup  # Add this import
 from airflow.decorators import task
 from airflow.models.dag import DAG
 from airflow.models import Variable
-
-Variable.delete("all_countries")
+import logging
+from cassandra_client import CassandraClient  # pylint: disable=import-error
+import timeout_decorator
 
 default_args = {
     "owner": "airflow",
@@ -56,22 +58,18 @@ def clean_country_name(country: str) -> str:
     )
 
 
-def get_all_countries(region=""):
+def get_all_countries():
     with open(COUNTRIES_JSON_PATH, "r", encoding="utf-8") as file:
         data = json.load(file)
 
-    all_countries = []
-
-    for reg in data:
-        if region and reg["region"].lower() != region.lower():
-            continue
-        countries = [country["country"].lower() for country in reg["countries"]]
-        all_countries.extend(countries)
-
+    all_countries = [
+        country["country"].lower() for reg in data for country in reg["countries"]
+    ]
+    print(all_countries)
     return all_countries
 
 
-all_countries = get_all_countries(region="NORTH AMERICA")
+all_countries = get_all_countries()
 
 # ==============================
 # 🔹 Step 1: get sectors and industries
@@ -79,56 +77,40 @@ all_countries = get_all_countries(region="NORTH AMERICA")
 datasets = ["sectors", "industries"]
 
 
-def fetch_tradingview_sector_and_industry_by_country(country, dataset, **kwargs):
-    ti = kwargs["ti"]
+def fetch_tradingview_sector_and_industry_by_country(country, dataset):
+    cassandra_client = CassandraClient()
+    cassandra_client.connect()
+    cassandra_client.create_keyspace()
     country_source = country.lower().replace(" ", "-")
     if dataset == "sectors":
         df = get_tradingview_sectors_by_country(country=country_source)
-        view_data(df)
-        if df is None or df.empty:
-            raise ValueError("❌ ERROR: df is None or empty! Check the data source.")
-        ti.xcom_push(
-            key=f"{clean_country_name(country)}_{dataset}",
-            value=df.to_dict(orient="records"),
-        )
     elif dataset == "industries":
         df = get_tradingview_industries_by_country(country=country_source)
-        view_data(df)
-        if df is None or df.empty:
-            raise ValueError("❌ ERROR: df is None or empty! Check the data source.")
-        ti.xcom_push(
-            key=f"{clean_country_name(country)}_{dataset}",
-            value=df.to_dict(orient="records"),
-        )
-    print(f"Pushing XCom Key: {clean_country_name(country)}_{dataset}")  # Ở push
 
-    return f"fetch successfully {dataset} of {country}!!!!"
+    view_data(df)
+    if df is None or df.empty:
+        raise ValueError("❌ ERROR: df is None or empty! Check the data source.")
+
+    table_name = f"tradingview_{dataset}"
+    cassandra_client.save_to_cassandra(df, table_name)
+    cassandra_client.close()
+
+    return f"Fetch successfully {dataset} of {country}!!!!"
 
 
 # ==============================
 # 🔹 Step 2: get components
 # ==============================
-def fetch_tradingview_sector_and_industry_components_by_country(
-    country, dataset, **kwargs
-):
-    ti = kwargs["ti"]
-    if dataset == "sectors":
-        data = ti.xcom_pull(
-            key=f"{clean_country_name(country)}_sectors",
-            task_ids=f"fetch_{clean_country_name(country)}_sectors",
-        )
+def fetch_tradingview_sector_and_industry_components_by_country(country, dataset):
 
-    elif dataset == "industries":
-        data = ti.xcom_pull(
-            key=f"{clean_country_name(country)}_industries",
-            task_ids=f"fetch_{clean_country_name(country)}_industries",
-        )
-    print(f"Pulling XCom Key: {clean_country_name(country)}_{dataset}")  # Ở pull
+    cassandra_client = CassandraClient()
+    cassandra_client.connect()
+    cassandra_client.create_keyspace()
 
-    print("XCom Data:", data)  # Debugging
-
-    components_df = pd.DataFrame(data)
-    print(components_df)
+    table_name = f"tradingview_{dataset}"
+    query = f"SELECT * FROM {table_name} WHERE country = %s ALLOW FILTERING"
+    components_df = cassandra_client.query_to_dataframe(query, (str(country),))
+    view_data(components_df)
     components_links = components_df["component_url"].tolist()
     components_arr = []
     for link in components_links:
@@ -136,16 +118,18 @@ def fetch_tradingview_sector_and_industry_components_by_country(
             print(f"Fetching components from {link}")
             result = get_tradingview_sectors_industries_components(link)
             result["component_url"] = link
+            view_data(result)
             components_arr.append(result)
         except Exception as e:
             print(f"Failed: {e}")
             components_arr.append(pd.DataFrame())
 
     components_df = pd.concat(components_arr, ignore_index=True)
-    ti.xcom_push(
-        key=f"{clean_country_name(country)}_{dataset}_components",
-        value=components_df.to_dict(orient="records"),
-    )
+    view_data(components_df)
+
+    table_name = f"tradingview_icb_components"
+    cassandra_client.save_to_cassandra(components_df, table_name)
+    cassandra_client.close()
 
     return f"fetch successfully {dataset} components of {country}!!!!"
 
@@ -232,9 +216,19 @@ with DAG(
                     op_args=[country, dataset],
                 )
 
-    concat_task = PythonOperator(
-        task_id="concat_and_save",
-        python_callable=concat_and_save,
-    )
+    # concat_task = PythonOperator(
+    #     task_id="concat_and_save",
+    #     python_callable=concat_and_save,
+    # )
 
-    list_countries_task >> fetch_data_group >> fetch_components_group >> concat_task
+    # list_countries_task >> fetch_data_group >> fetch_components_group >> concat_task
+    list_countries_task >> fetch_data_group >> fetch_components_group
+
+
+def cleanup():
+    logging.info("Closing Cassandra connection.")
+    cassandra_client.close()
+
+
+dag.on_success_callback = cleanup
+dag.on_failure_callback = cleanup
