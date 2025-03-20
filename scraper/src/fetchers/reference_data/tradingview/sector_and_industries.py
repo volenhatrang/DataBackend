@@ -124,7 +124,9 @@ def get_tradingview_sectors_by_country(country="usa"):
     chrome_options.add_argument("--force-device-scale-factor=0.9")
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--window-size=2560,1440")
-
+    chrome_options.add_argument(
+        "--disable-blink-features=AutomationControlled"
+    )  # Avoid bot detection
     url_sector = f"https://www.tradingview.com/markets/stocks-{country}/sectorandindustry-sector/"
 
     s = Service()
@@ -136,7 +138,7 @@ def get_tradingview_sectors_by_country(country="usa"):
         while True:
             try:
                 load_more = WebDriverWait(driver, 10).until(
-                    EC.element_to_be_clickable(
+                    EC.presence_of_element_located(
                         (
                             By.XPATH,
                             '//*[@id="js-category-content"]/div[2]/div/div[4]/div[3]/button',
@@ -224,10 +226,12 @@ def get_tradingview_sectors_by_country(country="usa"):
         df["volume"] = df["volume"].apply(lambda x: pd.Series(convert_number(x)[0]))
 
         df = df.drop(columns=["divyield(indicated)"])
-
+        driver.quit()
         return df
     except Exception as e:
         print(f"Failed: {e}")
+        driver.quit()
+
         return df
 
 
@@ -243,7 +247,9 @@ def get_tradingview_industries_by_country(country="usa"):
     chrome_options.add_argument("--force-device-scale-factor=0.9")
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--window-size=2560,1440")
-
+    chrome_options.add_argument(
+        "--disable-blink-features=AutomationControlled"
+    )  # Avoid bot detection
     url = f"https://www.tradingview.com/markets/stocks-{country}/sectorandindustry-industry/"
 
     s = Service()
@@ -342,10 +348,13 @@ def get_tradingview_industries_by_country(country="usa"):
         )
 
         df["volume"] = df["volume"].apply(lambda x: pd.Series(convert_number(x)[0]))
+        driver.quit()
 
         return df
     except Exception as e:
         print(f"Failed: {e}")
+        driver.quit()
+
         return df
 
 
@@ -362,7 +371,9 @@ def get_tradingview_sectors_industries_components(
     chrome_options.add_argument("--force-device-scale-factor=0.9")
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--window-size=2560,1440")
-
+    chrome_options.add_argument(
+        "--disable-blink-features=AutomationControlled"
+    )  # Avoid bot detection
     s = Service()
     driver = webdriver.Chrome(service=s, options=chrome_options)
     driver.set_window_size(1920, 1080)
@@ -379,7 +390,7 @@ def get_tradingview_sectors_industries_components(
                 #     '//*[@id="js-category-content"]/div[2]/div/div[4]/div[3]/button',
                 # )
                 load_more = WebDriverWait(driver, 10).until(
-                    EC.element_to_be_clickable(
+                    EC.presence_of_element_located(
                         (
                             By.XPATH,
                             '//*[@id="js-category-content"]/div[2]/div/div[4]/div[3]/button',
@@ -472,6 +483,7 @@ def get_tradingview_sectors_industries_components(
         df = df.drop(columns=["Symbol"])
         df = clean_colnames(df)
         df.rename(columns={"change": "rt"}, inplace=True)
+        df.rename(columns={"p/e": "pe"}, inplace=True)
 
         df = clean_dash(df, numeric_columns=["marketcap", "price", "rt", "volume"])
 
@@ -490,10 +502,12 @@ def get_tradingview_sectors_industries_components(
         )
 
         df["volume"] = df["volume"].apply(lambda x: pd.Series(convert_number(x)[0]))
-
+        view_data(df)
+        driver.quit()
         return df
     except Exception as e:
         print(f"Failed: {e}")
+        driver.quit()
         return df
 
 

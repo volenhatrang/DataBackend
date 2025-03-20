@@ -1,10 +1,22 @@
 from airflow import DAG
+from airflow.utils.task_group import TaskGroup  # Add this import
 from airflow.operators.python import PythonOperator
+from airflow.decorators import task
+from airflow.models.dag import DAG
+from airflow.models import Variable
+from airflow.exceptions import AirflowTaskTimeout
+from airflow.models.baseoperator import chain
+
 from datetime import datetime, timedelta
 import sys
 import os
-
-from airflow.exceptions import AirflowTaskTimeout
+import logging
+import timeout_decorator
+import time
+import json
+import pandas as pd
+from concurrent.futures import ThreadPoolExecutor
+import random
 
 sys.path.extend(
     [
@@ -14,19 +26,9 @@ sys.path.extend(
 )
 
 from sector_and_industries import *
-import json
-import pandas as pd
 
 # from app.scraper.src.fetchers.reference_data.tradingview.sector_and_industries import *
-from datetime import datetime
-from airflow.utils.task_group import TaskGroup  # Add this import
-
-from airflow.decorators import task
-from airflow.models.dag import DAG
-from airflow.models import Variable
-import logging
 from cassandra_client import CassandraClient  # pylint: disable=import-error
-import timeout_decorator
 
 default_args = {
     "owner": "airflow",
@@ -34,7 +36,7 @@ default_args = {
     "start_date": datetime(2024, 2, 17),
     "retries": 3,
     "retry_delay": timedelta(minutes=5),
-    "execution_timeout": timedelta(minutes=10),
+    "execution_timeout": timedelta(minutes=600),
 }
 
 
@@ -92,8 +94,11 @@ def fetch_tradingview_sector_and_industry_by_country(country, dataset):
         raise ValueError("❌ ERROR: df is None or empty! Check the data source.")
 
     table_name = f"tradingview_{dataset}"
-    cassandra_client.save_to_cassandra(df, table_name)
+    cassandra_client.insert_df_to_cassandra(df, table_name)
     cassandra_client.close()
+
+    # ti = kwargs["ti"]
+    # ti.xcom_push(key=f"{country}_{dataset}_done", value=True)
 
     return f"Fetch successfully {dataset} of {country}!!!!"
 
@@ -101,34 +106,81 @@ def fetch_tradingview_sector_and_industry_by_country(country, dataset):
 # ==============================
 # 🔹 Step 2: get components
 # ==============================
+# @task(execution_timeout=timedelta(minutes=30), do_xcom_push=False)
 def fetch_tradingview_sector_and_industry_components_by_country(country, dataset):
 
     cassandra_client = CassandraClient()
     cassandra_client.connect()
     cassandra_client.create_keyspace()
 
+    # ti = kwargs["ti"]
+    # country_done = ti.xcom_pull(
+    #     task_ids=f"fetch_{clean_country_name(country)}_{dataset}",
+    #     key=f"{country}_{dataset}_done",
+    # )
+    # print(country_done)
+    # if not country_done:
+    #     print(f"⚠️ {country} does not have sector/industry data, waiting...")
+    #     return f"⏳ Waiting for {country} data..."
+
     table_name = f"tradingview_{dataset}"
-    query = f"SELECT * FROM {table_name} WHERE country = %s ALLOW FILTERING"
+    print(table_name)
+    query = f"SELECT * FROM {table_name} WHERE country = %s ALLOW FILTERING "
     components_df = cassandra_client.query_to_dataframe(query, (str(country),))
+
+    if components_df.empty:
+        print(f"⚠️ No data found for country: {country} in {dataset}. Skipping...")
+        cassandra_client.close()
+        return f"No data for {country}, skipping..."
+
     view_data(components_df)
     components_links = components_df["component_url"].tolist()
     components_arr = []
-    for link in components_links:
-        try:
-            print(f"Fetching components from {link}")
-            result = get_tradingview_sectors_industries_components(link)
-            result["component_url"] = link
-            view_data(result)
-            components_arr.append(result)
-        except Exception as e:
-            print(f"Failed: {e}")
-            components_arr.append(pd.DataFrame())
+
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        components_arr = list(
+            executor.map(
+                lambda link: (
+                    print(f"Fetching components from {link}")
+                    or time.sleep(random.randint(1, 10))
+                    or get_tradingview_sectors_industries_components(link).assign(
+                        component_url=link
+                    )
+                    if link
+                    else pd.DataFrame()
+                ),
+                components_links,
+            )
+        )
 
     components_df = pd.concat(components_arr, ignore_index=True)
     view_data(components_df)
 
     table_name = f"tradingview_icb_components"
-    cassandra_client.save_to_cassandra(components_df, table_name)
+    # batch_size = 5
+
+    # for i in range(0, len(components_links), batch_size):
+    #     batch_links = components_links[i:i + batch_size]
+
+    #     with ThreadPoolExecutor(max_workers=5) as executor:
+    #         components_arr = list(
+    #             executor.map(
+    #                 lambda link: (
+    #                     print(f"Fetching components from {link}"),
+    #                     time.sleep(random.randint(1, 10)),
+    #                     get_tradingview_sectors_industries_components(link).assign(component_url=link)
+    #                     if link else pd.DataFrame()
+    #                 )[-1],  # Chỉ lấy kết quả từ biểu thức cuối
+    #                 batch_links,
+    #             )
+    #         )
+
+    #     components_batch_df = pd.concat(components_arr, ignore_index=True)
+    #     if not components_batch_df.empty:
+    #         view_data(components_batch_df)
+    #         cassandra_client.insert_df_to_cassandra(components_batch_df, table_name)
+
+    cassandra_client.insert_df_to_cassandra(components_df, table_name)
     cassandra_client.close()
 
     return f"fetch successfully {dataset} components of {country}!!!!"
@@ -197,7 +249,12 @@ with DAG(
         python_callable=get_all_countries,
     )
 
-    with TaskGroup("fetch_sectors_and_industries_tasks") as fetch_data_group:
+    fetch_sectors_and_industries_tasks = []
+    fetch_components_tasks = []
+
+    with TaskGroup(
+        "fetch_sectors_and_industries_tasks"
+    ) as fetch_sectors_and_industries_group:
         for country in all_countries:
             print(country)
             for dataset in datasets:
@@ -206,6 +263,7 @@ with DAG(
                     python_callable=fetch_tradingview_sector_and_industry_by_country,
                     op_args=[country, dataset],
                 )
+                # fetch_sectors_and_industries_tasks.append(task)
 
     with TaskGroup("fetch_components_tasks") as fetch_components_group:
         for country in all_countries:
@@ -215,14 +273,34 @@ with DAG(
                     python_callable=fetch_tradingview_sector_and_industry_components_by_country,
                     op_args=[country, dataset],
                 )
+                # fetch_components_tasks.append(task)
 
-    # concat_task = PythonOperator(
-    #     task_id="concat_and_save",
-    #     python_callable=concat_and_save,
-    # )
+        # concat_task = PythonOperator(
+        #     task_id="concat_and_save",
+        #     python_callable=concat_and_save,
+        # )
 
-    # list_countries_task >> fetch_data_group >> fetch_components_group >> concat_task
-    list_countries_task >> fetch_data_group >> fetch_components_group
+        # list_countries_task >> fetch_data_group >> fetch_components_group >> concat_task
+    # chain(*fetch_sectors_and_industries_tasks)
+    # chain(*fetch_components_tasks)
+
+    # with TaskGroup("fetch_sectors_components_tasks") as fetch_sectors_components_group:
+    #     for country in all_countries:
+    #         cassandra_client = CassandraClient()
+    #         cassandra_client.connect()
+    #         cassandra_client.create_keyspace()
+    #         sectors_query = f"SELECT DISTINCT sector FROM tradingview_sectors WHERE country = %s ALLOW FILTERING"
+    #         sectors = cassandra_client.query_to_dataframe(sectors_query, (str(country),))["icb_code"].tolist()
+
+    #         for sector in sectors:
+    #             PythonOperator(
+    #                 task_id=f"fetch_{clean_country_name(country)}_sectors_components",
+    #                 python_callable=fetch_tradingview_sector_and_industry_components_by_country,
+    #                 op_args=[country, 'sectors', sector],
+    #             )
+    #         cassandra_client.close()
+
+    list_countries_task >> fetch_sectors_and_industries_group >> fetch_components_group
 
 
 def cleanup():

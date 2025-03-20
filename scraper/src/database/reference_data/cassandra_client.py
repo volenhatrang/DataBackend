@@ -137,6 +137,7 @@ class CassandraClient:
             self.session.execute(
                 """
                 CREATE TABLE IF NOT EXISTS tradingview_icb_components (
+                    component_url TEXT,
                     codesource TEXT,
                     marketcap DOUBLE,
                     price DOUBLE,
@@ -153,7 +154,7 @@ class CassandraClient:
                     name TEXT,
                     cur TEXT,
                     timestamp TIMESTAMP,
-                    PRIMARY KEY (codesource)
+                    PRIMARY KEY (codesource,component_url)
                 );
             """
             )
@@ -278,7 +279,7 @@ class CassandraClient:
         except Exception as e:
             logger.error(f"Failed to insert country data: {e}")
 
-    def save_to_cassandra(self, df, table_name):
+    def insert_df_to_cassandra(self, df, table_name):
         if df.empty:
             return
 
