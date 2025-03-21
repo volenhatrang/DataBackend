@@ -13,6 +13,11 @@ RUN apt-get update && apt-get install -y \
     fonts-liberation \
     libgbm-dev \
     xvfb \
+    python3-dev \
+    python3-pip \
+    python3-venv \
+    python3-wheel \
+    python3-setuptools \
     software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 

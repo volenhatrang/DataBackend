@@ -26,11 +26,20 @@ default_args = {
     "retry_delay": timedelta(minutes=5),
 }
 
-# Cassandra client singleton
+cassandra_client = CassandraClient()
+
+def initialize_cassandra():
+    """Khởi tạo kết nối và keyspace cho Cassandra nếu chưa có."""
+    global cassandra_client
+    if not cassandra_client.session: 
+        cassandra_client.connect()
+        cassandra_client.create_keyspace()
+    logging.info("Cassandra client initialized.")
+
 def fetch_and_store_data(fetch_function, title, url, content):
-    cassandra_client = CassandraClient()
-    cassandra_client.connect()
-    cassandra_client.create_keyspace()
+    """Lấy dữ liệu từ web và lưu vào Cassandra."""
+    global cassandra_client
+    initialize_cassandra()  
     logging.info(f"Scraping data for: {title}")
     data = fetch_function()
     if not data:
@@ -46,10 +55,10 @@ def fetch_and_store_data(fetch_function, title, url, content):
     return f"{title} processed!"
 
 def transform_data():
+    """Biến đổi dữ liệu từ bảng web_crawl sang các bảng khác."""
+    global cassandra_client
+    initialize_cassandra() 
     logging.info("Starting data transformation")
-    cassandra_client = CassandraClient()
-    cassandra_client.connect()
-    cassandra_client.create_keyspace()
     data = cassandra_client.fetch_latest_data_by_title()
     list_data = list(data.items())
     for item in list_data:
@@ -74,6 +83,13 @@ def transform_data():
             logging.warning(f"Unknown title: {title}")
     logging.info("Data transformation complete")
 
+def cleanup():
+    """Đóng kết nối Cassandra khi DAG hoàn thành hoặc thất bại."""
+    global cassandra_client
+    logging.info("Closing Cassandra connection.")
+    cassandra_client.close()
+
+
 with DAG("web_scraping_dag", default_args=default_args, schedule_interval=None, catchup=False) as dag:
     countries_task = PythonOperator(
         task_id="scraping_raw_countries",
@@ -94,11 +110,9 @@ with DAG("web_scraping_dag", default_args=default_args, schedule_interval=None, 
         python_callable=transform_data
     )
     
+   
     countries_task >> exchanges_task >> transform_task
 
-def cleanup():
-    logging.info("Closing Cassandra connection.")
-    cassandra_client.close()
 
 dag.on_success_callback = cleanup
 dag.on_failure_callback = cleanup
