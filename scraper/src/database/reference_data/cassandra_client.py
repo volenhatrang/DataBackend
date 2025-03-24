@@ -12,6 +12,7 @@ import time
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 class CassandraClient:
     _instance = None
     _lock = Lock()
@@ -68,7 +69,9 @@ class CassandraClient:
             )
             logger.info(f"Keyspace '{keyspace_to_create}' created or already exists.")
         except Exception as e:
-            logger.error(f"Failed to create keyspace '{keyspace_to_create}': {e}", exc_info=True)
+            logger.error(
+                f"Failed to create keyspace '{keyspace_to_create}': {e}", exc_info=True
+            )
             raise
 
     def create_tables(self):
@@ -238,7 +241,9 @@ class CassandraClient:
                     data_crawled["data_crawled"],
                 ),
             )
-            logger.info(f"Successfully inserted raw data for URL: {data_crawled['url']}")
+            logger.info(
+                f"Successfully inserted raw data for URL: {data_crawled['url']}"
+            )
         except Exception as e:
             logger.error(f"Failed to insert raw data: {e}", exc_info=True)
             raise
@@ -332,6 +337,7 @@ class CassandraClient:
             INSERT INTO {table_name} ({', '.join(columns)})
             VALUES ({placeholders}) IF NOT EXISTS
         """
+        )
 
         for _, row in df.iterrows():
             self.execute_with_retry(query, tuple(row))
