@@ -6,38 +6,56 @@ import datetime
 import json
 import pandas as pd
 from cassandra.query import SimpleStatement
+from threading import Lock
+import time
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class CassandraClient:
+    _instance = None
+    _lock = Lock()
+
+    def __new__(cls):
+        if cls._instance is None:
+            with cls._lock:
+                if cls._instance is None:
+                    cls._instance = super().__new__(cls)
+                    cls._instance._initialized = False
+        return cls._instance
+
     def __init__(self):
-        self.hosts = os.getenv("CASSANDRA_HOSTS", "cassandra").split(",")
-        self.port = int(os.getenv("CASSANDRA_PORT", 9042))
-        self.keyspace = os.getenv("CASSANDRA_KEYSPACE", "my_keyspace")  
-        self.session = None
-        self.cluster = None
+        if not self._initialized:
+            with self._lock:
+                if not self._initialized:
+                    self.host = os.getenv("CASSANDRA_HOST", "localhost")
+                    self.port = int(os.getenv("CASSANDRA_PORT", 9042))
+                    self.keyspace = os.getenv("CASSANDRA_KEYSPACE", "default_keyspace")
+                    self.session = None
+                    self.cluster = None
+                    self._initialized = True
 
     def connect(self, keyspace=None):
-        keyspace_to_create = keyspace if keyspace else self.keyspace
-        try:
-            logger.info(f"Connecting to Cassandra cluster at hosts: {self.hosts}, port: {self.port}")
-            self.cluster = Cluster(
-                self.hosts,
-                port=self.port,
-                protocol_version=5,
-                load_balancing_policy=DCAwareRoundRobinPolicy(local_dc="datacenter1"),
-                connect_timeout=15,
-                control_connection_timeout=15,
-            )
-            self.session = self.cluster.connect()
-            logger.info("Connected to Cassandra cluster successfully.")
-            self.create_keyspace(keyspace_to_create)
-            self.session.set_keyspace(keyspace_to_create)
-            self.create_tables()
-        except Exception as e:
-            logger.error(f"Error connecting to Cassandra: {e}", exc_info=True)
-            raise
+        with self._lock:
+            if self.session is None:
+                keyspace_to_create = keyspace if keyspace else self.keyspace
+                try:
+                    self.cluster = Cluster(
+                        [self.host],
+                        port=self.port,
+                        protocol_version=5,
+                        load_balancing_policy=DCAwareRoundRobinPolicy(
+                            local_dc="datacenter1"
+                        ),
+                    )
+                    self.session = self.cluster.connect()
+                    self.create_keyspace(keyspace_to_create)
+                    self.session.set_keyspace(keyspace_to_create)
+                    self.create_tables()
+                    logger.info("Connected to Cassandra successfully")
+                except Exception as e:
+                    logger.error(f"Error connecting to Cassandra: {e}")
+                    raise
 
     def create_keyspace(self, keyspace=None):
         keyspace_to_create = keyspace if keyspace else self.keyspace
@@ -163,6 +181,8 @@ class CassandraClient:
                     ticker TEXT,
                     name TEXT,
                     cur TEXT,
+                    country TEXT,
+                    dataset TEXT,
                     timestamp TIMESTAMP,
                     PRIMARY KEY (codesource, component_url)
                 );
@@ -311,40 +331,69 @@ class CassandraClient:
             f"""
             INSERT INTO {table_name} ({', '.join(columns)})
             VALUES ({placeholders}) IF NOT EXISTS
-            """
-        )
-        try:
-            for _, row in df.iterrows():
-                self.session.execute(query, tuple(row))
-            logger.info(f"Inserted DataFrame successfully into {table_name}")
-        except Exception as e:
-            logger.error(f"Failed to insert DataFrame into {table_name}: {e}", exc_info=True)
-            raise
+        """
+
+        for _, row in df.iterrows():
+            self.execute_with_retry(query, tuple(row))
+
+        logger.info(f"Inserted dataframe successfully to {table_name}!!!")
 
     def query_data(self, query, params=None):
-        try:
-            if params:
-                rows = self.session.execute(query, params)
-            else:
-                rows = self.session.execute(query)
-            return list(rows)
-        except Exception as e:
-            logger.error(f"Failed to execute query: {e}", exc_info=True)
-            raise
+        """Execute query with retry logic"""
+        return list(self.execute_with_retry(query, params))
 
     def query_to_dataframe(self, query, params=None):
-        try:
-            rows = self.query_data(query, params)
-            if rows:
-                return pd.DataFrame(rows, columns=rows[0]._fields)
-            return pd.DataFrame()
-        except Exception as e:
-            logger.error(f"Failed to convert query to DataFrame: {e}", exc_info=True)
-            raise
+        """Execute query and return results as DataFrame with retry logic"""
+        rows = self.query_data(query, params)
+        if rows:
+            return pd.DataFrame(rows, columns=rows[0]._fields)
+        return pd.DataFrame()
 
     def close(self):
-        if self.session and self.cluster:
-            self.cluster.shutdown()
-            self.session = None
-            self.cluster = None
-            logger.info("Cassandra connection closed.")
+        with self._lock:
+            if self.session:
+                self.cluster.shutdown()
+                logger.info("Closed Cassandra connection")
+                self.session = None
+                self.cluster = None
+
+    def ensure_connection(self):
+        """Ensure there is a valid connection, reconnect if needed"""
+        try:
+            if self.session is None or self.cluster is None:
+                self.connect()
+            else:
+                # Test if connection is still alive
+                try:
+                    self.session.execute("SELECT release_version FROM system.local")
+                except Exception:
+                    logger.warning("Connection lost, attempting to reconnect...")
+                    self.close()  # Close existing connection
+                    self.connect()  # Create new connection
+            return self.session
+        except Exception as e:
+            logger.error(f"Error ensuring connection: {e}")
+            self.close()  # Force close on error
+            raise
+
+    def execute_with_retry(self, query, params=None, max_retries=3):
+        """Execute query with retry logic and automatic reconnection"""
+        last_error = None
+        for attempt in range(max_retries):
+            try:
+                session = self.ensure_connection()
+                result = (
+                    session.execute(query, params) if params else session.execute(query)
+                )
+                return result
+            except Exception as e:
+                last_error = e
+                logger.error(
+                    f"Query execution failed (attempt {attempt + 1}/{max_retries}): {e}"
+                )
+                if attempt < max_retries - 1:
+                    time.sleep(2**attempt)  # Exponential backoff
+                    self.close()  # Force reconnection on next attempt
+                else:
+                    logger.error(f"All retry attempts failed. Last error: {last_error}")
+                    raise
