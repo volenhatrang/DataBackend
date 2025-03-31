@@ -18,3 +18,4 @@ logs/*
 
 # Ignore all JSON files in /database/reference_data/scraping_raw_json/tradingview/
 scraper/database/reference_data/scraping_raw_json/tradingview/*
+*.cfg

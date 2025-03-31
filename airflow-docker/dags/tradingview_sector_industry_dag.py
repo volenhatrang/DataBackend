@@ -117,6 +117,8 @@ def fetch_tradingview_sector_and_industry_by_country(country, dataset, **context
     with timeout_handler():
         try:
             cassandra_client = CassandraClient()  # Will return singleton instance
+            cassandra_client.connect()
+            cassandra_client.create_keyspace()
             country_source = country.lower().replace(" ", "-")
 
             table_name = f"tradingview_{dataset}"
@@ -142,6 +144,7 @@ def fetch_tradingview_sector_and_industry_by_country(country, dataset, **context
                 )
 
             cassandra_client.insert_df_to_cassandra(df, table_name)
+            cleanup_cassandra_connection()
             return f"Fetch successfully {dataset} of {country}!!!!"
 
         except AirflowTaskTerminated:
@@ -150,6 +153,17 @@ def fetch_tradingview_sector_and_industry_by_country(country, dataset, **context
         except Exception as e:
             logging.error(f"Error fetching {dataset} for {country}: {str(e)}")
             raise
+
+
+def fetch_tradingview_sector_and_industry_by_list_country(list_countries, dataset):
+    country_failed = []
+    for country in list_countries:
+        df = fetch_tradingview_sector_and_industry_by_country(country, dataset)
+        if df.empty:
+            country_failed.append(country)
+    if country_failed:
+        print(f"Failed fetching at some country: {country_failed}")
+    return "Fetch this list DONE"
 
 
 def cleanup_cassandra_connection():
@@ -327,55 +341,99 @@ with DAG(
     schedule_interval=None,
     catchup=False,
     max_active_runs=1,
-    concurrency=4,
+    concurrency=2,
     max_active_tasks=8,
 ) as dag:
 
     start_task = DummyOperator(task_id="start")
 
-    CHUNK_SIZE = 3
-    country_chunks = chunk_list(all_countries, CHUNK_SIZE)
+    # CHUNK_SIZE = 3
+    # country_chunks = chunk_list(all_countries, CHUNK_SIZE)
 
     list_countries_task = PythonOperator(
         task_id="get_list_countries",
         python_callable=get_all_countries,
     )
 
-    chunk_groups = []
+    num_sublists = 3
+    split_countries = [all_countries[i::num_sublists] for i in range(num_sublists)]
 
-    for chunk_idx, country_chunk in enumerate(country_chunks):
-        with TaskGroup(group_id=f"country_chunk_{chunk_idx}") as chunk_group:
-            country_groups = {}
+    task_groups = []
 
-            for country in country_chunk:
-                print(f"Process get sector and industry for {country}")
-                with TaskGroup(group_id=clean_country_name(country.lower())) as tg:
-                    for dataset in datasets:
-                        with TaskGroup(
-                            group_id=f"{clean_country_name(country.lower())}_{dataset}_group"
-                        ) as sector_tg:
-                            get_list_dataset_task = PythonOperator(
-                                task_id=f"fetch_{clean_country_name(country)}_{dataset}_list",
-                                python_callable=fetch_tradingview_sector_and_industry_by_country,
-                                op_args=[country, dataset],
-                                provide_context=True,
-                                # Update retry configuration
-                                retries=5,
-                                retry_delay=timedelta(minutes=5),
-                                execution_timeout=timedelta(minutes=120),
-                                retry_exponential_backoff=True,
-                                max_retry_delay=timedelta(minutes=60),
-                                pool="default_pool",
-                                pool_slots=1,
-                            )
-                    country_groups[clean_country_name(country.lower())] = tg
+    for idx, country_list in enumerate(split_countries):
+        with TaskGroup(group_id=f"sublist_{idx + 1}") as sublist_group:
+            for dataset in datasets:
+                PythonOperator(
+                    task_id=f"fetch_{dataset}_group_{idx}",
+                    python_callable=fetch_tradingview_sector_and_industry_by_list_country,
+                    op_args=[
+                        country_list,
+                        dataset,
+                    ],
+                    retries=5,
+                    retry_delay=timedelta(minutes=5),
+                    execution_timeout=timedelta(minutes=120),
+                    retry_exponential_backoff=True,
+                    max_retry_delay=timedelta(minutes=60),
+                    pool="default_pool",
+                    pool_slots=1,
+                )
 
-            chunk_groups.append(chunk_group)
+        task_groups.append(sublist_group)
+
+    # for chunk_idx, country_chunk in enumerate(country_chunks):
+    #     print(f"Processing country chunk {chunk_idx}: {country_chunk}")
+    #     with TaskGroup(group_id=f"country_chunk_{chunk_idx}") as chunk_group:
+    #         for dataset in datasets:
+    #             with TaskGroup(group_id=f"dataset_{dataset}_group") as dataset_tg:
+    #                 for country in country_chunk:
+    #                     get_list_dataset_task = PythonOperator(
+    #                         task_id=f"fetch_{clean_country_name(country)}_{dataset}_list",
+    #                         python_callable=fetch_tradingview_sector_and_industry_by_country,
+    #                         op_args=[country, dataset],
+    #                         provide_context=True,
+    #                         retries=5,
+    #                         retry_delay=timedelta(minutes=5),
+    #                         execution_timeout=timedelta(minutes=120),
+    #                         retry_exponential_backoff=True,
+    #                         max_retry_delay=timedelta(minutes=60),
+    #                         pool="default_pool",
+    #                         pool_slots=1,
+    #                     )
+    #         chunk_groups.append(chunk_group)
+    # for chunk_idx, country_chunk in enumerate(country_chunks):
+    #     with TaskGroup(group_id=f"country_chunk_{chunk_idx}") as chunk_group:
+    #         country_groups = {}
+
+    #         for country in country_chunk:
+    #             print(f"Process get sector and industry for {country}")
+    #             with TaskGroup(group_id=clean_country_name(country.lower())) as tg:
+    #                 for dataset in datasets:
+    #                     with TaskGroup(
+    #                         group_id=f"{clean_country_name(country.lower())}_{dataset}_group"
+    #                     ) as sector_tg:
+    #                         get_list_dataset_task = PythonOperator(
+    #                             task_id=f"fetch_{clean_country_name(country)}_{dataset}_list",
+    #                             python_callable=fetch_tradingview_sector_and_industry_by_country,
+    #                             op_args=[country, dataset],
+    #                             provide_context=True,
+    #                             # Update retry configuration
+    #                             retries=5,
+    #                             retry_delay=timedelta(minutes=5),
+    #                             execution_timeout=timedelta(minutes=120),
+    #                             retry_exponential_backoff=True,
+    #                             max_retry_delay=timedelta(minutes=60),
+    #                             pool="default_pool",
+    #                             pool_slots=1,
+    #                         )
+    #                 country_groups[clean_country_name(country.lower())] = tg
+
+    #         chunk_groups.append(chunk_group)
 
     (
         start_task
         >> list_countries_task
-        >> chunk_groups
+        >> task_groups
         >> PythonOperator(
             task_id="cleanup_cassandra_connection",
             python_callable=cleanup_cassandra_connection,

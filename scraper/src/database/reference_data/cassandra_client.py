@@ -1,13 +1,14 @@
 from cassandra.cluster import Cluster
-from cassandra.policies import DCAwareRoundRobinPolicy
+from cassandra.policies import DCAwareRoundRobinPolicy, RetryPolicy
 import os
 import logging
 import datetime
 import json
 import pandas as pd
-from cassandra.query import SimpleStatement
 from threading import Lock
 import time
+from cassandra.query import BatchStatement, ConsistencyLevel, SimpleStatement, BatchType
+from cassandra.concurrent import execute_concurrent_with_args
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -35,28 +36,36 @@ class CassandraClient:
                     self.session = None
                     self.cluster = None
                     self._initialized = True
+                    # self.connect()
 
-    def connect(self, keyspace=None):
+    def connect(self, keyspace=None, retries=3, delay=5):
         with self._lock:
             if self.session is None:
                 keyspace_to_create = keyspace if keyspace else self.keyspace
-                try:
-                    self.cluster = Cluster(
-                        [self.host],
-                        port=self.port,
-                        protocol_version=5,
-                        load_balancing_policy=DCAwareRoundRobinPolicy(
-                            local_dc="datacenter1"
-                        ),
-                    )
-                    self.session = self.cluster.connect()
-                    self.create_keyspace(keyspace_to_create)
-                    self.session.set_keyspace(keyspace_to_create)
-                    self.create_tables()
-                    logger.info("Connected to Cassandra successfully")
-                except Exception as e:
-                    logger.error(f"Error connecting to Cassandra: {e}")
-                    raise
+                for attempt in range(retries):
+                    try:
+                        self.cluster = Cluster(
+                            [self.host],
+                            port=self.port,
+                            protocol_version=5,
+                            load_balancing_policy=DCAwareRoundRobinPolicy(
+                                local_dc="datacenter1"
+                            ),
+                        )
+                        self.session = self.cluster.connect()
+                        self.create_keyspace(keyspace_to_create)
+                        self.session.set_keyspace(keyspace_to_create)
+                        self.create_tables()
+                        logger.info("Connected to Cassandra successfully")
+                        return
+                    except Exception as e:
+                        logger.error(
+                            f"Error connecting to Cassandra (attempt {attempt + 1}): {e}"
+                        )
+                        time.sleep(delay)
+                raise Exception(
+                    "Failed to connect to Cassandra after multiple attempts"
+                )
 
     def create_keyspace(self, keyspace=None):
         keyspace_to_create = keyspace if keyspace else self.keyspace
@@ -188,6 +197,40 @@ class CassandraClient:
                     dataset TEXT,
                     timestamp TIMESTAMP,
                     PRIMARY KEY (codesource, component_url)
+                );
+                """
+            )
+            self.session.execute(
+                """
+                CREATE TABLE IF NOT EXISTS all_source_prices (
+                    ticker TEXT,
+                    date TIMESTAMP,
+                    open DOUBLE,
+                    high DOUBLE,
+                    low DOUBLE,
+                    close DOUBLE,
+                    volume DOUBLE,
+                    source TEXT,
+                    adjclose DOUBLE,
+                    updated TIMESTAMP,
+                    PRIMARY KEY (ticker, date)
+                );
+                """
+            )
+            self.session.execute(
+                """
+                CREATE TABLE IF NOT EXISTS download_yah_prices_day_history (
+                    ticker TEXT,
+                    date TIMESTAMP,
+                    open DOUBLE,
+                    high DOUBLE,
+                    low DOUBLE,
+                    close DOUBLE,
+                    volume DOUBLE,
+                    source TEXT,
+                    adjclose DOUBLE,
+                    updated TIMESTAMP,
+                    PRIMARY KEY (ticker, date)
                 );
                 """
             )
@@ -325,6 +368,66 @@ class CassandraClient:
             logger.error(f"Failed to insert holiday data: {e}", exc_info=True)
             raise
 
+    def insert_prices_to_cassandra(self, df, table_name):
+        # if self.session is None:
+        #     raise Exception("Cassandra session is not initialized")
+
+        # query = """
+        #     INSERT INTO {} (ticker, date, open, high, low, close, volume, source, adjclose, updated)
+        #     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        # """.format(
+        #     table_name
+        # )
+        query = SimpleStatement(
+            """
+                INSERT INTO all_source_prices (ticker, date, open, high, low, close, volume, source, adjclose, updated)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            """
+        )
+        # statement = SimpleStatement(query, consistency_level=ConsistencyLevel.LOCAL_ONE)
+        # statement = SimpleStatement(query)
+
+        for _, row in df.iterrows():
+            try:
+                updated_dt = (
+                    datetime.datetime.strptime(row["updated"], "%Y-%m-%d %H:%M:%S")
+                    if isinstance(row["updated"], str)
+                    else row["updated"]
+                )
+                date_val = row["date"]
+                if isinstance(date_val, pd.Timestamp):
+                    date_val = date_val.to_pydatetime()
+                elif isinstance(date_val, str):
+                    date_val = datetime.datetime.strptime(date_val, "%Y-%m-%d %H:%M:%S")
+
+                # print(f"Type of date_val: {type(date_val)}, Value: {date_val}")
+                # print(f"Type of updated_dt: {type(updated_dt)}, Value: {updated_dt}")
+
+                if isinstance(date_val, str):
+                    date_val = datetime.datetime.strptime(date_val, "%Y-%m-%d %H:%M:%S")
+                if isinstance(updated_dt, str):
+                    updated_dt = datetime.datetime.strptime(
+                        updated_dt, "%Y-%m-%d %H:%M:%S"
+                    )
+
+                self.session.execute(
+                    query,
+                    (
+                        row["ticker"],
+                        date_val,
+                        row["open"] if pd.notna(row["open"]) else None,
+                        row["high"] if pd.notna(row["high"]) else None,
+                        row["low"] if pd.notna(row["low"]) else None,
+                        row["close"] if pd.notna(row["close"]) else None,
+                        row["volume"] if pd.notna(row["volume"]) else None,
+                        row["source"],
+                        row["adjclose"] if pd.notna(row["adjclose"]) else None,
+                        updated_dt,
+                    ),
+                )
+            except Exception as e:
+                print(f"Error inserting row {row['ticker']} on {row['date']}: {e}")
+
     def insert_df_to_cassandra(self, df, table_name):
         if df.empty:
             logger.warning(f"DataFrame is empty, skipping insert into {table_name}")
@@ -335,14 +438,133 @@ class CassandraClient:
         query = SimpleStatement(
             f"""
             INSERT INTO {table_name} ({', '.join(columns)})
-            VALUES ({placeholders}) IF NOT EXISTS
+            VALUES ({placeholders})
         """
         )
 
         for _, row in df.iterrows():
-            self.execute_with_retry(query, tuple(row))
+            self.session.execute(query, tuple(row))
 
         logger.info(f"Inserted dataframe successfully to {table_name}!!!")
+
+    def batch_insert_prices_to_cassandra(self, df, table_name, batch_size=100):
+
+        query = SimpleStatement(
+            f"""
+            INSERT INTO {table_name} (ticker, date, open, high, low, close, volume, source, adjclose, updated)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        """
+        )
+
+        batch = BatchStatement(batch_type=BatchType.UNLOGGED)
+
+        for i, row in df.iterrows():
+            try:
+                updated_dt = (
+                    datetime.datetime.strptime(row["updated"], "%Y-%m-%d %H:%M:%S")
+                    if isinstance(row["updated"], str)
+                    else row["updated"]
+                )
+
+                date_val = row["date"]
+                if isinstance(date_val, pd.Timestamp):
+                    date_val = date_val.to_pydatetime()
+                elif isinstance(date_val, str):
+                    date_val = datetime.datetime.strptime(date_val, "%Y-%m-%d %H:%M:%S")
+
+                if isinstance(date_val, str):
+                    date_val = datetime.datetime.strptime(date_val, "%Y-%m-%d %H:%M:%S")
+                if isinstance(updated_dt, str):
+                    updated_dt = datetime.datetime.strptime(
+                        updated_dt, "%Y-%m-%d %H:%M:%S"
+                    )
+
+                batch.add(
+                    query,
+                    (
+                        row["ticker"],
+                        date_val,
+                        row["open"] if pd.notna(row["open"]) else None,
+                        row["high"] if pd.notna(row["high"]) else None,
+                        row["low"] if pd.notna(row["low"]) else None,
+                        row["close"] if pd.notna(row["close"]) else None,
+                        row["volume"] if pd.notna(row["volume"]) else None,
+                        row["source"],
+                        row["adjclose"] if pd.notna(row["adjclose"]) else None,
+                        updated_dt,
+                    ),
+                )
+
+                if (i + 1) % batch_size == 0:
+                    self.session.execute(batch)
+                    print(f"Batch insert completed for {batch_size} records")
+                    batch = BatchStatement(batch_type=BatchType.UNLOGGED)
+                    time.sleep(2)
+            except Exception as e:
+                print(f"Error inserting row {row['ticker']} on {row['date']}: {e}")
+
+        if len(batch) > 0:
+            self.session.execute(batch)
+
+        print(f"Batch insert completed for {len(df)} records.")
+
+    def batch_insert_prices_async(self, df, table_name, batch_size=50):
+        query = f"""
+            INSERT INTO {table_name} (ticker, date, open, high, low, close, volume, source, adjclose, updated)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """
+        params_list = []
+        for _, row in df.iterrows():
+            try:
+                updated_dt = (
+                    datetime.datetime.strptime(row["updated"], "%Y-%m-%d %H:%M:%S")
+                    if isinstance(row["updated"], str)
+                    else row["updated"]
+                )
+
+                date_val = row["date"]
+                if isinstance(date_val, pd.Timestamp):
+                    date_val = date_val.to_pydatetime()
+                elif isinstance(date_val, str):
+                    date_val = datetime.datetime.strptime(date_val, "%Y-%m-%d %H:%M:%S")
+
+                params_list.append(
+                    (
+                        row["ticker"],
+                        date_val,
+                        row["open"] if pd.notna(row["open"]) else None,
+                        row["high"] if pd.notna(row["high"]) else None,
+                        row["low"] if pd.notna(row["low"]) else None,
+                        row["close"] if pd.notna(row["close"]) else None,
+                        row["volume"] if pd.notna(row["volume"]) else None,
+                        row["source"],
+                        row["adjclose"] if pd.notna(row["adjclose"]) else None,
+                        updated_dt,
+                    )
+                )
+            except Exception as e:
+                print(f"⚠️ Error processing row {row['ticker']} on {row['date']}: {e}")
+
+        print(f"🔹 Total valid rows: {len(params_list)}")
+
+        total_success = 0
+        total_failed = 0
+        for i in range(0, len(params_list), batch_size):
+            batch = params_list[i : i + batch_size]
+            results = execute_concurrent_with_args(
+                self.session, query, batch, concurrency=batch_size
+            )
+
+            for success, result in results:
+                if success:
+                    total_success += 1
+                else:
+                    total_failed += 1
+                    print(f"❌ Failed row: {result}")  # Log row lỗi để kiểm tra
+
+        print(
+            f"✅ Batch insert completed: {total_success} success, {total_failed} failed."
+        )
 
     def query_data(self, query, params=None):
         """Execute query with retry logic"""

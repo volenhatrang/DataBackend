@@ -1,0 +1,387 @@
+[
+    {
+        "region": "NORTH AMERICA",
+        "countries": [
+            {
+                "country": "USA",
+                "data_market": "us",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/US.svg"
+            },
+            {
+                "country": "Canada",
+                "data_market": "ca",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/CA.svg"
+            }
+        ]
+    },
+    {
+        "region": "EUROPE",
+        "countries": [
+            {
+                "country": "Greece",
+                "data_market": "gr",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/GR.svg"
+            },
+            {
+                "country": "Switzerland",
+                "data_market": "ch",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/CH.svg"
+            },
+            {
+                "country": "Serbia",
+                "data_market": "rs",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/RS.svg"
+            },
+            {
+                "country": "Germany",
+                "data_market": "de",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/DE.svg"
+            },
+            {
+                "country": "Spain",
+                "data_market": "es",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/ES.svg"
+            },
+            {
+                "country": "Slovakia",
+                "data_market": "sk",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/SK.svg"
+            },
+            {
+                "country": "Romania",
+                "data_market": "ro",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/RO.svg"
+            },
+            {
+                "country": "Hungary",
+                "data_market": "hu",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/HU.svg"
+            },
+            {
+                "country": "Cyprus",
+                "data_market": "cy",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/CY.svg"
+            },
+            {
+                "country": "European Union",
+                "data_market": "eu",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/EU.svg"
+            },
+            {
+                "country": "United Kingdom",
+                "data_market": "gb",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/GB.svg"
+            },
+            {
+                "country": "Luxembourg",
+                "data_market": "lu",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/LU.svg"
+            },
+            {
+                "country": "Italy",
+                "data_market": "it",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/IT.svg"
+            },
+            {
+                "country": "Sweden",
+                "data_market": "se",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/SE.svg"
+            },
+            {
+                "country": "Czech Republic",
+                "data_market": "cz",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/CZ.svg"
+            },
+            {
+                "country": "Austria",
+                "data_market": "at",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/AT.svg"
+            },
+            {
+                "country": "Poland",
+                "data_market": "pl",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/PL.svg"
+            },
+            {
+                "country": "Latvia",
+                "data_market": "lv",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/LV.svg"
+            },
+            {
+                "country": "Ireland",
+                "data_market": "ie",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/IE.svg"
+            },
+            {
+                "country": "Denmark",
+                "data_market": "dk",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/DK.svg"
+            },
+            {
+                "country": "Russia",
+                "data_market": "ru",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/RU.svg"
+            },
+            {
+                "country": "France",
+                "data_market": "fr",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/FR.svg"
+            },
+            {
+                "country": "Lithuania",
+                "data_market": "lt",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/LT.svg"
+            },
+            {
+                "country": "Belgium",
+                "data_market": "be",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/BE.svg"
+            },
+            {
+                "country": "Portugal",
+                "data_market": "pt",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/PT.svg"
+            },
+            {
+                "country": "Ukraine",
+                "data_market": "ua",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/UA.svg"
+            },
+            {
+                "country": "Estonia",
+                "data_market": "ee",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/EE.svg"
+            },
+            {
+                "country": "Finland",
+                "data_market": "fi",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/FI.svg"
+            },
+            {
+                "country": "Iceland",
+                "data_market": "is",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/IS.svg"
+            },
+            {
+                "country": "Netherlands",
+                "data_market": "nl",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/NL.svg"
+            },
+            {
+                "country": "Norway",
+                "data_market": "no",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/NO.svg"
+            }
+        ]
+    },
+    {
+        "region": "MIDDLE EAST / AFRICA",
+        "countries": [
+            {
+                "country": "Turkey",
+                "data_market": "tr",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/TR.svg"
+            },
+            {
+                "country": "United Arab Emirates",
+                "data_market": "ae",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/AE.svg"
+            },
+            {
+                "country": "Bahrain",
+                "data_market": "bh",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/BH.svg"
+            },
+            {
+                "country": "Morocco",
+                "data_market": "ma",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/MA.svg"
+            },
+            {
+                "country": "Egypt",
+                "data_market": "eg",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/EG.svg"
+            },
+            {
+                "country": "South Africa",
+                "data_market": "za",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/ZA.svg"
+            },
+            {
+                "country": "Kuwait",
+                "data_market": "kw",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/KW.svg"
+            },
+            {
+                "country": "Kenya",
+                "data_market": "ke",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/KE.svg"
+            },
+            {
+                "country": "Nigeria",
+                "data_market": "ng",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/NG.svg"
+            },
+            {
+                "country": "Qatar",
+                "data_market": "qa",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/QA.svg"
+            },
+            {
+                "country": "Saudi Arabia",
+                "data_market": "sa",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/SA.svg"
+            },
+            {
+                "country": "Israel",
+                "data_market": "il",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/IL.svg"
+            },
+            {
+                "country": "Tunisia",
+                "data_market": "tn",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/TN.svg"
+            },
+            {
+                "country": "Mauritius",
+                "data_market": "mu",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/MU.svg"
+            },
+            {
+                "country": "Rwanda",
+                "data_market": "rw",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/RW.svg"
+            }
+        ]
+    },
+    {
+        "region": "MEXICO AND SOUTH AMERICA",
+        "countries": [
+            {
+                "country": "Argentina",
+                "data_market": "ar",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/AR.svg"
+            },
+            {
+                "country": "Mexico",
+                "data_market": "mx",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/MX.svg"
+            },
+            {
+                "country": "Brazil",
+                "data_market": "br",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/BR.svg"
+            },
+            {
+                "country": "Venezuela",
+                "data_market": "ve",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/VE.svg"
+            },
+            {
+                "country": "Colombia",
+                "data_market": "co",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/CO.svg"
+            },
+            {
+                "country": "Peru",
+                "data_market": "pe",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/PE.svg"
+            },
+            {
+                "country": "Chile",
+                "data_market": "cl",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/CL.svg"
+            }
+        ]
+    },
+    {
+        "region": "ASIA / PACIFIC",
+        "countries": [
+            {
+                "country": "India",
+                "data_market": "in",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/IN.svg"
+            },
+            {
+                "country": "Malaysia",
+                "data_market": "my",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/MY.svg"
+            },
+            {
+                "country": "Thailand",
+                "data_market": "th",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/TH.svg"
+            },
+            {
+                "country": "Japan",
+                "data_market": "jp",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/JP.svg"
+            },
+            {
+                "country": "Australia",
+                "data_market": "au",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/AU.svg"
+            },
+            {
+                "country": "Sri Lanka",
+                "data_market": "lk",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/LK.svg"
+            },
+            {
+                "country": "Bangladesh",
+                "data_market": "bd",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/BD.svg"
+            },
+            {
+                "country": "Singapore",
+                "data_market": "sg",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/SG.svg"
+            },
+            {
+                "country": "Hong Kong",
+                "data_market": "hk",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/HK.svg"
+            },
+            {
+                "country": "Vietnam",
+                "data_market": "vn",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/VN.svg"
+            },
+            {
+                "country": "Indonesia",
+                "data_market": "id",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/ID.svg"
+            },
+            {
+                "country": "South Korea",
+                "data_market": "kr",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/KR.svg"
+            },
+            {
+                "country": "New Zealand",
+                "data_market": "nz",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/NZ.svg"
+            },
+            {
+                "country": "Pakistan",
+                "data_market": "pk",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/PK.svg"
+            },
+            {
+                "country": "Philippines",
+                "data_market": "ph",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/PH.svg"
+            },
+            {
+                "country": "China",
+                "data_market": "cn",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/CN.svg"
+            },
+            {
+                "country": "Taiwan",
+                "data_market": "tw",
+                "country_flag": "https://s3-symbol-logo.tradingview.com/country/TW.svg"
+            }
+        ]
+    }
+]

@@ -127,6 +127,10 @@ def get_tradingview_sectors_by_country(country="usa"):
     chrome_options.add_argument(
         "--disable-blink-features=AutomationControlled"
     )  # Avoid bot detection
+    chrome_options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+    )
+
     url_sector = f"https://www.tradingview.com/markets/stocks-{country}/sectorandindustry-sector/"
 
     s = Service()
@@ -250,6 +254,9 @@ def get_tradingview_industries_by_country(country="usa"):
     chrome_options.add_argument(
         "--disable-blink-features=AutomationControlled"
     )  # Avoid bot detection
+    chrome_options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+    )
     url = f"https://www.tradingview.com/markets/stocks-{country}/sectorandindustry-industry/"
 
     s = Service()
@@ -374,6 +381,9 @@ def get_tradingview_sectors_industries_components(
     chrome_options.add_argument(
         "--disable-blink-features=AutomationControlled"
     )  # Avoid bot detection
+    chrome_options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+    )
     s = Service()
     driver = webdriver.Chrome(service=s, options=chrome_options)
     driver.set_window_size(1920, 1080)
@@ -497,8 +507,15 @@ def get_tradingview_sectors_industries_components(
         df["rt"] = df["rt"].apply(
             lambda x: f"{x}%" if pd.notna(x) and "%" not in x else x
         )
+        # df["rt"] = (
+        #     df["rt"].str.replace("%", "").str.replace("−", "-").astype(float) / 100
+        # )
         df["rt"] = (
-            df["rt"].str.replace("%", "").str.replace("−", "-").astype(float) / 100
+            df["rt"]
+            .str.replace("−", "-", regex=False)  # Fix minus sign
+            .str.replace("%", "", regex=False)  # Remove %
+            .astype(float)
+            / 100  # Convert to float
         )
 
         df["volume"] = df["volume"].apply(lambda x: pd.Series(convert_number(x)[0]))
