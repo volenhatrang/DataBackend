@@ -145,7 +145,7 @@ def check_updated_tickers():
 
 
 def get_list_tickers(nb_group=3, updated_tickers=None, source="YAH"):
-    df = pd.read_csv(LIST_CODES_FILE, usecols=[source], dtype=str)
+    df = pd.read_csv(LIST_CODES_FILE, dtype=str)
     tickers = df[source].dropna().unique().tolist()
 
     if updated_tickers:
@@ -159,6 +159,52 @@ def get_list_tickers(nb_group=3, updated_tickers=None, source="YAH"):
 
     chunk_size = math.ceil(total_tickers / nb_group)
     return [tickers[i : i + chunk_size] for i in range(0, total_tickers, chunk_size)]
+
+
+def get_max_date_for_ticker(ticker):
+    try:
+        query = f"SELECT MAX(date) as max_date FROM {table_name} WHERE ticker = %s ALLOW FILTERING"
+        result = cassandra_client.query(query, (ticker,))
+        row = result.one()
+        if row and row.max_date:
+            return row.max_date
+        return None
+    except Exception as e:
+        logging.error(f"❌ Error querying max date for {ticker}: {e}")
+        return None
+
+
+def calculate_optimal_period(max_date):
+    current_date = datetime.now().date()
+
+    if not max_date:
+        return "max"
+
+    if isinstance(max_date, datetime):
+        max_date = max_date.date()
+
+    days_diff = (current_date - max_date).days
+
+    if days_diff <= 0:
+        return None
+
+    period_days = {
+        "1d": 1,
+        "5d": 5,
+        "1mo": 30,
+        "3mo": 90,
+        "6mo": 180,
+        "1y": 365,
+        "2y": 730,
+        "5y": 1825,
+        "10y": 3650,
+    }
+
+    for period, days in period_days.items():
+        if days_diff <= days:
+            return period
+
+    return "max"
 
 
 def fetch_yah_prices_by_list(list_codesource, group_id, batch_size=50):
@@ -175,9 +221,33 @@ def fetch_yah_prices_by_list(list_codesource, group_id, batch_size=50):
 
             def fetch_single_ticker(ticker):
                 retries = 3
+                # max_date = get_max_date_for_ticker(ticker)
+                query = f"SELECT MAX(date) as max_date FROM {table_name} WHERE ticker = %s ALLOW FILTERING"
+                try:
+                    result = cassandra_client.query_data(query, (ticker,))
+                    if result and len(result) > 0:
+                        row = result[0]
+                        if row.max_date:
+                            max_date = row.max_date
+                            period = calculate_optimal_period(max_date)
+                            logging.info(
+                                f"Found max_date {max_date} for {ticker}, using period: {period}"
+                            )
+                        else:
+                            period = "max"
+                            logging.info(
+                                f"No max_date found for {ticker}, using period: {period}"
+                            )
+                    else:
+                        period = "max"
+                        logging.info(f"No results for {ticker}, using period: {period}")
+                except Exception as e:
+                    logging.error(f"Error querying max date for {ticker}: {e}")
+                    period = "max"
+
                 for attempt in range(retries):
                     try:
-                        df = download_yah_prices_by_code(ticker, period="max")
+                        df = download_yah_prices_by_code(ticker, period=period)
                         if df is None or df.empty:
                             return None
                         df["source"] = "YAH"
@@ -230,7 +300,7 @@ def fetch_yah_prices_by_list(list_codesource, group_id, batch_size=50):
 
                             final_df = final_df.dropna(subset=["date"])
 
-                            cassandra_client.batch_insert_prices_to_cassandra(
+                            cassandra_client.batch_insert_prices_async(
                                 final_df, table_name, 100
                             )
 

@@ -6,8 +6,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.
 from common_fn import *
 
 
-def download_yah_prices_intraday_by_code(
-    pCodesource="AAPL", pInterval="1d", pNbdays=60000, Hour_adjust=0
+def download_yah_prices_by_api(
+    pCodesource="AAPL", pInterval="5m", pNbdays=60, Hour_adjust=0
 ):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
@@ -172,12 +172,94 @@ def standardize_date(date_value):
         return str(date_value)  # Chuyển thành chuỗi để tránh lỗi
 
 
-def download_yah_prices_by_code(ticker="AAPL", period="max"):
+def download_yah_prices_intraday_by_code(ticker="AAPL", pInterval="5m"):
     try:
         price_data = pd.DataFrame()
+        price_data = download_yah_prices_by_api(
+            pCodesource=ticker,
+            pInterval=pInterval,
+            pNbdays=60,
+            Hour_adjust=0,
+        )
+        price_data = price_data[
+            [
+                "open",
+                "high",
+                "low",
+                "close",
+                "close_adj",
+                "volume",
+                "date",
+                "datetime",
+                "timestamp",
+            ]
+        ]
+        price_data = price_data.rename(columns={"close_adj": "adjclose"})
+        if price_data.empty:
+            price_data = yf.download(
+                ticker, period="max", auto_adjust=False, interval=pInterval
+            )
+            if price_data.empty:
+                symbol = yf.Ticker(ticker)
+                price_data = symbol.history(
+                    period="max", auto_adjust=False, interval=pInterval
+                )[["Open", "High", "Low", "Close", "Adj Close", "Volume"]]
+                if price_data.empty:
+                    print(f"⚠ Warning: No data for {ticker}")
+                    return pd.DataFrame()
+
+        if isinstance(price_data.columns, pd.MultiIndex):
+            price_data.columns = price_data.columns.get_level_values(0)
+        price_data = price_data.loc[:, ~price_data.columns.duplicated()]
+
+        price_data = price_data.reset_index()
+        price_data["ticker"] = ticker
+        price_data = clean_colnames(price_data)
+
+        if "date" in price_data.columns:
+            price_data["date"] = pd.to_datetime(
+                price_data["date"], utc=True
+            ).dt.tz_localize(None)
+        else:
+            price_data["date"] = price_data["datetime"].dt.strftime("%Y-%m-%d")
+
+        price_data["datetime"] = pd.to_datetime(
+            price_data["datetime"], utc=True
+        ).dt.tz_localize(None)
+
+        price_data["timestamp"] = price_data["datetime"]
+
+        price_data = update_updated(price_data)
+        price_data = price_data.drop(columns=["index"], errors="ignore")
+        view_data(price_data)
+        return price_data
+    except Exception as e:
+        print(f"Error fetching data for {ticker}: {e}")
+        return pd.DataFrame()
+
+
+def download_yah_prices_by_code(ticker="AAPL", period="max"):
+    try:
+        period_days = {
+            "1d": 1,
+            "5d": 5,
+            "1mo": 30,
+            "3mo": 90,
+            "6mo": 180,
+            "1y": 365,
+            "2y": 730,
+            "5y": 1825,
+            "10y": 3650,
+            "max": 60000,
+        }
+        # pNbdays = period_days.get(period)
+        price_data = pd.DataFrame()
         if period == "max":
-            price_data = download_yah_prices_intraday_by_code(
-                pCodesource=ticker, pInterval="1d", pNbdays=60000, Hour_adjust=0
+            price_data = download_yah_prices_by_api(
+                pCodesource=ticker,
+                pInterval="1d",
+                pNbdays=period_days.get(period),
+                Hour_adjust=0,
             )
             price_data = price_data[
                 ["open", "high", "low", "close", "close_adj", "volume", "date"]
@@ -249,8 +331,8 @@ def download_yah_shares_by_code(ticker="AAPL"):
     symbol = yf.Ticker(ticker)
     shares_data = symbol.get_shares_full()
     shares_data = pd.DataFrame(list(shares_data.items()), columns=["date", "sharesout"])
-    shares_data = self.clean_colnames(shares_data)
-
+    shares_data = clean_colnames(shares_data)
+    shares_data = shares_data.drop_duplicates(subset=["date"], keep="last")
     return shares_data
 
 

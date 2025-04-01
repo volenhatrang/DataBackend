@@ -9,6 +9,8 @@ from threading import Lock
 import time
 from cassandra.query import BatchStatement, ConsistencyLevel, SimpleStatement, BatchType
 from cassandra.concurrent import execute_concurrent_with_args
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from functools import partial
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -234,6 +236,25 @@ class CassandraClient:
                 );
                 """
             )
+            self.session.execute(
+                """
+                CREATE TABLE IF NOT EXISTS download_yah_prices_intraday_history (
+                    ticker TEXT,
+                    datetime TIMESTAMP,
+                    timestamp TIMESTAMP,
+                    date TIMESTAMP,
+                    open DOUBLE,
+                    high DOUBLE,
+                    low DOUBLE,
+                    close DOUBLE,
+                    volume DOUBLE,
+                    source TEXT,
+                    adjclose DOUBLE,
+                    updated TIMESTAMP,
+                    PRIMARY KEY (ticker, datetime)
+                );
+                """
+            )
             logger.info("All tables created successfully.")
         except Exception as e:
             logger.error(f"Failed to create tables: {e}", exc_info=True)
@@ -368,66 +389,6 @@ class CassandraClient:
             logger.error(f"Failed to insert holiday data: {e}", exc_info=True)
             raise
 
-    def insert_prices_to_cassandra(self, df, table_name):
-        # if self.session is None:
-        #     raise Exception("Cassandra session is not initialized")
-
-        # query = """
-        #     INSERT INTO {} (ticker, date, open, high, low, close, volume, source, adjclose, updated)
-        #     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        # """.format(
-        #     table_name
-        # )
-        query = SimpleStatement(
-            """
-                INSERT INTO all_source_prices (ticker, date, open, high, low, close, volume, source, adjclose, updated)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-            """
-        )
-        # statement = SimpleStatement(query, consistency_level=ConsistencyLevel.LOCAL_ONE)
-        # statement = SimpleStatement(query)
-
-        for _, row in df.iterrows():
-            try:
-                updated_dt = (
-                    datetime.datetime.strptime(row["updated"], "%Y-%m-%d %H:%M:%S")
-                    if isinstance(row["updated"], str)
-                    else row["updated"]
-                )
-                date_val = row["date"]
-                if isinstance(date_val, pd.Timestamp):
-                    date_val = date_val.to_pydatetime()
-                elif isinstance(date_val, str):
-                    date_val = datetime.datetime.strptime(date_val, "%Y-%m-%d %H:%M:%S")
-
-                # print(f"Type of date_val: {type(date_val)}, Value: {date_val}")
-                # print(f"Type of updated_dt: {type(updated_dt)}, Value: {updated_dt}")
-
-                if isinstance(date_val, str):
-                    date_val = datetime.datetime.strptime(date_val, "%Y-%m-%d %H:%M:%S")
-                if isinstance(updated_dt, str):
-                    updated_dt = datetime.datetime.strptime(
-                        updated_dt, "%Y-%m-%d %H:%M:%S"
-                    )
-
-                self.session.execute(
-                    query,
-                    (
-                        row["ticker"],
-                        date_val,
-                        row["open"] if pd.notna(row["open"]) else None,
-                        row["high"] if pd.notna(row["high"]) else None,
-                        row["low"] if pd.notna(row["low"]) else None,
-                        row["close"] if pd.notna(row["close"]) else None,
-                        row["volume"] if pd.notna(row["volume"]) else None,
-                        row["source"],
-                        row["adjclose"] if pd.notna(row["adjclose"]) else None,
-                        updated_dt,
-                    ),
-                )
-            except Exception as e:
-                print(f"Error inserting row {row['ticker']} on {row['date']}: {e}")
-
     def insert_df_to_cassandra(self, df, table_name):
         if df.empty:
             logger.warning(f"DataFrame is empty, skipping insert into {table_name}")
@@ -447,89 +408,61 @@ class CassandraClient:
 
         logger.info(f"Inserted dataframe successfully to {table_name}!!!")
 
-    def batch_insert_prices_to_cassandra(self, df, table_name, batch_size=100):
-
-        query = SimpleStatement(
-            f"""
-            INSERT INTO {table_name} (ticker, date, open, high, low, close, volume, source, adjclose, updated)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    def batch_insert_prices_async(
+        self,
+        df,
+        table_name,
+        batch_size=1000,
+        max_workers=8,
+        max_retries=3,
+        chunk_size=10000,
+    ):
         """
-        )
-
-        batch = BatchStatement(batch_type=BatchType.UNLOGGED)
-
-        for i, row in df.iterrows():
-            try:
-                updated_dt = (
-                    datetime.datetime.strptime(row["updated"], "%Y-%m-%d %H:%M:%S")
-                    if isinstance(row["updated"], str)
-                    else row["updated"]
-                )
-
-                date_val = row["date"]
-                if isinstance(date_val, pd.Timestamp):
-                    date_val = date_val.to_pydatetime()
-                elif isinstance(date_val, str):
-                    date_val = datetime.datetime.strptime(date_val, "%Y-%m-%d %H:%M:%S")
-
-                if isinstance(date_val, str):
-                    date_val = datetime.datetime.strptime(date_val, "%Y-%m-%d %H:%M:%S")
-                if isinstance(updated_dt, str):
-                    updated_dt = datetime.datetime.strptime(
-                        updated_dt, "%Y-%m-%d %H:%M:%S"
-                    )
-
-                batch.add(
-                    query,
-                    (
-                        row["ticker"],
-                        date_val,
-                        row["open"] if pd.notna(row["open"]) else None,
-                        row["high"] if pd.notna(row["high"]) else None,
-                        row["low"] if pd.notna(row["low"]) else None,
-                        row["close"] if pd.notna(row["close"]) else None,
-                        row["volume"] if pd.notna(row["volume"]) else None,
-                        row["source"],
-                        row["adjclose"] if pd.notna(row["adjclose"]) else None,
-                        updated_dt,
-                    ),
-                )
-
-                if (i + 1) % batch_size == 0:
-                    self.session.execute(batch)
-                    print(f"Batch insert completed for {batch_size} records")
-                    batch = BatchStatement(batch_type=BatchType.UNLOGGED)
-                    time.sleep(2)
-            except Exception as e:
-                print(f"Error inserting row {row['ticker']} on {row['date']}: {e}")
-
-        if len(batch) > 0:
-            self.session.execute(batch)
-
-        print(f"Batch insert completed for {len(df)} records.")
-
-    def batch_insert_prices_async(self, df, table_name, batch_size=50):
+        Optimized for millions of rows with async execution, thread pooling, and chunked processing
+        """
+        # Prepare the query
         query = f"""
             INSERT INTO {table_name} (ticker, date, open, high, low, close, volume, source, adjclose, updated)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """
-        params_list = []
-        for _, row in df.iterrows():
-            try:
-                updated_dt = (
-                    datetime.datetime.strptime(row["updated"], "%Y-%m-%d %H:%M:%S")
-                    if isinstance(row["updated"], str)
-                    else row["updated"]
-                )
+        prepared_stmt = self.session.prepare(query)
 
-                date_val = row["date"]
-                if isinstance(date_val, pd.Timestamp):
-                    date_val = date_val.to_pydatetime()
-                elif isinstance(date_val, str):
-                    date_val = datetime.datetime.strptime(date_val, "%Y-%m-%d %H:%M:%S")
+        # Process DataFrame in chunks to manage memory
+        total_rows = len(df)
+        logging.info(f"🔹 Total rows to process: {total_rows:,}")
+        start_time = time.time()
 
-                params_list.append(
-                    (
+        total_success = 0
+        total_failed = 0
+
+        # Process DataFrame in chunks
+        for chunk_start in range(0, total_rows, chunk_size):
+            # if self._shutdown:
+            #     logging.warning("Shutdown requested, stopping processing")
+            #     break
+
+            chunk_end = min(chunk_start + chunk_size, total_rows)
+            chunk_df = df.iloc[chunk_start:chunk_end]
+            params_list = []
+
+            # Convert chunk to parameters
+            for _, row in chunk_df.iterrows():
+                try:
+                    updated_dt = (
+                        datetime.datetime.strptime(row["updated"], "%Y-%m-%d %H:%M:%S")
+                        if isinstance(row["updated"], str)
+                        else row["updated"]
+                    )
+
+                    date_val = row["date"]
+                    if isinstance(date_val, pd.Timestamp):
+                        date_val = date_val.to_pydatetime()
+                    elif isinstance(date_val, str):
+                        date_val = datetime.datetime.strptime(
+                            date_val, "%Y-%m-%d %H:%M:%S"
+                        )
+
+                    params = (
                         row["ticker"],
                         date_val,
                         row["open"] if pd.notna(row["open"]) else None,
@@ -541,30 +474,233 @@ class CassandraClient:
                         row["adjclose"] if pd.notna(row["adjclose"]) else None,
                         updated_dt,
                     )
-                )
-            except Exception as e:
-                print(f"⚠️ Error processing row {row['ticker']} on {row['date']}: {e}")
+                    params_list.append(params)
+                except Exception as e:
+                    logging.error(
+                        f"⚠️ Error processing row {row['ticker']} on {row['date']}: {e}"
+                    )
 
-        print(f"🔹 Total valid rows: {len(params_list)}")
+            # Async execution with retry logic
+            def execute_special(params, session, stmt, retries=max_retries):
+                for attempt in range(retries):
+                    # if self._shutdown:
+                    #     return False, (params, "Task shutdown requested")
+                    future = session.execute_async(stmt, params)
+                    try:
+                        future.result()
+                        return True, None
+                    except Exception as e:
+                        if attempt == retries - 1:
+                            return False, (params, str(e))
+                        time.sleep(1)
+                return False, (params, "Max retries reached")
+
+            # Process batch with thread pool
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                for i in range(0, len(params_list), batch_size):
+                    # if self._shutdown:
+                    #     logging.warning("Shutdown requested, stopping batch processing")
+                    #     break
+
+                    batch = params_list[i : i + batch_size]
+                    execute_func = partial(
+                        execute_special,
+                        session=self.session,
+                        stmt=prepared_stmt,
+                        retries=max_retries,
+                    )
+
+                    futures = {
+                        executor.submit(execute_func, params): params
+                        for params in batch
+                    }
+
+                    batch_success = 0
+                    batch_failed = 0
+
+                    for future in as_completed(futures):
+                        success, error_info = future.result()
+                        if success:
+                            batch_success += 1
+                        else:
+                            batch_failed += 1
+                            params, error = error_info
+                            logging.error(
+                                f"❌ Failed row - ticker: {params[0]}, date: {params[1]}, error: {error}"
+                            )
+
+                    total_success += batch_success
+                    total_failed += batch_failed
+
+                    elapsed = time.time() - start_time
+                    rows_per_sec = total_success / elapsed if elapsed > 0 else 0
+                    logging.info(
+                        f"🔸 Progress: {total_success:,} success, {total_failed:,} failed "
+                        f"({rows_per_sec:,.0f} rows/sec)"
+                    )
+
+        # Final report
+        elapsed = time.time() - start_time
+        logging.info(
+            f"✅ Batch insert completed: {total_success:,} success, {total_failed:,} failed "
+            f"in {elapsed:.2f} seconds ({total_success/elapsed:,.0f} rows/sec)"
+        )
+        return total_success, total_failed
+
+    def batch_insert_prices_intraday_async(
+        self,
+        df,
+        table_name,
+        batch_size=1000,
+        max_workers=8,
+        max_retries=3,
+        chunk_size=10000,
+    ):
+        """
+        Optimized for millions of rows with async execution, thread pooling, and chunked processing
+        """
+        # Prepare the query
+        query = f"""
+            INSERT INTO {table_name} (ticker, date, datetime, timestamp, open, high, low, close, volume, source, adjclose, updated)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """
+        prepared_stmt = self.session.prepare(query)
+
+        # Process DataFrame in chunks to manage memory
+        total_rows = len(df)
+        logging.info(f"🔹 Total rows to process: {total_rows:,}")
+        start_time = time.time()
 
         total_success = 0
         total_failed = 0
-        for i in range(0, len(params_list), batch_size):
-            batch = params_list[i : i + batch_size]
-            results = execute_concurrent_with_args(
-                self.session, query, batch, concurrency=batch_size
-            )
 
-            for success, result in results:
-                if success:
-                    total_success += 1
-                else:
-                    total_failed += 1
-                    print(f"❌ Failed row: {result}")  # Log row lỗi để kiểm tra
+        # Process DataFrame in chunks
+        for chunk_start in range(0, total_rows, chunk_size):
+            # if self._shutdown:
+            #     logging.warning("Shutdown requested, stopping processing")
+            #     break
 
-        print(
-            f"✅ Batch insert completed: {total_success} success, {total_failed} failed."
+            chunk_end = min(chunk_start + chunk_size, total_rows)
+            chunk_df = df.iloc[chunk_start:chunk_end]
+            params_list = []
+
+            # Convert chunk to parameters
+            for _, row in chunk_df.iterrows():
+                try:
+                    updated_dt = (
+                        datetime.datetime.strptime(row["updated"], "%Y-%m-%d %H:%M:%S")
+                        if isinstance(row["updated"], str)
+                        else row["updated"]
+                    )
+
+                    datetime_dt = (
+                        datetime.datetime.strptime(row["datetime"], "%Y-%m-%d %H:%M:%S")
+                        if isinstance(row["datetime"], str)
+                        else row["datetime"]
+                    )
+
+                    timestamp_dt = (
+                        datetime.datetime.strptime(
+                            row["timestamp"], "%Y-%m-%d %H:%M:%S"
+                        )
+                        if isinstance(row["timestamp"], str)
+                        else row["timestamp"]
+                    )
+
+                    date_val = row["date"]
+                    if isinstance(date_val, pd.Timestamp):
+                        date_val = date_val.to_pydatetime()
+                    elif isinstance(date_val, str):
+                        date_val = datetime.datetime.strptime(
+                            date_val, "%Y-%m-%d %H:%M:%S"
+                        )
+
+                    params = (
+                        row["ticker"],
+                        date_val,
+                        datetime_dt,
+                        timestamp_dt,
+                        row["open"] if pd.notna(row["open"]) else None,
+                        row["high"] if pd.notna(row["high"]) else None,
+                        row["low"] if pd.notna(row["low"]) else None,
+                        row["close"] if pd.notna(row["close"]) else None,
+                        row["volume"] if pd.notna(row["volume"]) else None,
+                        row["source"],
+                        row["adjclose"] if pd.notna(row["adjclose"]) else None,
+                        updated_dt,
+                    )
+                    params_list.append(params)
+                except Exception as e:
+                    logging.error(
+                        f"⚠️ Error processing row {row['ticker']} on {row['date']}: {e}"
+                    )
+
+            # Async execution with retry logic
+            def execute_special(params, session, stmt, retries=max_retries):
+                for attempt in range(retries):
+                    # if self._shutdown:
+                    #     return False, (params, "Task shutdown requested")
+                    future = session.execute_async(stmt, params)
+                    try:
+                        future.result()
+                        return True, None
+                    except Exception as e:
+                        if attempt == retries - 1:
+                            return False, (params, str(e))
+                        time.sleep(1)
+                return False, (params, "Max retries reached")
+
+            # Process batch with thread pool
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                for i in range(0, len(params_list), batch_size):
+                    # if self._shutdown:
+                    #     logging.warning("Shutdown requested, stopping batch processing")
+                    #     break
+
+                    batch = params_list[i : i + batch_size]
+                    execute_func = partial(
+                        execute_special,
+                        session=self.session,
+                        stmt=prepared_stmt,
+                        retries=max_retries,
+                    )
+
+                    futures = {
+                        executor.submit(execute_func, params): params
+                        for params in batch
+                    }
+
+                    batch_success = 0
+                    batch_failed = 0
+
+                    for future in as_completed(futures):
+                        success, error_info = future.result()
+                        if success:
+                            batch_success += 1
+                        else:
+                            batch_failed += 1
+                            params, error = error_info
+                            logging.error(
+                                f"❌ Failed row - ticker: {params[0]}, date: {params[1]}, error: {error}"
+                            )
+
+                    total_success += batch_success
+                    total_failed += batch_failed
+
+                    elapsed = time.time() - start_time
+                    rows_per_sec = total_success / elapsed if elapsed > 0 else 0
+                    logging.info(
+                        f"🔸 Progress: {total_success:,} success, {total_failed:,} failed "
+                        f"({rows_per_sec:,.0f} rows/sec)"
+                    )
+
+        # Final report
+        elapsed = time.time() - start_time
+        logging.info(
+            f"✅ Batch insert completed: {total_success:,} success, {total_failed:,} failed "
+            f"in {elapsed:.2f} seconds ({total_success/elapsed:,.0f} rows/sec)"
         )
+        return total_success, total_failed
 
     def query_data(self, query, params=None):
         """Execute query with retry logic"""
