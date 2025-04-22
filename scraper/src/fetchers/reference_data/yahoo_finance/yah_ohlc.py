@@ -298,6 +298,36 @@ def download_yah_prices_by_code(ticker="AAPL", period="max"):
         return pd.DataFrame()
 
 
+def download_prices_and_save_csv(
+    ticker_list, period="max", output_file="yah_prices.csv"
+):
+    all_data = []
+
+    for ticker in ticker_list:
+        print(f"⬇ Downloading: {ticker}")
+        df = download_yah_prices_by_code(ticker=ticker, period=period)
+        if not df.empty:
+            all_data.append(df)
+        else:
+            print(f"⚠ Skipped {ticker} due to empty data.")
+
+    if all_data:
+        final_df = pd.concat(all_data, ignore_index=True)
+        final_df.to_csv(output_file, index=False)
+        print(f"✅ Data saved to {output_file}")
+        return final_df
+    else:
+        print("❌ No data downloaded.")
+        return pd.DataFrame()
+
+
+# LIST_CODES_FILE = 'D:/WebBEQ/DataBackend/scraper/src/database/reference_data/list_code_by_source/LIST_CODESOURCE_DOWNLOAD_SPECIAL.txt'
+# df = pd.read_csv(LIST_CODES_FILE, usecols=['YAH'], dtype=str)
+# tickers = df['YAH'].dropna().unique().tolist()
+
+# download_prices_and_save_csv(tickers, period="max", output_file="yah_prices.csv")
+
+
 def download_yah_info_by_code(ticker="AAPL"):
     # symbol = yf.Ticker('MSFT')
     symbol = yf.Ticker(ticker)

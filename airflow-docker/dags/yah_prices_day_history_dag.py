@@ -40,7 +40,7 @@ from cassandra_client import CassandraClient
 
 
 T = TypeVar("T")
-LIST_CODES_FILE = "/app/scraper/src/database/reference_data/list_code_by_source/LIST_CODESOURCE_DOWNLOAD.txt"
+LIST_CODES_FILE = "/app/scraper/src/database/reference_data/list_code_by_source/LIST_CODESOURCE_DOWNLOAD_SPECIAL.txt"
 
 # LIST_CODES_FILE = "scraper/src/database/reference_data/list_code_by_source/LIST_CODESOURCE_DOWNLOAD.txt"
 
@@ -111,7 +111,7 @@ def check_updated_tickers():
     cassandra_client = CassandraClient()
     cassandra_client.connect()
     cassandra_client.create_keyspace()
-    table_name = "download_yah_prices_day_history"
+    table_name = "download_yah_prices_day_history_special"
     updated_tickers = []
     today = datetime.now().date()
     today_str = today.strftime("%Y-%m-%d")
@@ -145,7 +145,7 @@ def check_updated_tickers():
 
 
 def get_list_tickers(nb_group=3, updated_tickers=None, source="YAH"):
-    df = pd.read_csv(LIST_CODES_FILE, dtype=str)
+    df = pd.read_csv(LIST_CODES_FILE, usecols=[source], dtype=str)
     tickers = df[source].dropna().unique().tolist()
 
     if updated_tickers:
@@ -216,7 +216,7 @@ def fetch_yah_prices_by_list(list_codesource, group_id, batch_size=50):
             cassandra_client = CassandraClient()
             cassandra_client.connect()
             cassandra_client.create_keyspace()
-            table_name = "download_yah_prices_day_history"
+            table_name = "download_yah_prices_day_history_special"
             all_data = []
 
             def fetch_single_ticker(ticker):
@@ -336,7 +336,7 @@ default_args = {
 }
 NB_GROUPS = 5
 with DAG(
-    "download_yah_prices_day_history",
+    "download_yah_prices_day_history_special",
     default_args=default_args,
     description="Download price day of tickers from Yahoo Finance",
     schedule_interval=None,

@@ -1,0 +1,1896 @@
+{
+    "oanda": [
+        {
+            "description": "Oanda EUR/CZK",
+            "displaySymbol": "EUR/CZK",
+            "symbol": "OANDA:EUR_CZK"
+        },
+        {
+            "description": "Oanda USD/CNH",
+            "displaySymbol": "USD/CNH",
+            "symbol": "OANDA:USD_CNH"
+        },
+        {
+            "description": "Oanda TRY/JPY",
+            "displaySymbol": "TRY/JPY",
+            "symbol": "OANDA:TRY_JPY"
+        },
+        {
+            "description": "Oanda Silver/CAD",
+            "displaySymbol": "XAG/CAD",
+            "symbol": "OANDA:XAG_CAD"
+        },
+        {
+            "description": "Oanda EUR/PLN",
+            "displaySymbol": "EUR/PLN",
+            "symbol": "OANDA:EUR_PLN"
+        },
+        {
+            "description": "Oanda SGD/CHF",
+            "displaySymbol": "SGD/CHF",
+            "symbol": "OANDA:SGD_CHF"
+        },
+        {
+            "description": "Oanda SGD/JPY",
+            "displaySymbol": "SGD/JPY",
+            "symbol": "OANDA:SGD_JPY"
+        },
+        {
+            "description": "Oanda US 10Y T-Note",
+            "displaySymbol": "USB10Y/USD",
+            "symbol": "OANDA:USB10Y_USD"
+        },
+        {
+            "description": "Oanda Brent Crude Oil",
+            "displaySymbol": "BCO/USD",
+            "symbol": "OANDA:BCO_USD"
+        },
+        {
+            "description": "Oanda Natural Gas",
+            "displaySymbol": "NATGAS/USD",
+            "symbol": "OANDA:NATGAS_USD"
+        },
+        {
+            "description": "Oanda Palladium",
+            "displaySymbol": "XPD/USD",
+            "symbol": "OANDA:XPD_USD"
+        },
+        {
+            "description": "Oanda Gold/HKD",
+            "displaySymbol": "XAU/HKD",
+            "symbol": "OANDA:XAU_HKD"
+        },
+        {
+            "description": "Oanda AUD/JPY",
+            "displaySymbol": "AUD/JPY",
+            "symbol": "OANDA:AUD_JPY"
+        },
+        {
+            "description": "Oanda EUR/TRY",
+            "displaySymbol": "EUR/TRY",
+            "symbol": "OANDA:EUR_TRY"
+        },
+        {
+            "description": "Oanda AUD/SGD",
+            "displaySymbol": "AUD/SGD",
+            "symbol": "OANDA:AUD_SGD"
+        },
+        {
+            "description": "Oanda NZD/HKD",
+            "displaySymbol": "NZD/HKD",
+            "symbol": "OANDA:NZD_HKD"
+        },
+        {
+            "description": "Oanda USD/MXN",
+            "displaySymbol": "USD/MXN",
+            "symbol": "OANDA:USD_MXN"
+        },
+        {
+            "description": "Oanda Silver/CHF",
+            "displaySymbol": "XAG/CHF",
+            "symbol": "OANDA:XAG_CHF"
+        },
+        {
+            "description": "Oanda EUR/AUD",
+            "displaySymbol": "EUR/AUD",
+            "symbol": "OANDA:EUR_AUD"
+        },
+        {
+            "description": "Oanda Gold/Silver",
+            "displaySymbol": "XAU/XAG",
+            "symbol": "OANDA:XAU_XAG"
+        },
+        {
+            "description": "Oanda USD/PLN",
+            "displaySymbol": "USD/PLN",
+            "symbol": "OANDA:USD_PLN"
+        },
+        {
+            "description": "Oanda AUD/HKD",
+            "displaySymbol": "AUD/HKD",
+            "symbol": "OANDA:AUD_HKD"
+        },
+        {
+            "description": "Oanda GBP/USD",
+            "displaySymbol": "GBP/USD",
+            "symbol": "OANDA:GBP_USD"
+        },
+        {
+            "description": "Oanda GBP/ZAR",
+            "displaySymbol": "GBP/ZAR",
+            "symbol": "OANDA:GBP_ZAR"
+        },
+        {
+            "description": "Oanda USD/TRY",
+            "displaySymbol": "USD/TRY",
+            "symbol": "OANDA:USD_TRY"
+        },
+        {
+            "description": "Oanda Gold/SGD",
+            "displaySymbol": "XAU/SGD",
+            "symbol": "OANDA:XAU_SGD"
+        },
+        {
+            "description": "Oanda USD/JPY",
+            "displaySymbol": "USD/JPY",
+            "symbol": "OANDA:USD_JPY"
+        },
+        {
+            "description": "Oanda Australia 200",
+            "displaySymbol": "AU200/AUD",
+            "symbol": "OANDA:AU200_AUD"
+        },
+        {
+            "description": "Oanda EUR/USD",
+            "displaySymbol": "EUR/USD",
+            "symbol": "OANDA:EUR_USD"
+        },
+        {
+            "description": "Oanda NZD/CAD",
+            "displaySymbol": "NZD/CAD",
+            "symbol": "OANDA:NZD_CAD"
+        },
+        {
+            "description": "Oanda US SPX 500",
+            "displaySymbol": "SPX500/USD",
+            "symbol": "OANDA:SPX500_USD"
+        },
+        {
+            "description": "Oanda GBP/AUD",
+            "displaySymbol": "GBP/AUD",
+            "symbol": "OANDA:GBP_AUD"
+        },
+        {
+            "description": "Oanda USD/SGD",
+            "displaySymbol": "USD/SGD",
+            "symbol": "OANDA:USD_SGD"
+        },
+        {
+            "description": "Oanda USD/SEK",
+            "displaySymbol": "USD/SEK",
+            "symbol": "OANDA:USD_SEK"
+        },
+        {
+            "description": "Oanda CHF/ZAR",
+            "displaySymbol": "CHF/ZAR",
+            "symbol": "OANDA:CHF_ZAR"
+        },
+        {
+            "description": "Oanda UK 100",
+            "displaySymbol": "UK100/GBP",
+            "symbol": "OANDA:UK100_GBP"
+        },
+        {
+            "description": "Oanda USD/NOK",
+            "displaySymbol": "USD/NOK",
+            "symbol": "OANDA:USD_NOK"
+        },
+        {
+            "description": "Oanda EUR/JPY",
+            "displaySymbol": "EUR/JPY",
+            "symbol": "OANDA:EUR_JPY"
+        },
+        {
+            "description": "Oanda EUR/SEK",
+            "displaySymbol": "EUR/SEK",
+            "symbol": "OANDA:EUR_SEK"
+        },
+        {
+            "description": "Oanda Corn",
+            "displaySymbol": "CORN/USD",
+            "symbol": "OANDA:CORN_USD"
+        },
+        {
+            "description": "Oanda CAD/HKD",
+            "displaySymbol": "CAD/HKD",
+            "symbol": "OANDA:CAD_HKD"
+        },
+        {
+            "description": "Oanda USD/DKK",
+            "displaySymbol": "USD/DKK",
+            "symbol": "OANDA:USD_DKK"
+        },
+        {
+            "description": "Oanda Gold/CAD",
+            "displaySymbol": "XAU/CAD",
+            "symbol": "OANDA:XAU_CAD"
+        },
+        {
+            "description": "Oanda Copper",
+            "displaySymbol": "XCU/USD",
+            "symbol": "OANDA:XCU_USD"
+        },
+        {
+            "description": "Oanda Sugar",
+            "displaySymbol": "SUGAR/USD",
+            "symbol": "OANDA:SUGAR_USD"
+        },
+        {
+            "description": "Oanda EUR/ZAR",
+            "displaySymbol": "EUR/ZAR",
+            "symbol": "OANDA:EUR_ZAR"
+        },
+        {
+            "description": "Oanda EUR/SGD",
+            "displaySymbol": "EUR/SGD",
+            "symbol": "OANDA:EUR_SGD"
+        },
+        {
+            "description": "Oanda USD/THB",
+            "displaySymbol": "USD/THB",
+            "symbol": "OANDA:USD_THB"
+        },
+        {
+            "description": "Oanda USD/CHF",
+            "displaySymbol": "USD/CHF",
+            "symbol": "OANDA:USD_CHF"
+        },
+        {
+            "description": "Oanda GBP/SGD",
+            "displaySymbol": "GBP/SGD",
+            "symbol": "OANDA:GBP_SGD"
+        },
+        {
+            "description": "Oanda Platinum",
+            "displaySymbol": "XPT/USD",
+            "symbol": "OANDA:XPT_USD"
+        },
+        {
+            "description": "Oanda Silver/NZD",
+            "displaySymbol": "XAG/NZD",
+            "symbol": "OANDA:XAG_NZD"
+        },
+        {
+            "description": "Oanda EUR/NZD",
+            "displaySymbol": "EUR/NZD",
+            "symbol": "OANDA:EUR_NZD"
+        },
+        {
+            "description": "Oanda Gold/CHF",
+            "displaySymbol": "XAU/CHF",
+            "symbol": "OANDA:XAU_CHF"
+        },
+        {
+            "description": "Oanda AUD/CHF",
+            "displaySymbol": "AUD/CHF",
+            "symbol": "OANDA:AUD_CHF"
+        },
+        {
+            "description": "Oanda Wheat",
+            "displaySymbol": "WHEAT/USD",
+            "symbol": "OANDA:WHEAT_USD"
+        },
+        {
+            "description": "Oanda EUR/CAD",
+            "displaySymbol": "EUR/CAD",
+            "symbol": "OANDA:EUR_CAD"
+        },
+        {
+            "description": "Oanda Silver/EUR",
+            "displaySymbol": "XAG/EUR",
+            "symbol": "OANDA:XAG_EUR"
+        },
+        {
+            "description": "Oanda AUD/NZD",
+            "displaySymbol": "AUD/NZD",
+            "symbol": "OANDA:AUD_NZD"
+        },
+        {
+            "description": "Oanda GBP/CHF",
+            "displaySymbol": "GBP/CHF",
+            "symbol": "OANDA:GBP_CHF"
+        },
+        {
+            "description": "Oanda NZD/JPY",
+            "displaySymbol": "NZD/JPY",
+            "symbol": "OANDA:NZD_JPY"
+        },
+        {
+            "description": "Oanda US Nas 100",
+            "displaySymbol": "NAS100/USD",
+            "symbol": "OANDA:NAS100_USD"
+        },
+        {
+            "description": "Oanda USD/HUF",
+            "displaySymbol": "USD/HUF",
+            "symbol": "OANDA:USD_HUF"
+        },
+        {
+            "description": "Oanda AUD/CAD",
+            "displaySymbol": "AUD/CAD",
+            "symbol": "OANDA:AUD_CAD"
+        },
+        {
+            "description": "Oanda Soybeans",
+            "displaySymbol": "SOYBN/USD",
+            "symbol": "OANDA:SOYBN_USD"
+        },
+        {
+            "description": "Oanda US T-Bond",
+            "displaySymbol": "USB30Y/USD",
+            "symbol": "OANDA:USB30Y_USD"
+        },
+        {
+            "description": "Oanda Silver/GBP",
+            "displaySymbol": "XAG/GBP",
+            "symbol": "OANDA:XAG_GBP"
+        },
+        {
+            "description": "Oanda HKD/JPY",
+            "displaySymbol": "HKD/JPY",
+            "symbol": "OANDA:HKD_JPY"
+        },
+        {
+            "description": "Oanda Gold/GBP",
+            "displaySymbol": "XAU/GBP",
+            "symbol": "OANDA:XAU_GBP"
+        },
+        {
+            "description": "Oanda Silver",
+            "displaySymbol": "XAG/USD",
+            "symbol": "OANDA:XAG_USD"
+        },
+        {
+            "description": "Oanda GBP/JPY",
+            "displaySymbol": "GBP/JPY",
+            "symbol": "OANDA:GBP_JPY"
+        },
+        {
+            "description": "Oanda Silver/HKD",
+            "displaySymbol": "XAG/HKD",
+            "symbol": "OANDA:XAG_HKD"
+        },
+        {
+            "description": "Oanda CAD/SGD",
+            "displaySymbol": "CAD/SGD",
+            "symbol": "OANDA:CAD_SGD"
+        },
+        {
+            "description": "Oanda Japan 225",
+            "displaySymbol": "JP225/USD",
+            "symbol": "OANDA:JP225_USD"
+        },
+        {
+            "description": "Oanda Gold/NZD",
+            "displaySymbol": "XAU/NZD",
+            "symbol": "OANDA:XAU_NZD"
+        },
+        {
+            "description": "Oanda Hong Kong 33",
+            "displaySymbol": "HK33/HKD",
+            "symbol": "OANDA:HK33_HKD"
+        },
+        {
+            "description": "Oanda Gold",
+            "displaySymbol": "XAU/USD",
+            "symbol": "OANDA:XAU_USD"
+        },
+        {
+            "description": "Oanda Bund",
+            "displaySymbol": "DE10YB/EUR",
+            "symbol": "OANDA:DE10YB_EUR"
+        },
+        {
+            "description": "Oanda USD/ZAR",
+            "displaySymbol": "USD/ZAR",
+            "symbol": "OANDA:USD_ZAR"
+        },
+        {
+            "description": "Oanda NZD/USD",
+            "displaySymbol": "NZD/USD",
+            "symbol": "OANDA:NZD_USD"
+        },
+        {
+            "description": "Oanda EUR/HKD",
+            "displaySymbol": "EUR/HKD",
+            "symbol": "OANDA:EUR_HKD"
+        },
+        {
+            "description": "Oanda Netherlands 25",
+            "displaySymbol": "NL25/EUR",
+            "symbol": "OANDA:NL25_EUR"
+        },
+        {
+            "description": "Oanda US 2Y T-Note",
+            "displaySymbol": "USB02Y/USD",
+            "symbol": "OANDA:USB02Y_USD"
+        },
+        {
+            "description": "Oanda GBP/CAD",
+            "displaySymbol": "GBP/CAD",
+            "symbol": "OANDA:GBP_CAD"
+        },
+        {
+            "description": "Oanda NZD/SGD",
+            "displaySymbol": "NZD/SGD",
+            "symbol": "OANDA:NZD_SGD"
+        },
+        {
+            "description": "Oanda CHF/HKD",
+            "displaySymbol": "CHF/HKD",
+            "symbol": "OANDA:CHF_HKD"
+        },
+        {
+            "description": "Oanda EUR/HUF",
+            "displaySymbol": "EUR/HUF",
+            "symbol": "OANDA:EUR_HUF"
+        },
+        {
+            "description": "Oanda NZD/CHF",
+            "displaySymbol": "NZD/CHF",
+            "symbol": "OANDA:NZD_CHF"
+        },
+        {
+            "description": "Oanda UK 10Y Gilt",
+            "displaySymbol": "UK10YB/GBP",
+            "symbol": "OANDA:UK10YB_GBP"
+        },
+        {
+            "description": "Oanda USD/CAD",
+            "displaySymbol": "USD/CAD",
+            "symbol": "OANDA:USD_CAD"
+        },
+        {
+            "description": "Oanda Europe 50",
+            "displaySymbol": "EU50/EUR",
+            "symbol": "OANDA:EU50_EUR"
+        },
+        {
+            "description": "Oanda USD/HKD",
+            "displaySymbol": "USD/HKD",
+            "symbol": "OANDA:USD_HKD"
+        },
+        {
+            "description": "Oanda Japan 225 (JPY)",
+            "displaySymbol": "JP225Y/JPY",
+            "symbol": "OANDA:JP225Y_JPY"
+        },
+        {
+            "description": "Oanda EUR/GBP",
+            "displaySymbol": "EUR/GBP",
+            "symbol": "OANDA:EUR_GBP"
+        },
+        {
+            "description": "Oanda GBP/NZD",
+            "displaySymbol": "GBP/NZD",
+            "symbol": "OANDA:GBP_NZD"
+        },
+        {
+            "description": "Oanda France 40",
+            "displaySymbol": "FR40/EUR",
+            "symbol": "OANDA:FR40_EUR"
+        },
+        {
+            "description": "Oanda US Wall St 30",
+            "displaySymbol": "US30/USD",
+            "symbol": "OANDA:US30_USD"
+        },
+        {
+            "description": "Oanda Singapore 30",
+            "displaySymbol": "SG30/SGD",
+            "symbol": "OANDA:SG30_SGD"
+        },
+        {
+            "description": "Oanda Silver/JPY",
+            "displaySymbol": "XAG/JPY",
+            "symbol": "OANDA:XAG_JPY"
+        },
+        {
+            "description": "Oanda CHF/JPY",
+            "displaySymbol": "CHF/JPY",
+            "symbol": "OANDA:CHF_JPY"
+        },
+        {
+            "description": "Oanda West Texas Oil",
+            "displaySymbol": "WTICO/USD",
+            "symbol": "OANDA:WTICO_USD"
+        },
+        {
+            "description": "Oanda Gold/JPY",
+            "displaySymbol": "XAU/JPY",
+            "symbol": "OANDA:XAU_JPY"
+        },
+        {
+            "description": "Oanda EUR/DKK",
+            "displaySymbol": "EUR/DKK",
+            "symbol": "OANDA:EUR_DKK"
+        },
+        {
+            "description": "Oanda CAD/JPY",
+            "displaySymbol": "CAD/JPY",
+            "symbol": "OANDA:CAD_JPY"
+        },
+        {
+            "description": "Oanda EUR/CHF",
+            "displaySymbol": "EUR/CHF",
+            "symbol": "OANDA:EUR_CHF"
+        },
+        {
+            "description": "Oanda AUD/USD",
+            "displaySymbol": "AUD/USD",
+            "symbol": "OANDA:AUD_USD"
+        },
+        {
+            "description": "Oanda US 5Y T-Note",
+            "displaySymbol": "USB05Y/USD",
+            "symbol": "OANDA:USB05Y_USD"
+        },
+        {
+            "description": "Oanda GBP/HKD",
+            "displaySymbol": "GBP/HKD",
+            "symbol": "OANDA:GBP_HKD"
+        },
+        {
+            "description": "Oanda USD/CZK",
+            "displaySymbol": "USD/CZK",
+            "symbol": "OANDA:USD_CZK"
+        },
+        {
+            "description": "Oanda China A50",
+            "displaySymbol": "CN50/USD",
+            "symbol": "OANDA:CN50_USD"
+        },
+        {
+            "description": "Oanda ZAR/JPY",
+            "displaySymbol": "ZAR/JPY",
+            "symbol": "OANDA:ZAR_JPY"
+        },
+        {
+            "description": "Oanda Silver/AUD",
+            "displaySymbol": "XAG/AUD",
+            "symbol": "OANDA:XAG_AUD"
+        },
+        {
+            "description": "Oanda Silver/SGD",
+            "displaySymbol": "XAG/SGD",
+            "symbol": "OANDA:XAG_SGD"
+        },
+        {
+            "description": "Oanda Gold/AUD",
+            "displaySymbol": "XAU/AUD",
+            "symbol": "OANDA:XAU_AUD"
+        },
+        {
+            "description": "Oanda CAD/CHF",
+            "displaySymbol": "CAD/CHF",
+            "symbol": "OANDA:CAD_CHF"
+        },
+        {
+            "description": "Oanda US Russ 2000",
+            "displaySymbol": "US2000/USD",
+            "symbol": "OANDA:US2000_USD"
+        },
+        {
+            "description": "Oanda GBP/PLN",
+            "displaySymbol": "GBP/PLN",
+            "symbol": "OANDA:GBP_PLN"
+        },
+        {
+            "description": "Oanda Germany 30",
+            "displaySymbol": "DE30/EUR",
+            "symbol": "OANDA:DE30_EUR"
+        },
+        {
+            "description": "Oanda Gold/EUR",
+            "displaySymbol": "XAU/EUR",
+            "symbol": "OANDA:XAU_EUR"
+        },
+        {
+            "description": "Oanda EUR/NOK",
+            "displaySymbol": "EUR/NOK",
+            "symbol": "OANDA:EUR_NOK"
+        }
+    ],
+    "fxcm": [
+        {
+            "description": "FXCM ETH/USD",
+            "displaySymbol": "ETH/USD",
+            "symbol": "FXCM:ETH/USD"
+        },
+        {
+            "description": "FXCM US30",
+            "displaySymbol": "US30",
+            "symbol": "FXCM:US30"
+        },
+        {
+            "description": "FXCM XAU/USD",
+            "displaySymbol": "XAU/USD",
+            "symbol": "FXCM:XAU/USD"
+        },
+        {
+            "description": "FXCM US2000",
+            "displaySymbol": "US2000",
+            "symbol": "FXCM:US2000"
+        },
+        {
+            "description": "FXCM ZAR/JPY",
+            "displaySymbol": "ZAR/JPY",
+            "symbol": "FXCM:ZAR/JPY"
+        },
+        {
+            "description": "FXCM USD/NOK",
+            "displaySymbol": "USD/NOK",
+            "symbol": "FXCM:USD/NOK"
+        },
+        {
+            "description": "FXCM CORNF",
+            "displaySymbol": "CORNF",
+            "symbol": "FXCM:CORNF"
+        },
+        {
+            "description": "FXCM NZD/CHF",
+            "displaySymbol": "NZD/CHF",
+            "symbol": "FXCM:NZD/CHF"
+        },
+        {
+            "description": "FXCM EUR/CHF",
+            "displaySymbol": "EUR/CHF",
+            "symbol": "FXCM:EUR/CHF"
+        },
+        {
+            "description": "FXCM NZD/USD",
+            "displaySymbol": "NZD/USD",
+            "symbol": "FXCM:NZD/USD"
+        },
+        {
+            "description": "FXCM CAD/JPY",
+            "displaySymbol": "CAD/JPY",
+            "symbol": "FXCM:CAD/JPY"
+        },
+        {
+            "description": "FXCM NZD/CAD",
+            "displaySymbol": "NZD/CAD",
+            "symbol": "FXCM:NZD/CAD"
+        },
+        {
+            "description": "FXCM AUS200",
+            "displaySymbol": "AUS200",
+            "symbol": "FXCM:AUS200"
+        },
+        {
+            "description": "FXCM EUR/AUD",
+            "displaySymbol": "EUR/AUD",
+            "symbol": "FXCM:EUR/AUD"
+        },
+        {
+            "description": "FXCM XRP/USD",
+            "displaySymbol": "XRP/USD",
+            "symbol": "FXCM:XRP/USD"
+        },
+        {
+            "description": "FXCM AUD/NZD",
+            "displaySymbol": "AUD/NZD",
+            "symbol": "FXCM:AUD/NZD"
+        },
+        {
+            "description": "FXCM USD/SEK",
+            "displaySymbol": "USD/SEK",
+            "symbol": "FXCM:USD/SEK"
+        },
+        {
+            "description": "FXCM CHF/JPY",
+            "displaySymbol": "CHF/JPY",
+            "symbol": "FXCM:CHF/JPY"
+        },
+        {
+            "description": "FXCM AUD/JPY",
+            "displaySymbol": "AUD/JPY",
+            "symbol": "FXCM:AUD/JPY"
+        },
+        {
+            "description": "FXCM EUR/GBP",
+            "displaySymbol": "EUR/GBP",
+            "symbol": "FXCM:EUR/GBP"
+        },
+        {
+            "description": "FXCM EUR/SEK",
+            "displaySymbol": "EUR/SEK",
+            "symbol": "FXCM:EUR/SEK"
+        },
+        {
+            "description": "FXCM EUR/NOK",
+            "displaySymbol": "EUR/NOK",
+            "symbol": "FXCM:EUR/NOK"
+        },
+        {
+            "description": "FXCM USD/HKD",
+            "displaySymbol": "USD/HKD",
+            "symbol": "FXCM:USD/HKD"
+        },
+        {
+            "description": "FXCM AUD/CHF",
+            "displaySymbol": "AUD/CHF",
+            "symbol": "FXCM:AUD/CHF"
+        },
+        {
+            "description": "FXCM JPYBasket",
+            "displaySymbol": "JPYBasket",
+            "symbol": "FXCM:JPYBasket"
+        },
+        {
+            "description": "FXCM EUSTX50",
+            "displaySymbol": "EUSTX50",
+            "symbol": "FXCM:EUSTX50"
+        },
+        {
+            "description": "FXCM USD/ZAR",
+            "displaySymbol": "USD/ZAR",
+            "symbol": "FXCM:USD/ZAR"
+        },
+        {
+            "description": "FXCM EMBasket",
+            "displaySymbol": "EMBasket",
+            "symbol": "FXCM:EMBasket"
+        },
+        {
+            "description": "FXCM EUR/JPY",
+            "displaySymbol": "EUR/JPY",
+            "symbol": "FXCM:EUR/JPY"
+        },
+        {
+            "description": "FXCM AUD/USD",
+            "displaySymbol": "AUD/USD",
+            "symbol": "FXCM:AUD/USD"
+        },
+        {
+            "description": "FXCM NAS100",
+            "displaySymbol": "NAS100",
+            "symbol": "FXCM:NAS100"
+        },
+        {
+            "description": "FXCM USDOLLAR",
+            "displaySymbol": "USDOLLAR",
+            "symbol": "FXCM:USDOLLAR"
+        },
+        {
+            "description": "FXCM AUD/CAD",
+            "displaySymbol": "AUD/CAD",
+            "symbol": "FXCM:AUD/CAD"
+        },
+        {
+            "description": "FXCM EUR/TRY",
+            "displaySymbol": "EUR/TRY",
+            "symbol": "FXCM:EUR/TRY"
+        },
+        {
+            "description": "FXCM FRA40",
+            "displaySymbol": "FRA40",
+            "symbol": "FXCM:FRA40"
+        },
+        {
+            "description": "FXCM Bund",
+            "displaySymbol": "Bund",
+            "symbol": "FXCM:Bund"
+        },
+        {
+            "description": "FXCM UKOil",
+            "displaySymbol": "UKOil",
+            "symbol": "FXCM:UKOil"
+        },
+        {
+            "description": "FXCM WHEATF",
+            "displaySymbol": "WHEATF",
+            "symbol": "FXCM:WHEATF"
+        },
+        {
+            "description": "FXCM GBP/NZD",
+            "displaySymbol": "GBP/NZD",
+            "symbol": "FXCM:GBP/NZD"
+        },
+        {
+            "description": "FXCM EUR/NZD",
+            "displaySymbol": "EUR/NZD",
+            "symbol": "FXCM:EUR/NZD"
+        },
+        {
+            "description": "FXCM UK100",
+            "displaySymbol": "UK100",
+            "symbol": "FXCM:UK100"
+        },
+        {
+            "description": "FXCM EUR/CAD",
+            "displaySymbol": "EUR/CAD",
+            "symbol": "FXCM:EUR/CAD"
+        },
+        {
+            "description": "FXCM USOil",
+            "displaySymbol": "USOil",
+            "symbol": "FXCM:USOil"
+        },
+        {
+            "description": "FXCM USD/MXN",
+            "displaySymbol": "USD/MXN",
+            "symbol": "FXCM:USD/MXN"
+        },
+        {
+            "description": "FXCM GBP/USD",
+            "displaySymbol": "GBP/USD",
+            "symbol": "FXCM:GBP/USD"
+        },
+        {
+            "description": "FXCM CHN50",
+            "displaySymbol": "CHN50",
+            "symbol": "FXCM:CHN50"
+        },
+        {
+            "description": "FXCM GER30",
+            "displaySymbol": "GER30",
+            "symbol": "FXCM:GER30"
+        },
+        {
+            "description": "FXCM EUR/USD",
+            "displaySymbol": "EUR/USD",
+            "symbol": "FXCM:EUR/USD"
+        },
+        {
+            "description": "FXCM JPN225",
+            "displaySymbol": "JPN225",
+            "symbol": "FXCM:JPN225"
+        },
+        {
+            "description": "FXCM USD/CAD",
+            "displaySymbol": "USD/CAD",
+            "symbol": "FXCM:USD/CAD"
+        },
+        {
+            "description": "FXCM SPX500",
+            "displaySymbol": "SPX500",
+            "symbol": "FXCM:SPX500"
+        },
+        {
+            "description": "FXCM USD/JPY",
+            "displaySymbol": "USD/JPY",
+            "symbol": "FXCM:USD/JPY"
+        },
+        {
+            "description": "FXCM NGAS",
+            "displaySymbol": "NGAS",
+            "symbol": "FXCM:NGAS"
+        },
+        {
+            "description": "FXCM SOYF",
+            "displaySymbol": "SOYF",
+            "symbol": "FXCM:SOYF"
+        },
+        {
+            "description": "FXCM XAG/USD",
+            "displaySymbol": "XAG/USD",
+            "symbol": "FXCM:XAG/USD"
+        },
+        {
+            "description": "FXCM GBP/CHF",
+            "displaySymbol": "GBP/CHF",
+            "symbol": "FXCM:GBP/CHF"
+        },
+        {
+            "description": "FXCM LTC/USD",
+            "displaySymbol": "LTC/USD",
+            "symbol": "FXCM:LTC/USD"
+        },
+        {
+            "description": "FXCM USD/TRY",
+            "displaySymbol": "USD/TRY",
+            "symbol": "FXCM:USD/TRY"
+        },
+        {
+            "description": "FXCM USD/CNH",
+            "displaySymbol": "USD/CNH",
+            "symbol": "FXCM:USD/CNH"
+        },
+        {
+            "description": "FXCM Copper",
+            "displaySymbol": "Copper",
+            "symbol": "FXCM:Copper"
+        },
+        {
+            "description": "FXCM TRY/JPY",
+            "displaySymbol": "TRY/JPY",
+            "symbol": "FXCM:TRY/JPY"
+        },
+        {
+            "description": "FXCM ESP35",
+            "displaySymbol": "ESP35",
+            "symbol": "FXCM:ESP35"
+        },
+        {
+            "description": "FXCM BTC/USD",
+            "displaySymbol": "BTC/USD",
+            "symbol": "FXCM:BTC/USD"
+        },
+        {
+            "description": "FXCM USD/CHF",
+            "displaySymbol": "USD/CHF",
+            "symbol": "FXCM:USD/CHF"
+        },
+        {
+            "description": "FXCM NZD/JPY",
+            "displaySymbol": "NZD/JPY",
+            "symbol": "FXCM:NZD/JPY"
+        },
+        {
+            "description": "FXCM HKG33",
+            "displaySymbol": "HKG33",
+            "symbol": "FXCM:HKG33"
+        },
+        {
+            "description": "FXCM GBP/JPY",
+            "displaySymbol": "GBP/JPY",
+            "symbol": "FXCM:GBP/JPY"
+        },
+        {
+            "description": "FXCM GBP/AUD",
+            "displaySymbol": "GBP/AUD",
+            "symbol": "FXCM:GBP/AUD"
+        },
+        {
+            "description": "FXCM CAD/CHF",
+            "displaySymbol": "CAD/CHF",
+            "symbol": "FXCM:CAD/CHF"
+        },
+        {
+            "description": "FXCM GBP/CAD",
+            "displaySymbol": "GBP/CAD",
+            "symbol": "FXCM:GBP/CAD"
+        },
+        {
+            "description": "FXCM BCH/USD",
+            "displaySymbol": "BCH/USD",
+            "symbol": "FXCM:BCH/USD"
+        }
+    ],
+    "forex.com": [
+        {
+            "description": "Forex.com EUR/PLN",
+            "displaySymbol": "EUR/PLN",
+            "symbol": "FOREX:401484342"
+        },
+        {
+            "description": "Forex.com AUD/USD",
+            "displaySymbol": "AUD/USD",
+            "symbol": "FOREX:401484317"
+        },
+        {
+            "description": "Forex.com USD/CAD",
+            "displaySymbol": "USD/CAD",
+            "symbol": "FOREX:401484406"
+        },
+        {
+            "description": "Forex.com USD/ILS",
+            "displaySymbol": "USD/ILS",
+            "symbol": "FOREX:401484413"
+        },
+        {
+            "description": "Forex.com USD/CHF",
+            "displaySymbol": "USD/CHF",
+            "symbol": "FOREX:401484407"
+        },
+        {
+            "description": "Forex.com AUD/NZD",
+            "displaySymbol": "AUD/NZD",
+            "symbol": "FOREX:401484314"
+        },
+        {
+            "description": "Forex.com AUD/PLN",
+            "displaySymbol": "AUD/PLN",
+            "symbol": "FOREX:401484315"
+        },
+        {
+            "description": "Forex.com USD/TRY",
+            "displaySymbol": "USD/TRY",
+            "symbol": "FOREX:401484422"
+        },
+        {
+            "description": "Forex.com AUD/NOK",
+            "displaySymbol": "AUD/NOK",
+            "symbol": "FOREX:401484304"
+        },
+        {
+            "description": "Forex.com USD/SGD",
+            "displaySymbol": "USD/SGD",
+            "symbol": "FOREX:401484420"
+        },
+        {
+            "description": "Forex.com CAD/CHF",
+            "displaySymbol": "CAD/CHF",
+            "symbol": "FOREX:401484320"
+        },
+        {
+            "description": "Forex.com NOK/JPY",
+            "displaySymbol": "NOK/JPY",
+            "symbol": "FOREX:401484396"
+        },
+        {
+            "description": "Forex.com CAD/PLN",
+            "displaySymbol": "CAD/PLN",
+            "symbol": "FOREX:401484323"
+        },
+        {
+            "description": "Forex.com NZD/JPY",
+            "displaySymbol": "NZD/JPY",
+            "symbol": "FOREX:401484401"
+        },
+        {
+            "description": "Forex.com GBP/SGD",
+            "displaySymbol": "GBP/SGD",
+            "symbol": "FOREX:401484391"
+        },
+        {
+            "description": "Forex.com SGD/JPY",
+            "displaySymbol": "SGD/JPY",
+            "symbol": "FOREX:401484404"
+        },
+        {
+            "description": "Forex.com EUR/JPY",
+            "displaySymbol": "EUR/JPY",
+            "symbol": "FOREX:401484338"
+        },
+        {
+            "description": "Forex.com GBP/HKD",
+            "displaySymbol": "GBP/HKD",
+            "symbol": "FOREX:401484353"
+        },
+        {
+            "description": "Forex.com AUD/JPY",
+            "displaySymbol": "AUD/JPY",
+            "symbol": "FOREX:401484303"
+        },
+        {
+            "description": "Forex.com USD/HKD",
+            "displaySymbol": "USD/HKD",
+            "symbol": "FOREX:401484411"
+        },
+        {
+            "description": "Forex.com CHF/NOK",
+            "displaySymbol": "CHF/NOK",
+            "symbol": "FOREX:401484326"
+        },
+        {
+            "description": "Forex.com GBP/NOK",
+            "displaySymbol": "GBP/NOK",
+            "symbol": "FOREX:401484387"
+        },
+        {
+            "description": "Forex.com EUR/GBP",
+            "displaySymbol": "EUR/GBP",
+            "symbol": "FOREX:401484335"
+        },
+        {
+            "description": "Forex.com EUR/HKD",
+            "displaySymbol": "EUR/HKD",
+            "symbol": "FOREX:401484336"
+        },
+        {
+            "description": "Forex.com EUR/NZD",
+            "displaySymbol": "EUR/NZD",
+            "symbol": "FOREX:401484341"
+        },
+        {
+            "description": "Forex.com EUR/SGD",
+            "displaySymbol": "EUR/SGD",
+            "symbol": "FOREX:401484345"
+        },
+        {
+            "description": "Forex.com CNH/JPY",
+            "displaySymbol": "CNH/JPY",
+            "symbol": "FOREX:401484328"
+        },
+        {
+            "description": "Forex.com EUR/SEK",
+            "displaySymbol": "EUR/SEK",
+            "symbol": "FOREX:401484344"
+        },
+        {
+            "description": "Forex.com GBP/USD",
+            "displaySymbol": "GBP/USD",
+            "symbol": "FOREX:401484392"
+        },
+        {
+            "description": "Forex.com NZD/CHF",
+            "displaySymbol": "NZD/CHF",
+            "symbol": "FOREX:401484400"
+        },
+        {
+            "description": "Forex.com EUR/CHF",
+            "displaySymbol": "EUR/CHF",
+            "symbol": "FOREX:401484331"
+        },
+        {
+            "description": "Forex.com GBP/NZD",
+            "displaySymbol": "GBP/NZD",
+            "symbol": "FOREX:401484388"
+        },
+        {
+            "description": "Forex.com TRY/JPY",
+            "displaySymbol": "TRY/JPY",
+            "symbol": "FOREX:401484405"
+        },
+        {
+            "description": "Forex.com NOK/SEK",
+            "displaySymbol": "NOK/SEK",
+            "symbol": "FOREX:401484397"
+        },
+        {
+            "description": "Forex.com GBP/DKK",
+            "displaySymbol": "GBP/DKK",
+            "symbol": "FOREX:401484352"
+        },
+        {
+            "description": "Forex.com GBP/PLN",
+            "displaySymbol": "GBP/PLN",
+            "symbol": "FOREX:401484389"
+        },
+        {
+            "description": "Forex.com GBP/AUD",
+            "displaySymbol": "GBP/AUD",
+            "symbol": "FOREX:401484349"
+        },
+        {
+            "description": "Forex.com SGD/HKD",
+            "displaySymbol": "SGD/HKD",
+            "symbol": "FOREX:401484403"
+        },
+        {
+            "description": "Forex.com USD/PLN",
+            "displaySymbol": "USD/PLN",
+            "symbol": "FOREX:401484417"
+        },
+        {
+            "description": "Forex.com CAD/NOK",
+            "displaySymbol": "CAD/NOK",
+            "symbol": "FOREX:401484322"
+        },
+        {
+            "description": "Forex.com CHF/PLN",
+            "displaySymbol": "CHF/PLN",
+            "symbol": "FOREX:401484327"
+        },
+        {
+            "description": "Forex.com NZD/USD",
+            "displaySymbol": "NZD/USD",
+            "symbol": "FOREX:401484402"
+        },
+        {
+            "description": "Forex.com CHF/HUF",
+            "displaySymbol": "CHF/HUF",
+            "symbol": "FOREX:401484324"
+        },
+        {
+            "description": "Forex.com AUD/CHF",
+            "displaySymbol": "AUD/CHF",
+            "symbol": "FOREX:401484301"
+        },
+        {
+            "description": "Forex.com EUR/MXN",
+            "displaySymbol": "EUR/MXN",
+            "symbol": "FOREX:401484339"
+        },
+        {
+            "description": "Forex.com USD/DKK",
+            "displaySymbol": "USD/DKK",
+            "symbol": "FOREX:401484410"
+        },
+        {
+            "description": "Forex.com GBP/MXN",
+            "displaySymbol": "GBP/MXN",
+            "symbol": "FOREX:401484386"
+        },
+        {
+            "description": "Forex.com NOK/DKK",
+            "displaySymbol": "NOK/DKK",
+            "symbol": "FOREX:401484395"
+        },
+        {
+            "description": "Forex.com CAD/JPY",
+            "displaySymbol": "CAD/JPY",
+            "symbol": "FOREX:401484321"
+        },
+        {
+            "description": "Forex.com USD/NOK",
+            "displaySymbol": "USD/NOK",
+            "symbol": "FOREX:401484416"
+        },
+        {
+            "description": "Forex.com EUR/AUD",
+            "displaySymbol": "EUR/AUD",
+            "symbol": "FOREX:401484329"
+        },
+        {
+            "description": "Forex.com GBP/JPY",
+            "displaySymbol": "GBP/JPY",
+            "symbol": "FOREX:401484385"
+        },
+        {
+            "description": "Forex.com GBP/ZAR",
+            "displaySymbol": "GBP/ZAR",
+            "symbol": "FOREX:401484393"
+        },
+        {
+            "description": "Forex.com HKD/JPY",
+            "displaySymbol": "HKD/JPY",
+            "symbol": "FOREX:401484394"
+        },
+        {
+            "description": "Forex.com USD/SEK",
+            "displaySymbol": "USD/SEK",
+            "symbol": "FOREX:401484419"
+        },
+        {
+            "description": "Forex.com EUR/NOK",
+            "displaySymbol": "EUR/NOK",
+            "symbol": "FOREX:401484340"
+        },
+        {
+            "description": "Forex.com EUR/TRY",
+            "displaySymbol": "EUR/TRY",
+            "symbol": "FOREX:401484346"
+        },
+        {
+            "description": "Forex.com USD/THB",
+            "displaySymbol": "USD/THB",
+            "symbol": "FOREX:401484421"
+        },
+        {
+            "description": "Forex.com USD/JPY",
+            "displaySymbol": "USD/JPY",
+            "symbol": "FOREX:401484414"
+        },
+        {
+            "description": "Forex.com USD/HUF",
+            "displaySymbol": "USD/HUF",
+            "symbol": "FOREX:401484412"
+        },
+        {
+            "description": "Forex.com USD/MXN",
+            "displaySymbol": "USD/MXN",
+            "symbol": "FOREX:401484415"
+        },
+        {
+            "description": "Forex.com AUD/SGD",
+            "displaySymbol": "AUD/SGD",
+            "symbol": "FOREX:401484316"
+        },
+        {
+            "description": "Forex.com EUR/DKK",
+            "displaySymbol": "EUR/DKK",
+            "symbol": "FOREX:401484334"
+        },
+        {
+            "description": "Forex.com GBP/CAD",
+            "displaySymbol": "GBP/CAD",
+            "symbol": "FOREX:401484350"
+        },
+        {
+            "description": "Forex.com ZAR/JPY",
+            "displaySymbol": "ZAR/JPY",
+            "symbol": "FOREX:401484424"
+        },
+        {
+            "description": "Forex.com USD/CNH",
+            "displaySymbol": "USD/CNH",
+            "symbol": "FOREX:401484408"
+        },
+        {
+            "description": "Forex.com USD/ZAR",
+            "displaySymbol": "USD/ZAR",
+            "symbol": "FOREX:401484423"
+        },
+        {
+            "description": "Forex.com EUR/HUF",
+            "displaySymbol": "EUR/HUF",
+            "symbol": "FOREX:401484337"
+        },
+        {
+            "description": "Forex.com AUD/CNH",
+            "displaySymbol": "AUD/CNH",
+            "symbol": "FOREX:401484302"
+        },
+        {
+            "description": "Forex.com EUR/ZAR",
+            "displaySymbol": "EUR/ZAR",
+            "symbol": "FOREX:401484348"
+        },
+        {
+            "description": "Forex.com EUR/CAD",
+            "displaySymbol": "EUR/CAD",
+            "symbol": "FOREX:401484330"
+        },
+        {
+            "description": "Forex.com AUD/CAD",
+            "displaySymbol": "AUD/CAD",
+            "symbol": "FOREX:401484300"
+        },
+        {
+            "description": "Forex.com EUR/CZK",
+            "displaySymbol": "EUR/CZK",
+            "symbol": "FOREX:401484333"
+        },
+        {
+            "description": "Forex.com GBP/SEK",
+            "displaySymbol": "GBP/SEK",
+            "symbol": "FOREX:401484390"
+        },
+        {
+            "description": "Forex.com USD/CZK",
+            "displaySymbol": "USD/CZK",
+            "symbol": "FOREX:401484409"
+        },
+        {
+            "description": "Forex.com EUR/USD",
+            "displaySymbol": "EUR/USD",
+            "symbol": "FOREX:401484347"
+        },
+        {
+            "description": "Forex.com NZD/CAD",
+            "displaySymbol": "NZD/CAD",
+            "symbol": "FOREX:401484398"
+        },
+        {
+            "description": "Forex.com EUR/CNH",
+            "displaySymbol": "EUR/CNH",
+            "symbol": "FOREX:401484332"
+        },
+        {
+            "description": "Forex.com GBP/CHF",
+            "displaySymbol": "GBP/CHF",
+            "symbol": "FOREX:401484351"
+        },
+        {
+            "description": "Forex.com CHF/JPY",
+            "displaySymbol": "CHF/JPY",
+            "symbol": "FOREX:401484325"
+        }
+    ],
+    "ic markets": [
+        {
+            "description": "IC MARKETS Swedish Krona vs Japanese Yen SEKJPY",
+            "displaySymbol": "SEK/JPY",
+            "symbol": "IC MARKETS:1015"
+        },
+        {
+            "description": "IC MARKETS Euro vs Turkish Lira EURTRY",
+            "displaySymbol": "EUR/TRY",
+            "symbol": "IC MARKETS:1007"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Singapore Dollar USDSGD",
+            "displaySymbol": "USD/SGD",
+            "symbol": "IC MARKETS:28"
+        },
+        {
+            "description": "IC MARKETS Switzerland 20 Index SWI20",
+            "displaySymbol": "SWI2010037/CHF",
+            "symbol": "IC MARKETS:10037"
+        },
+        {
+            "description": "IC MARKETS Dashcoin US Dollar DSHUSD",
+            "displaySymbol": "DSH/USD",
+            "symbol": "IC MARKETS:10027"
+        },
+        {
+            "description": "IC MARKETS Euro vs Canadian Dollar EURCAD",
+            "displaySymbol": "EUR/CAD",
+            "symbol": "IC MARKETS:17"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Thai Bhat USDTHB",
+            "displaySymbol": "USD/THB",
+            "symbol": "IC MARKETS:1026"
+        },
+        {
+            "description": "IC MARKETS Sweden 30 Index SE30",
+            "displaySymbol": "SE30/SEK",
+            "symbol": "IC MARKETS:10042"
+        },
+        {
+            "description": "IC MARKETS Bitcoin Cash US Dollar BCHUSD",
+            "displaySymbol": "BCH/USD",
+            "symbol": "IC MARKETS:10028"
+        },
+        {
+            "description": "IC MARKETS Norwegian Krone vs Japanese Yen NOKJPY",
+            "displaySymbol": "NOK/JPY",
+            "symbol": "IC MARKETS:1014"
+        },
+        {
+            "description": "IC MARKETS British Pound vs Canadian Dollar GBPCAD",
+            "displaySymbol": "GBP/CAD",
+            "symbol": "IC MARKETS:19"
+        },
+        {
+            "description": "IC MARKETS Australian Dollar vs Singapore Dollar AUDSGD",
+            "displaySymbol": "AUD/SGD",
+            "symbol": "IC MARKETS:1001"
+        },
+        {
+            "description": "IC MARKETS FTSE China A50 Index CHINA50",
+            "displaySymbol": "CHINA50/USD",
+            "symbol": "IC MARKETS:10025"
+        },
+        {
+            "description": "IC MARKETS Australian Dollar vs Japanese Yen AUDJPY",
+            "displaySymbol": "AUD/JPY",
+            "symbol": "IC MARKETS:11"
+        },
+        {
+            "description": "IC MARKETS Norway 25 Index NOR25",
+            "displaySymbol": "NOR25/NOK",
+            "symbol": "IC MARKETS:10040"
+        },
+        {
+            "description": "IC MARKETS Swiss Franc vs Singapore Dollar CHFSGD",
+            "displaySymbol": "CHF/SGD",
+            "symbol": "IC MARKETS:1002"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Russian Ruble USDRUB",
+            "displaySymbol": "USD/RUB",
+            "symbol": "IC MARKETS:1019"
+        },
+        {
+            "description": "IC MARKETS Canadian Dollar vs Japanese Yen CADJPY",
+            "displaySymbol": "CAD/JPY",
+            "symbol": "IC MARKETS:15"
+        },
+        {
+            "description": "IC MARKETS Silver vs Euro XAGEUR",
+            "displaySymbol": "XAG/EUR",
+            "symbol": "IC MARKETS:44"
+        },
+        {
+            "description": "IC MARKETS Euro vs Swiss Franc EURCHF",
+            "displaySymbol": "EUR/CHF",
+            "symbol": "IC MARKETS:10"
+        },
+        {
+            "description": "IC MARKETS South Africa 40 Index SA40",
+            "displaySymbol": "SA40/ZAR",
+            "symbol": "IC MARKETS:10041"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Hong Kong dollar USDHKD",
+            "displaySymbol": "USD/HKD",
+            "symbol": "IC MARKETS:1000"
+        },
+        {
+            "description": "IC MARKETS Euro vs Swedish Krona EURSEK",
+            "displaySymbol": "EUR/SEK",
+            "symbol": "IC MARKETS:31"
+        },
+        {
+            "description": "IC MARKETS Silver vs Australian Dollar XAGAUD",
+            "displaySymbol": "XAG/AUD",
+            "symbol": "IC MARKETS:10050"
+        },
+        {
+            "description": "IC MARKETS Norwegian Krone vs Swedish Krona NOKSEK",
+            "displaySymbol": "NOK/SEK",
+            "symbol": "IC MARKETS:1011"
+        },
+        {
+            "description": "IC MARKETS Euro vs Polish Zloty EURPLN",
+            "displaySymbol": "EUR/PLN",
+            "symbol": "IC MARKETS:1005"
+        },
+        {
+            "description": "IC MARKETS Chinese Hang Seng 50 Index HK50",
+            "displaySymbol": "HK50/HKD",
+            "symbol": "IC MARKETS:10004"
+        },
+        {
+            "description": "IC MARKETS Euro vs Hong Kong Dollar EURHKD",
+            "displaySymbol": "EUR/HKD",
+            "symbol": "IC MARKETS:1004"
+        },
+        {
+            "description": "IC MARKETS Germany Mid 60 Index MidDE60",
+            "displaySymbol": "MidDE60/EUR",
+            "symbol": "IC MARKETS:10035"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Japanese Yen USDJPY",
+            "displaySymbol": "USD/JPY",
+            "symbol": "IC MARKETS:4"
+        },
+        {
+            "description": "IC MARKETS Canadian Dollar vs Swiss Franc CADCHF",
+            "displaySymbol": "CAD/CHF",
+            "symbol": "IC MARKETS:27"
+        },
+        {
+            "description": "IC MARKETS Canada 60 Index CA60",
+            "displaySymbol": "CA60/CAD",
+            "symbol": "IC MARKETS:10033"
+        },
+        {
+            "description": "IC MARKETS USA S&P 500 Index US500",
+            "displaySymbol": "US500/USD",
+            "symbol": "IC MARKETS:10013"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Danish Krone USDDKK",
+            "displaySymbol": "USD/DKK",
+            "symbol": "IC MARKETS:36"
+        },
+        {
+            "description": "IC MARKETS British Pound vs Danish Krone GBPDKK",
+            "displaySymbol": "GBP/DKK",
+            "symbol": "IC MARKETS:1009"
+        },
+        {
+            "description": "IC MARKETS Euro vs Danish Krone EURDKK",
+            "displaySymbol": "EUR/DKK",
+            "symbol": "IC MARKETS:1003"
+        },
+        {
+            "description": "IC MARKETS Litecoin US Dollar LTCUSD",
+            "displaySymbol": "LTC/USD",
+            "symbol": "IC MARKETS:10030"
+        },
+        {
+            "description": "IC MARKETS Great Britain Pound vs Singapore Dollar GBPSGD",
+            "displaySymbol": "GBP/SGD",
+            "symbol": "IC MARKETS:32"
+        },
+        {
+            "description": "IC MARKETS Australian vs New Zealand Dollar AUDNZD",
+            "displaySymbol": "AUD/NZD",
+            "symbol": "IC MARKETS:20"
+        },
+        {
+            "description": "IC MARKETS Euro vs Singapore Dollar EURSGD",
+            "displaySymbol": "EUR/SGD",
+            "symbol": "IC MARKETS:1006"
+        },
+        {
+            "description": "IC MARKETS WTI Light Crude Oil XTIUSD",
+            "displaySymbol": "XTI/USD",
+            "symbol": "IC MARKETS:10019"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Hungarian Forint USDHUF",
+            "displaySymbol": "USD/HUF",
+            "symbol": "IC MARKETS:1017"
+        },
+        {
+            "description": "IC MARKETS British Pound vs Norwegian Krone GBPNOK",
+            "displaySymbol": "GBP/NOK",
+            "symbol": "IC MARKETS:37"
+        },
+        {
+            "description": "IC MARKETS New Zealand Dollar vs Japanese Yen NZDJPY",
+            "displaySymbol": "NZD/JPY",
+            "symbol": "IC MARKETS:21"
+        },
+        {
+            "description": "IC MARKETS Great Britain Pound vs Turkish Lira GBPTRY",
+            "displaySymbol": "GBP/TRY",
+            "symbol": "IC MARKETS:10031"
+        },
+        {
+            "description": "IC MARKETS Australian Dollar vs Swiss Franc AUDCHF",
+            "displaySymbol": "AUD/CHF",
+            "symbol": "IC MARKETS:23"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Swedish Krona USDSEK",
+            "displaySymbol": "USD/SEK",
+            "symbol": "IC MARKETS:29"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Swiss Franc USDCHF",
+            "displaySymbol": "USD/CHF",
+            "symbol": "IC MARKETS:6"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Polish Zloty USDPLN",
+            "displaySymbol": "USD/PLN",
+            "symbol": "IC MARKETS:35"
+        },
+        {
+            "description": "IC MARKETS Germany Tech 30 Index TecDE30",
+            "displaySymbol": "TecDE30/EUR",
+            "symbol": "IC MARKETS:10034"
+        },
+        {
+            "description": "IC MARKETS Natural Gas XNGUSD",
+            "displaySymbol": "XNG/USD",
+            "symbol": "IC MARKETS:10020"
+        },
+        {
+            "description": "IC MARKETS British Pound vs New Zealand Dollar  GBPNZD",
+            "displaySymbol": "GBP/NZD",
+            "symbol": "IC MARKETS:25"
+        },
+        {
+            "description": "IC MARKETS Euro vs Australian Dollar EURAUD",
+            "displaySymbol": "EUR/AUD",
+            "symbol": "IC MARKETS:14"
+        },
+        {
+            "description": "IC MARKETS Italian FTSE MIB Index IT40",
+            "displaySymbol": "IT40/EUR",
+            "symbol": "IC MARKETS:10005"
+        },
+        {
+            "description": "IC MARKETS Euro vs Japanese Yen EURJPY",
+            "displaySymbol": "EUR/JPY",
+            "symbol": "IC MARKETS:3"
+        },
+        {
+            "description": "IC MARKETS New Zealand Dollar vs Canadian Dollar NZDCAD",
+            "displaySymbol": "NZD/CAD",
+            "symbol": "IC MARKETS:30"
+        },
+        {
+            "description": "IC MARKETS British Pound vs Australian Dollar GBPAUD",
+            "displaySymbol": "GBP/AUD",
+            "symbol": "IC MARKETS:16"
+        },
+        {
+            "description": "IC MARKETS Japan Nikkei 225 Index JP225",
+            "displaySymbol": "JP225/JPY",
+            "symbol": "IC MARKETS:10006"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Turkish Lira USDTRY",
+            "displaySymbol": "USD/TRY",
+            "symbol": "IC MARKETS:1012"
+        },
+        {
+            "description": "IC MARKETS British Pound vs Swiss Franc GBPCHF",
+            "displaySymbol": "GBP/CHF",
+            "symbol": "IC MARKETS:40"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Czech Koruna USDCZK",
+            "displaySymbol": "USD/CZK",
+            "symbol": "IC MARKETS:1018"
+        },
+        {
+            "description": "IC MARKETS Euro vs Norwegian Krone EURNOK",
+            "displaySymbol": "EUR/NOK",
+            "symbol": "IC MARKETS:33"
+        },
+        {
+            "description": "IC MARKETS Gold vs Japanese Yen XAUJPY",
+            "displaySymbol": "XAU/JPY",
+            "symbol": "IC MARKETS:10049"
+        },
+        {
+            "description": "IC MARKETS EURO STOXX 50 Index STOXX50",
+            "displaySymbol": "STOXX50/EUR",
+            "symbol": "IC MARKETS:10001"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Canadian USDCAD",
+            "displaySymbol": "USD/CAD",
+            "symbol": "IC MARKETS:8"
+        },
+        {
+            "description": "IC MARKETS Gold vs Australian Dollar XAUAUD",
+            "displaySymbol": "XAU/AUD",
+            "symbol": "IC MARKETS:10032"
+        },
+        {
+            "description": "IC MARKETS British Pound vs Japanese Yen GBPJPY",
+            "displaySymbol": "GBP/JPY",
+            "symbol": "IC MARKETS:7"
+        },
+        {
+            "description": "IC MARKETS New Zealand Dollar vs US Dollar NZDUSD",
+            "displaySymbol": "NZD/USD",
+            "symbol": "IC MARKETS:12"
+        },
+        {
+            "description": "IC MARKETS British Pound vs Swedish Krona GBPSEK",
+            "displaySymbol": "GBP/SEK",
+            "symbol": "IC MARKETS:1010"
+        },
+        {
+            "description": "IC MARKETS Australian Dollar vs Canadian Dollar AUDCAD",
+            "displaySymbol": "AUD/CAD",
+            "symbol": "IC MARKETS:18"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Mexican Peso USDMXN",
+            "displaySymbol": "USD/MXN",
+            "symbol": "IC MARKETS:24"
+        },
+        {
+            "description": "IC MARKETS Singapore Dollar vs Japanese Yen SGDJPY",
+            "displaySymbol": "SGD/JPY",
+            "symbol": "IC MARKETS:1016"
+        },
+        {
+            "description": "IC MARKETS Platinum XPTUSD",
+            "displaySymbol": "XPT/USD",
+            "symbol": "IC MARKETS:10017"
+        },
+        {
+            "description": "IC MARKETS USA Russell 2000 Index US2000",
+            "displaySymbol": "US2000/USD",
+            "symbol": "IC MARKETS:10012"
+        },
+        {
+            "description": "IC MARKETS Hong Kong China H-shares Index CHINAH",
+            "displaySymbol": "CHINAH/HKD",
+            "symbol": "IC MARKETS:10039"
+        },
+        {
+            "description": "IC MARKETS Gold vs Swiss Franc XAUCHF",
+            "displaySymbol": "XAU/CHF",
+            "symbol": "IC MARKETS:10047"
+        },
+        {
+            "description": "IC MARKETS Netherlands 25 Index NETH25",
+            "displaySymbol": "NETH25/EUR",
+            "symbol": "IC MARKETS:10036"
+        },
+        {
+            "description": "IC MARKETS Palladium XPDUSD",
+            "displaySymbol": "XPD/USD",
+            "symbol": "IC MARKETS:10016"
+        },
+        {
+            "description": "IC MARKETS Spanish IBEX 35 Index ES35",
+            "displaySymbol": "ES35/EUR",
+            "symbol": "IC MARKETS:10009"
+        },
+        {
+            "description": "IC MARKETS USA Dow Jones IA Index US30",
+            "displaySymbol": "US30/USD",
+            "symbol": "IC MARKETS:10015"
+        },
+        {
+            "description": "IC MARKETS Etherimum US Dollar ETHUSD",
+            "displaySymbol": "ETH/USD",
+            "symbol": "IC MARKETS:10029"
+        },
+        {
+            "description": "IC MARKETS Brent Crude Oil XBRUSD",
+            "displaySymbol": "XBR/USD",
+            "symbol": "IC MARKETS:10018"
+        },
+        {
+            "description": "IC MARKETS Bitcoin BTCUSD",
+            "displaySymbol": "BTC/USD",
+            "symbol": "IC MARKETS:10026"
+        },
+        {
+            "description": "IC MARKETS German DAX 30 Index DE30",
+            "displaySymbol": "DE30/EUR",
+            "symbol": "IC MARKETS:10003"
+        },
+        {
+            "description": "IC MARKETS French CAC 40 Index F40",
+            "displaySymbol": "F40/EUR",
+            "symbol": "IC MARKETS:10002"
+        },
+        {
+            "description": "IC MARKETS UK 100 Index UK100",
+            "displaySymbol": "UK100/GBP",
+            "symbol": "IC MARKETS:10011"
+        },
+        {
+            "description": "IC MARKETS British Pound vs US Dollar GBPUSD",
+            "displaySymbol": "GBP/USD",
+            "symbol": "IC MARKETS:2"
+        },
+        {
+            "description": "IC MARKETS Euro vs US Dollar EURUSDt",
+            "displaySymbol": "EUR10023/USD",
+            "symbol": "IC MARKETS:10023"
+        },
+        {
+            "description": "IC MARKETS Swiss Franc vs Japanese Yen CHFJPY",
+            "displaySymbol": "CHF/JPY",
+            "symbol": "IC MARKETS:13"
+        },
+        {
+            "description": "IC MARKETS Silver vs US Dollar XAGUSD",
+            "displaySymbol": "XAG/USD",
+            "symbol": "IC MARKETS:42"
+        },
+        {
+            "description": "IC MARKETS Euro vs British Pound EURGBP",
+            "displaySymbol": "EUR/GBP",
+            "symbol": "IC MARKETS:9"
+        },
+        {
+            "description": "IC MARKETS USA NASDAQ 100 Index USTEC",
+            "displaySymbol": "USTEC/USD",
+            "symbol": "IC MARKETS:10014"
+        },
+        {
+            "description": "IC MARKETS New Zealand Dollar vs Swiss Franc NZDCHF",
+            "displaySymbol": "NZD/CHF",
+            "symbol": "IC MARKETS:39"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs South African Rand USDZAR",
+            "displaySymbol": "USD/ZAR",
+            "symbol": "IC MARKETS:1013"
+        },
+        {
+            "description": "IC MARKETS Euro vs US Dollar EURUSD",
+            "displaySymbol": "EUR/USD",
+            "symbol": "IC MARKETS:1"
+        },
+        {
+            "description": "IC MARKETS Euro vs South African Rand EURZAR",
+            "displaySymbol": "EUR/ZAR",
+            "symbol": "IC MARKETS:1008"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs China Offshore Spot USDCNH",
+            "displaySymbol": "USD/CNH",
+            "symbol": "IC MARKETS:1020"
+        },
+        {
+            "description": "IC MARKETS US Dollar vs Norwegian Krone USDNOK",
+            "displaySymbol": "USD/NOK",
+            "symbol": "IC MARKETS:22"
+        },
+        {
+            "description": "IC MARKETS Australian S&P/ASX 200 Index AUS200",
+            "displaySymbol": "AUS200/AUD",
+            "symbol": "IC MARKETS:10000"
+        },
+        {
+            "description": "IC MARKETS Gold vs Euro XAUEUR",
+            "displaySymbol": "XAU/EUR",
+            "symbol": "IC MARKETS:43"
+        },
+        {
+            "description": "IC MARKETS Germany Mid 50 Index MidDE50",
+            "displaySymbol": "MidDE50/EUR",
+            "symbol": "IC MARKETS:10045"
+        },
+        {
+            "description": "IC MARKETS Australian vs US Dollar AUDUSD",
+            "displaySymbol": "AUD/USD",
+            "symbol": "IC MARKETS:5"
+        },
+        {
+            "description": "IC MARKETS Gold vs British Pound XAUGBP",
+            "displaySymbol": "XAU/GBP",
+            "symbol": "IC MARKETS:10048"
+        },
+        {
+            "description": "IC MARKETS Euro vs New Zealand Dollar EURNZD",
+            "displaySymbol": "EUR/NZD",
+            "symbol": "IC MARKETS:26"
+        },
+        {
+            "description": "IC MARKETS Gold vs US Dollar XAUUSD",
+            "displaySymbol": "XAU/USD",
+            "symbol": "IC MARKETS:41"
+        },
+        {
+            "description": "IC MARKETS Germany DAX 40 Index DE40",
+            "displaySymbol": "DE40/EUR",
+            "symbol": "IC MARKETS:10046"
+        }
+    ],
+    "fxpro": []
+}

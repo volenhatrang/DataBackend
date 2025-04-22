@@ -20,4 +20,7 @@ numpy
 scipy
 timeout-decorator
 matplotlib
+apache-airflow-providers-apache-spark
+apache-airflow-providers-apache-cassandra
+timeout-decorator
 # 

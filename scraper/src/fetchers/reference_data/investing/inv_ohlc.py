@@ -140,7 +140,7 @@ def download_inv_prices_by_code(pCode="equities/a.j.-plast", number_day=100000):
                 """
                 let table = arguments[0];
                 let rows = table.querySelectorAll("tr");
-                return Array.from(rows).slice(1).map(row => 
+                return Array.from(rows).slice(1).map(row =>
                     Array.from(row.querySelectorAll("td")).map(td => td.innerText)
                 );
                 """,
@@ -340,7 +340,7 @@ def download_inv_profile_by_code(pCode="equities/apple-computer-inc"):
             """
             let table = arguments[0];
             let rows = table.querySelectorAll("tr");
-            return Array.from(rows).slice(1).map(row => 
+            return Array.from(rows).slice(1).map(row =>
                 Array.from(row.querySelectorAll("td")).map(td => td.innerText)
             );
             """,
@@ -362,12 +362,12 @@ def download_inv_profile_by_code(pCode="equities/apple-computer-inc"):
     return df
 
 
-# # x = investpy.stocks.get_stocks(country=None)
-# x = investpy.stocks.get_stock_countries()
-# exchanges = investpy.get_stocks(country="vietnam")
+# x = investpy.stocks.get_stocks(country=None)
+x = investpy.stocks.get_stock_countries()
+exchanges = investpy.get_stocks(country="vietnam")
 
-# company_profile = investpy.get_stock_company_profile(
-#     stock="bbva", country="spain", language="english"
-# )
-# # x.to_csv("/home/baongoc2001/project/Bigdata-System/airflow/data/list_crypto_inv.csv")
-# print(exchanges)
+company_profile = investpy.get_stock_company_profile(
+    stock="bbva", country="spain", language="english"
+)
+# x.to_csv("/home/baongoc2001/project/Bigdata-System/airflow/data/list_crypto_inv.csv")
+print(exchanges)

@@ -314,4 +314,3 @@ services:
 volumes:
   postgres-db-volume:
   cassandra-data:
-

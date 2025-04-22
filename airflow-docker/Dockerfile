@@ -2,7 +2,24 @@ FROM apache/airflow:2.10.5
 
 USER root
 
+RUN apt-get update && \
+    apt-get install -y wget apt-transport-https && \
+    mkdir -p /etc/apt/keyrings && \
+    wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | tee /etc/apt/keyrings/adoptium.asc && \
+    echo "deb [signed-by=/etc/apt/keyrings/adoptium.asc] https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
+
+RUN wget https://downloads.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz \
+    && tar -xzf hadoop-3.3.6.tar.gz -C /opt/ \
+    && rm hadoop-3.3.6.tar.gz \
+    && ln -s /opt/hadoop-3.3.6 /opt/hadoop
+
+# Set Hadoop environment variables
+ENV HADOOP_HOME=/opt/hadoop
+ENV HADOOP_CONF_DIR=${HADOOP_HOME}/etc/hadoop
+ENV YARN_CONF_DIR=${HADOOP_HOME}/etc/hadoop
+ENV PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin
 RUN apt-get update && apt-get install -y \
+    temurin-11-jdk \
     wget \
     curl \
     unzip \
@@ -31,11 +48,13 @@ RUN chmod +x /usr/bin/google-chrome || echo "Permission change failed for /usr/b
 
 USER airflow
 
+ENV JAVA_HOME=/usr/lib/jvm/temurin-11-jdk-amd64
+
 COPY requirements.txt /requirements.txt
 RUN pip install --no-cache-dir -r /requirements.txt
 RUN pip install --no-cache-dir \
     selenium \
     webdriver-manager \
-    ipython
+    ipython 
 
 CMD ["/bin/bash", "-c", "Xvfb :99 -screen 0 1920x1080x24 & export DISPLAY=:99 && python -c 'from selenium import webdriver; print(webdriver.Chrome().capabilities)'"]
