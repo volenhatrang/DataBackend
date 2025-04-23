@@ -101,7 +101,7 @@ def download_yah_prices_by_api(
 
         rCodesource = meta.get("symbol", pCodesource)
         print(f"=== {rCodesource} ===")
-
+        name = meta.get("shortName", "")
         timestamps = result.get("timestamp", [])
         df_timestamp = pd.DataFrame({"timestamp": timestamps})
         df_timestamp["ID"] = range(1, len(df_timestamp) + 1)
@@ -163,6 +163,7 @@ def download_yah_prices_by_api(
             df_combined = df_combined[cols_order]
 
             df_combined["codesource"] = rCodesource
+            df_combined["name"] = name
             df_combined["source"] = "YAH"
             cols_order = ["codesource"] + [
                 col for col in df_combined.columns if col != "codesource"
@@ -205,7 +206,7 @@ def download_yah_prices_by_code(ticker="AAPL", period="max"):
                 Hour_adjust=0,
             )
             price_data = price_data[
-                ["open", "high", "low", "close", "close_adj", "volume", "date"]
+                ["open", "high", "low", "close", "close_adj", "volume", "date", "name"]
             ]
             price_data = price_data.rename(columns={"close_adj": "adjclose"})
         if price_data.empty:
@@ -213,7 +214,7 @@ def download_yah_prices_by_code(ticker="AAPL", period="max"):
             if price_data.empty:
                 symbol = yf.Ticker(ticker)
                 price_data = symbol.history(period=period, auto_adjust=False)[
-                    ["Open", "High", "Low", "Close", "Adj Close", "Volume"]
+                    ["Open", "High", "Low", "Close", "Adj Close", "Volume", "name"]
                 ]
                 if price_data.empty:
                     print(f"⚠ Warning: No data for {ticker}")
@@ -255,7 +256,8 @@ def download_prices_and_save_csv(
 
     if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
-        final_df.to_csv(output_file, index=False)
+        final_df.set_index(["ticker", "date"], inplace=True)
+        final_df.to_csv(output_file, index=True)
         print(f"✅ Data saved to {output_file}")
         return final_df
     else:

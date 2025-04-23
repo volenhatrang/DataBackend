@@ -1,8 +1,8 @@
 CODE,NAME,TYPE,INDFGD,INDIMB,INDVOL,INDSECGICS,INDSECICB,INDSEC,INDIND,INDETF,YAH,CNBC,CBOE,EIK,INV,BLG,RTS,GOG,BIN,indhome,iso2,caf,entrade,vnd,c68,stb,vst,intraday,time_offset,fear_greed,new_bin,indworld,priority,start,end
-CMDCOFFEE,,,1,,,,,,,,KC=F,,,,,,,,,,,,,,,,,,,,,,1,0.1,23
-CMDGOLD,,,1,,1,,,,,,GC=F,@GC.1,,XAU=,,,,,,,,,,,,,,,-5,,,,1,0.1,23
-CMDRICE,,,1,,,,,,,,ZR=F,@RR.1,,,,,,,,,,,,,,,,,-5,,,,1,0.1,23
-CURBTCUSD,,,1,,1,,,,,,BTC-USD,BTC.CB=,,BTC=,,,,,,,,,,,,,,,-5,,,,1,0.1,23
-CUREURUSD,,,,,,,,,,,EURUSD=X,,,,,,,,,,,,,,,,,,,,,,,,,
+CMDCOFFEE,COFFEE,,1,,,,,,,,KC=F,,,,,,,,,,,,,,,,,,,,,,1,0.1,23
+CMDGOLD,GOLD,,1,,1,,,,,,GC=F,@GC.1,,XAU=,,,,,,,,,,,,,,,-5,,,,1,0.1,23
+CMDRICE,RICE,,1,,,,,,,,ZR=F,@RR.1,,,,,,,,,,,,,,,,,-5,,,,1,0.1,23
+CURBTCUSD,BITCOIN,,1,,1,,,,,,BTC-USD,BTC.CB=,,BTC=,,,,,,,,,,,,,,,-5,,,,1,0.1,23
+CUREURUSD,EUR/USD,,,,,,,,,,EURUSD=X,,,,,,,,,,,,,,,,,,,,,,,,,
 STKUSAAPL,APPLE,STK,1,,,,,1,,,AAPL,AAPL,,AAPL.OQ,equities/apple-computer-inc,,,,,,,,,,,,,,-5,1,,,1,20,3
 STKUSMSFT,MICROSOFT,STK,,,,,,1,,,MSFT,,,MSFT.OQ,,,,,,,,,,,,,,,,,,,1,,
